@@ -219,3 +219,4 @@ To do so under Ubuntu, you need to copy this dissector file to ~/.local/lib/wire
 cp mininet/collector/wireshark-ptp-tlv-dissector.lua ~/.local/lib/wireshark/plugins/ 
 ```
 
+<img src="mininet/collector/int-delay-req.png" width="500px" />
