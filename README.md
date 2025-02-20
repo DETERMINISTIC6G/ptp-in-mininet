@@ -1,4 +1,4 @@
-# Introduction
+# 1. Introduction
 
 This repository contains an emualtor of PTP time synchronization using Linuxptp. 
 
@@ -11,7 +11,7 @@ PTP server (h1) -- s1 ----- s2 ----- ... --- sn -- (h2) PTP client
 
 The transparent clocks are implemented using P4
 
-# Requirements
+# 2. Requirements
 
 - mininet
 - linuxptp
@@ -119,7 +119,7 @@ sudo systemctl restart grafana-server
 - Click `Menu`(top-left corner), navigate to `Dashboards` / `Import`, then import a json file at `mininet/collector/grafana.json`
 - After importing, you should see a dashboard having 6 charts that will be as the following once having data to show:
 
-<img src="mininet/collector/grafana.png" width=300px/>
+<img src="mininet/collector/grafana.png" width="800px"/>
 
 
 ### Install NetworkDelayEmulator to emulate TDA
@@ -164,7 +164,7 @@ make
 ls -lrat ~/NetworkDelayEmulator/tc/iproute2/tc/tc
 ```
 
-# Execution
+# 3. Execution
 
 The following steps will create a virtual network using the topology defined in `topos/3-virtuals.json`. Specifically, the network consists of:
 
@@ -172,7 +172,7 @@ The following steps will create a virtual network using the topology defined in 
 - a PTP server
 - a PTP client which run in free-mode in which the client does not modify the timestamp of the system.
 
-<img src="demo/network-topo.png" width="300px"/>
+<img src="demo/network-topo.png" width="500px"/>
 
 ## Start the emulator
 
@@ -205,7 +205,9 @@ sudo python3 ~/NetworkDelayEmulator/userspace_delay/userspace_delay.py /dev/sch_
 
 A video screencast of the demo is available [here](demo/ptp-monitoring.mp4)
 
-# Divers
+<video src="demo/ptp-monitoring.mp4" width="640px"/>
+
+# 4. Divers
 
 ## Wireshark dissector
 
