@@ -205,7 +205,7 @@ sudo python3 ~/NetworkDelayEmulator/userspace_delay/userspace_delay.py /dev/sch_
 
 A video screencast of the demo is available [here](demo/ptp-monitoring.mp4)
 
-<video src="demo/ptp-monitoring.mp4" width="640px"/>
+<video src="https://github.com/DETERMINISTIC6G/ptp-in-mininet/raw/refs/heads/main/demo/ptp-monitoring.mp4" width="640px"></video>
 
 # 4. Divers
 
