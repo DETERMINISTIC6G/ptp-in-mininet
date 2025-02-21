@@ -200,7 +200,7 @@ if __name__ == "__main__":
         data[name] = {}
 
         #for i in range(0, 10):
-        for i in range(1, 11):
+        for i in range(1, 21):
             log_file = f"./topos-{i}/{name}{extension}"
             print(f"parsing {log_file}")
             # Parse the log file

@@ -20,7 +20,7 @@ clean:
 
 	
 draw:
-	python3 ../plot.py --log-file logs/ptp4l.slave.log
+	python3 ./topos/plot.py --log-file logs/ptp4l.slave.log
 
 
 %.pdf: %.json tc.json
@@ -36,14 +36,15 @@ draw:
 	
 	scp pi@10.42.0.110:/tmp/ptp.slave.txt $<.slave.log
 	
-	python3 ../plot.py --log-file $<.slave.log --output-file $@
-	cd topos && python3 plot-all.py
+	python3 ./topos/plot.py --log-file $<.slave.log --output-file $@
 
 # ascending order
 test: topos/1-switch.pdf topos/2-switches.pdf topos/5-switches.pdf topos/10-switches.pdf  topos/20-switches.pdf
+	cd topos && python3 plot-all.py
 
 # descending order
-tset: topos/20-switch.pdf topos/10-switches.pdf topos/5-switches.pdf topos/2-switches.pdf  topos/1-switches.pdf
+tset: topos/20-switches.pdf topos/10-switches.pdf topos/5-switches.pdf topos/2-switches.pdf  topos/1-switch.pdf
+	cd topos && python3 plot-all.py
 
 test-1-switch: topos/1-switch.pdf
 

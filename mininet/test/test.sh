@@ -9,12 +9,13 @@ function do_test(){
 }
 
 function do_serial_test(){
-	ORDER=$2
+	ORDER=$1
 	rm -rf topos-* *.pdf
 	
 	for i in $(seq 1 20);
 	do
-		date
+		echo
+		echo "==============$(date)============="
 		echo test $i
 	 	
 		(do_test $ORDER)
@@ -30,11 +31,13 @@ function do_serial_test(){
 	python3 plot-all-tests.py
 }
 
-do_serial_test test
-mkdir test-1-2-5-10-20
-mv *.pdf *.log topos-* test-1-2-5-10-20
+#do_serial_test test | tee test.log
+#mkdir test-1-2-5-10-20
+#mv *.pdf *.log topos-* test-1-2-5-10-20
 
-do_serial_test tset
+#sleep 30
+
+do_serial_test tset | tee test.log
 mkdir test-20-10-5-2-1
 mv *.pdf *.log topos-* test-20-10-5-2-1
 
