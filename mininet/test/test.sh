@@ -22,6 +22,7 @@ function do_serial_test(){
 		(do_test $ORDER)
 	
 		cp -r ../topos topos-$i
+		cp -r ../logs  topos-$i/
 	
 	 	date
 		echo sleep 10 seconds
@@ -43,5 +44,5 @@ function do_serial_test(){
 #mv *.pdf *.log topos-* test-20-10-5-2-1
 
 do_serial_test tset | tee test.log
-mkdir test-1h-20-10-5-2-1
-mv *.pdf *.log topos-* test-1h-20-10-5-2-1
+mkdir test-ptp4l-1h-20-10-5-2-1
+mv *.pdf *.log topos-* test-ptp4l-1h-20-10-5-2-1
