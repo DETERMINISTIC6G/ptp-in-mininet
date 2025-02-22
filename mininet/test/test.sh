@@ -12,7 +12,8 @@ function do_serial_test(){
 	ORDER=$1
 	rm -rf topos-* *.pdf
 	
-	for i in $(seq 1 20);
+	#for i in $(seq 1 20);
+	for i in $(seq 1 2);
 	do
 		echo
 		echo "==============$(date)============="
@@ -37,7 +38,10 @@ function do_serial_test(){
 
 #sleep 30
 
-do_serial_test tset | tee test.log
-mkdir test-20-10-5-2-1
-mv *.pdf *.log topos-* test-20-10-5-2-1
+#do_serial_test tset | tee test.log
+#mkdir test-20-10-5-2-1
+#mv *.pdf *.log topos-* test-20-10-5-2-1
 
+do_serial_test tset | tee test.log
+mkdir test-1h-20-10-5-2-1
+mv *.pdf *.log topos-* test-1h-20-10-5-2-1
