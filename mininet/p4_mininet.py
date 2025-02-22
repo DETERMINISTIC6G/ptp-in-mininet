@@ -1,3 +1,12 @@
+# This code implement 3 classes to emulate 3 type of nodes in a PTP time syncrhonization network using Mininet
+# 1. End host: either a clock client or server
+# 2. A transparent clock using P4
+# 3. A transparent clock using LinuxPTP 
+# 
+#  These classes are used by main.py to create a network.
+#
+# Created by Huu-Nghia Nguyen <huunghia.nguyen@montimage.eu>
+# 22 Feb 2024
 
 from mininet.net import Mininet
 from mininet.node import Switch, Host

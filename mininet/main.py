@@ -1,3 +1,7 @@
+# This code implement a PTP time syncrhonization network using Mininet
+#
+# Created by Huu-Nghia Nguyen <huunghia.nguyen@montimage.eu>
+# 22 Feb 2024
 
 from mininet.net import Mininet
 from mininet.topo import Topo
