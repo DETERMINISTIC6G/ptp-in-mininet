@@ -68,7 +68,7 @@ def parse_ptp_log(log_file):
                     break
          
                 #data["timestamp"].append(int(kernel_time))
-                data["master_offset"].append(abs(float(master_offset))/1000)
+                data["master_offset"].append((float(master_offset))/1000)
                 data["frequency_offset"].append(float(freq))
                 data["path_delay"].append(float(path_delay)/1000)
     
@@ -91,7 +91,7 @@ def annotate_boxplot(ax, data):
                 f"Q1: {stats['q1']:.2f}\n"
                 f"Q3: {stats['q3']:.2f}"], loc="upper right", fontsize=10)
 
-def moving_average(y_2d, window_size=3):
+def moving_average(y_2d):
     #homogenous row size
     min_len = 10000
     for arr in y_2d:
@@ -105,13 +105,27 @@ def moving_average(y_2d, window_size=3):
     #get a average row
     mean = np.mean(new_y_2d, axis=0)
 
-    #smooth the line
-    return np.convolve(mean, np.ones(window_size)/window_size, mode='valid')
+    window_size = 10
+    if min_len > 500:
+        window_size = 100
 
-y_labels = {
-        "master_offset"   : "Clock offset (microsecond)", 
-        "frequency_offset": "Frequency offset", 
-        "path_delay"      : "Path delay (microsecond)"}
+    #smooth the line
+    smooth = np.convolve(mean, np.ones(window_size)/window_size, mode='valid')
+    return (mean, smooth)
+
+CONFIG = {
+        "master_offset"   : {
+            "ylabel": "Clock offset (microsecond)", 
+            "yticks": [-150, -100, -50, -25, 0, 25, 50, 100, 150]
+        },
+        "frequency_offset": {
+            "ylabel": "Frequency offset", 
+        },
+        "path_delay"      : {
+            "ylabel": "Path delay (microsecond)",
+            "yticks": [300, 350, 375, 400, 425, 450, 500]
+        }
+}
 
 def line_plot_metrics(data):
     """
@@ -126,18 +140,45 @@ def line_plot_metrics(data):
         
         for metric in obj:
             plt.clf()
-        
-            #plt.yscale('log')  # Set Y-axis to logarithmic scale (base 10)
 
+            # Remove margins
+            plt.margins(x=0, y=0) 
+            
+        
+            max_val = 0
+            min_val = 100*1000*1000*1000
+            #plt.yscale('log')  # Set Y-axis to logarithmic scale (base 10)
             for arr in obj[metric]:
-                plt.plot(range(0, len(arr)), arr, marker='o', color="black", markeredgewidth=0, alpha=0.5, markersize=3, linestyle='None')
+                v = min(arr)
+                if v < min_val:
+                    min_val = v
+                v = max(arr)
+                if v > max_val:
+                    max_val = v
+                    
+                plt.plot(range(0, len(arr)), arr, marker='o', color="green", markeredgewidth=0, alpha=0.5, markersize=3, linestyle='None')
             
             # a line to represent average
-            y_smooth = moving_average(obj[metric], window_size=10)
+            y_mean, y_smooth = moving_average(obj[metric])
+
+            plt.plot(range(0,len(y_mean)), y_mean, color="blue", alpha=0.9)
             plt.plot(range(0,len(y_smooth)), y_smooth, color="red")
             
+
             plt.xlabel("Timestamp (second)")
-            plt.ylabel( y_labels[metric] )
+            plt.ylabel( CONFIG[metric]["ylabel"] )
+
+
+            # Manually specify y-axis ticks
+            if "yticks" in CONFIG[metric]:
+                yticks = CONFIG[metric]["yticks"].copy() #we will modify the array
+                
+                yticks[0]  = int(min_val - 1)
+                yticks[-1] = int(max_val + 1)
+                
+                ax = plt.gca()  # Get current axis
+                ax.set_yticks( yticks )
+            
     
             plt.tight_layout()
             plt.grid()
@@ -166,7 +207,7 @@ def box_plot_metrics(data):
     """
     #plt.figure(figsize=(15, 12))
     #fig, ax = plt.subplots()
-    for metric in y_labels:
+    for metric in CONFIG:
         plt.clf()
         
         #plt.yscale('log')  # Set Y-axis to logarithmic scale (base 10)
@@ -181,9 +222,17 @@ def box_plot_metrics(data):
             val = flatten( val )
             arr.append( val )
         # Boxplot for Master Offset (Vertical)
-        box = plt.boxplot(arr, vert=True, patch_artist=True, labels=labels, boxprops=dict(color='black', facecolor='grey', alpha=0.9), medianprops=dict(color='black'))
+        box = plt.boxplot(arr, vert=True, patch_artist=True, labels=labels, boxprops=dict(color='black', facecolor='grey', alpha=0.9), medianprops=dict(color='black'),
+            #Change outlier size & color
+            flierprops=dict(marker='o', markersize=5, color='black', alpha=0.5))
         #plt.title("Master Offset Distribution")
-        plt.ylabel( y_labels[metric] )
+
+        plt.ylabel( CONFIG[metric]["ylabel"] )
+
+        # Manually specify y-axis ticks
+        if "yticks" in CONFIG[metric]:
+            ax = plt.gca()  # Get current axis
+            ax.set_yticks( CONFIG[metric]["yticks"] )
 
         plt.tight_layout()
         plt.grid()
@@ -202,10 +251,15 @@ if __name__ == "__main__":
         data[name] = {}
 
         #for i in range(0, 10):
-        #for i in range(1, 21):
-        for i in range(1, 3):
+        for i in range(1, 21):
+        #for i in range(1, 3):
             log_file = f"./topos-{i}/{name}{extension}"
+
+            if not os.path.exists( log_file ):
+                continue
+
             print(f"parsing {log_file}")
+
             # Parse the log file
             obj = parse_ptp_log(log_file)
             for metric in obj:
