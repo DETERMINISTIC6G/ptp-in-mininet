@@ -39,7 +39,7 @@ def parse_ptp_log(log_file):
         re.IGNORECASE
     )
     
-    min_ts   =  50
+    min_ts   =  0
     #interval = 300
     interval = 3600
     
@@ -74,6 +74,23 @@ def parse_ptp_log(log_file):
     
     return data
 
+def get_sub_data(data, start, end):
+    """
+    get a new deep copy of data
+       each element of the new data is a sub element
+    """
+    old_data = data
+    data = {}
+    for name in old_data:
+        data[name] = {}
+        obj = old_data[name]
+        for metric in obj:
+            data[name][metric] = []
+            for arr in obj[metric]:
+                data[name][metric].append( arr[start:end] )
+    return data
+    
+
 def annotate_boxplot(ax, data):
     """
     Annotates a boxplot with statistical values (mean, median, Q1, Q3).
@@ -107,7 +124,7 @@ def moving_average(y_2d):
 
     window_size = 10
     if min_len > 500:
-        window_size = 100
+        window_size = 20
 
     #smooth the line
     smooth = np.convolve(mean, np.ones(window_size)/window_size, mode='valid')
@@ -116,7 +133,7 @@ def moving_average(y_2d):
 CONFIG = {
         "master_offset"   : {
             "ylabel": "Clock offset (microsecond)", 
-            "yticks": [-150, -100, -50, -25, 0, 25, 50, 100, 150]
+            "yticks": [-150, -100, -50, 0, 50, 100, 150]
         },
         "frequency_offset": {
             "ylabel": "Frequency offset", 
@@ -134,6 +151,8 @@ def line_plot_metrics(data):
     #plt.figure(figsize=(15, 12))
     #fig, ax = plt.subplots()
     
+    # draw only first 600 samples
+    data = get_sub_data(data, 0, 600)
     for name in data:
 
         obj = data[name]
@@ -143,38 +162,46 @@ def line_plot_metrics(data):
 
             # Remove margins
             plt.margins(x=0, y=0) 
-            
+            # Set global font size
+            plt.rcParams.update({'font.size': 16})  # Adjust the font size
+
         
-            max_val = 0
-            min_val = 100*1000*1000*1000
             #plt.yscale('log')  # Set Y-axis to logarithmic scale (base 10)
             for arr in obj[metric]:
-                v = min(arr)
-                if v < min_val:
-                    min_val = v
-                v = max(arr)
-                if v > max_val:
-                    max_val = v
-                    
-                plt.plot(range(0, len(arr)), arr, marker='o', color="green", markeredgewidth=0, alpha=0.5, markersize=3, linestyle='None')
+                plt.plot(range(0, len(arr)), arr, marker='o', color="green", markeredgewidth=0, alpha=0.5, markersize=5, linestyle='None')
             
             # a line to represent average
             y_mean, y_smooth = moving_average(obj[metric])
 
             plt.plot(range(0,len(y_mean)), y_mean, color="blue", alpha=0.9)
-            plt.plot(range(0,len(y_smooth)), y_smooth, color="red")
+            plt.plot(range(0,len(y_smooth)), y_smooth, color="red", linewidth=3)
             
 
             plt.xlabel("Timestamp (second)")
-            plt.ylabel( CONFIG[metric]["ylabel"] )
+            #plt.ylabel( CONFIG[metric]["ylabel"] )
 
 
             # Manually specify y-axis ticks
             if "yticks" in CONFIG[metric]:
                 yticks = CONFIG[metric]["yticks"].copy() #we will modify the array
                 
-                yticks[0]  = int(min_val - 1)
-                yticks[-1] = int(max_val + 1)
+                max_val = 0
+                min_val = 100*1000*1000*1000
+                for arr in obj[metric]:
+                    v = min(arr)
+                    if v < min_val:
+                        min_val = v
+                    v = max(arr)
+                    if v > max_val:
+                        max_val = v
+                
+                yticks[0]  = int(min_val + 1)
+                yticks[-1] = int(max_val - 1)
+                if yticks[0] > yticks[1]:
+                    yticks[1] = yticks[0]
+                if yticks[-1] < yticks[-2]:
+                    yticks[-2] = yticks[-1]
+
                 
                 ax = plt.gca()  # Get current axis
                 ax.set_yticks( yticks )
@@ -205,11 +232,16 @@ def box_plot_metrics(data):
     Plots the master offset, frequency offset, and path delay metrics along with boxplots.
     :param data: Dictionary containing timestamps and metric values.
     """
+    
+    # remove the first 600 seconds
+    data = get_sub_data(data, 200,-1)
     #plt.figure(figsize=(15, 12))
     #fig, ax = plt.subplots()
     for metric in CONFIG:
         plt.clf()
-        
+        # Set global font size
+        plt.rcParams.update({'font.size': 16})  # Adjust the font size
+
         #plt.yscale('log')  # Set Y-axis to logarithmic scale (base 10)
 
         labels = []
@@ -227,7 +259,7 @@ def box_plot_metrics(data):
             flierprops=dict(marker='o', markersize=5, color='black', alpha=0.5))
         #plt.title("Master Offset Distribution")
 
-        plt.ylabel( CONFIG[metric]["ylabel"] )
+        #plt.ylabel( CONFIG[metric]["ylabel"] )
 
         # Manually specify y-axis ticks
         if "yticks" in CONFIG[metric]:

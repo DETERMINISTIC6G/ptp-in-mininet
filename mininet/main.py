@@ -52,11 +52,13 @@ class ExerciseTopo(Topo):
                 # add default switch
                 switchClass = None
 
+            # use either P4-based transparent clock or LinuxPTP-based on
             # P4-based transparent clock
-            self.addSwitch(sw, json_file="tc.json", log_dir=log_dir, cls=switchClass, **params )
+            #self.addSwitch(sw, json_file="tc.json", log_dir=log_dir, cls=switchClass, **params )
+            
             # LinuxPTP-based transparent clock
-            #params["config"] = "configs/E2E-TC.cfg"
-            #self.addSwitch(sw, log_dir=log_dir, cls=Ptp4lSwitch, **params )
+            params["config"] = "configs/E2E-TC.cfg"
+            self.addSwitch(sw, log_dir=log_dir, cls=Ptp4lSwitch, **params )
 
         for link in host_links:
             host_name = link['node1']
@@ -176,7 +178,7 @@ if __name__ == '__main__':
         if args.enter_cli:
             CLI(net)
         else:
-            sleep_sec = 3620
+            sleep_sec = 700
             info(f'sleep {sleep_sec} sec, then exit\n')
             time.sleep(sleep_sec)
     except Exception as e:

@@ -1,0 +1,931 @@
+ptp4l[1182838.327]: config item (null).assume_two_step is 0
+ptp4l[1182838.328]: config item (null).check_fup_sync is 0
+ptp4l[1182838.328]: config item (null).tx_timestamp_timeout is 10
+ptp4l[1182838.328]: config item (null).hwts_filter is 0
+ptp4l[1182838.328]: config item (null).ptp_minor_version is 1
+ptp4l[1182838.328]: config item (null).sa_file is '(null)'
+ptp4l[1182838.328]: config item (null).clock_servo is 0
+ptp4l[1182838.328]: config item (null).clock_type is 32768
+ptp4l[1182838.328]: config item (null).clock_servo is 0
+ptp4l[1182838.328]: config item (null).clockClass is 248
+ptp4l[1182838.328]: config item (null).clockAccuracy is 254
+ptp4l[1182838.328]: config item (null).offsetScaledLogVariance is 65535
+ptp4l[1182838.328]: config item (null).productDescription is ';;'
+ptp4l[1182838.328]: config item (null).revisionData is ';;'
+ptp4l[1182838.328]: config item (null).userDescription is ''
+ptp4l[1182838.328]: config item (null).manufacturerIdentity is '00:00:00'
+ptp4l[1182838.328]: config item (null).domainNumber is 127
+ptp4l[1182838.328]: config item (null).clientOnly is 0
+ptp4l[1182838.328]: config item (null).gmCapable is 1
+ptp4l[1182838.328]: config item (null).gmCapable is 1
+ptp4l[1182838.328]: config item (null).G.8275.defaultDS.localPriority is 128
+ptp4l[1182838.328]: config item (null).maxStepsRemoved is 255
+ptp4l[1182838.328]: config item (null).clock_class_threshold is 248
+ptp4l[1182838.328]: config item (null).time_stamping is 0
+ptp4l[1182838.328]: config item (null).twoStepFlag is 1
+ptp4l[1182838.328]: config item (null).twoStepFlag is 1
+ptp4l[1182838.328]: config item (null).time_stamping is 0
+ptp4l[1182838.328]: config item (null).priority1 is 248
+ptp4l[1182838.328]: config item (null).priority2 is 248
+ptp4l[1182838.328]: interface index 2 is up
+ptp4l[1182838.328]: config item eth0.phc_index is -1
+ptp4l[1182838.328]: config item (null).free_running is 1
+ptp4l[1182838.328]: config item (null).clockIdentity is '000000.0000.000000'
+ptp4l[1182838.328]: config item (null).uds_address is '/var/run/ptp4l-server'
+ptp4l[1182838.328]: section item /var/run/ptp4l-server.announceReceiptTimeout now 0
+ptp4l[1182838.328]: section item /var/run/ptp4l-server.delay_mechanism now 0
+ptp4l[1182838.328]: section item /var/run/ptp4l-server.network_transport now 0
+ptp4l[1182838.328]: section item /var/run/ptp4l-server.delay_filter_length now 1
+ptp4l[1182838.328]: config item (null).uds_ro_address is '/var/run/ptp4lro-server'
+ptp4l[1182838.328]: section item /var/run/ptp4lro-server.announceReceiptTimeout now 0
+ptp4l[1182838.328]: section item /var/run/ptp4lro-server.delay_mechanism now 0
+ptp4l[1182838.328]: section item /var/run/ptp4lro-server.network_transport now 0
+ptp4l[1182838.328]: section item /var/run/ptp4lro-server.delay_filter_length now 1
+ptp4l[1182838.328]: config item (null).free_running is 1
+ptp4l[1182838.328]: config item (null).freq_est_interval is 1
+ptp4l[1182838.328]: config item (null).write_phase_mode is 0
+ptp4l[1182838.328]: config item (null).gmCapable is 1
+ptp4l[1182838.328]: config item (null).kernel_leap is 1
+ptp4l[1182838.328]: config item (null).utc_offset is 37
+ptp4l[1182838.328]: config item (null).timeSource is 160
+ptp4l[1182838.328]: config item (null).step_window is 0
+ptp4l[1182838.328]: config item (null).pi_proportional_const is 0.000000
+ptp4l[1182838.328]: config item (null).pi_integral_const is 0.000000
+ptp4l[1182838.328]: config item (null).pi_proportional_scale is 0.000000
+ptp4l[1182838.328]: config item (null).pi_proportional_exponent is -0.300000
+ptp4l[1182838.328]: config item (null).pi_proportional_norm_max is 0.700000
+ptp4l[1182838.328]: config item (null).pi_integral_scale is 0.000000
+ptp4l[1182838.328]: config item (null).pi_integral_exponent is 0.400000
+ptp4l[1182838.328]: config item (null).pi_integral_norm_max is 0.300000
+ptp4l[1182838.328]: config item (null).step_threshold is 0.000000
+ptp4l[1182838.328]: config item (null).first_step_threshold is 0.000020
+ptp4l[1182838.328]: config item (null).max_frequency is 900000000
+ptp4l[1182838.328]: config item (null).servo_offset_threshold is 0
+ptp4l[1182838.328]: config item (null).servo_num_offset_values is 10
+ptp4l[1182838.328]: config item (null).dataset_comparison is 0
+ptp4l[1182838.328]: config item (null).delay_filter_length is 10
+ptp4l[1182838.328]: config item (null).delay_filter is 1
+ptp4l[1182838.328]: config item (null).tsproc_mode is 0
+ptp4l[1182838.329]: config item (null).initial_delay is 0
+ptp4l[1182838.329]: config item (null).summary_interval is 0
+ptp4l[1182838.329]: config item (null).sanity_freq_limit is 200000000
+ptp4l[1182838.329]: PI servo: sync interval 1.000 kp 0.100 ki 0.001000
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.phc_index is -1
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.boundary_clock_jbod is 0
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.serverOnly is 1
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.BMCA is 1
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.network_transport is 0
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.delayAsymmetry is 0
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.follow_up_info is 1
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.freq_est_interval is 1
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.msg_interval_request is 0
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.net_sync_monitor is 0
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.path_trace_enabled is 1
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.tc_spanning_tree is 0
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.ingressLatency is 0
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.egressLatency is 0
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.delay_mechanism is 0
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.power_profile.version is 0
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.power_profile.grandmasterID is 0
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.power_profile.2011.grandmasterTimeInaccuracy is -1
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.power_profile.2011.networkTimeInaccuracy is -1
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.power_profile.2017.totalTimeInaccuracy is -1
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.allowedLostResponses is 3
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.spp is -1
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.active_key_id is 0
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.hybrid_e2e is 0
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.fault_badpeernet_interval is 16
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.fault_reset_interval is 4
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.delay_filter_length is 1
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.delay_filter is 1
+ptp4l[1182838.329]: config item /var/run/ptp4l-server.tsproc_mode is 0
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.phc_index is -1
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.boundary_clock_jbod is 0
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.serverOnly is 1
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.BMCA is 1
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.network_transport is 0
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.delayAsymmetry is 0
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.follow_up_info is 1
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.freq_est_interval is 1
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.msg_interval_request is 0
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.net_sync_monitor is 0
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.path_trace_enabled is 1
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.tc_spanning_tree is 0
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.ingressLatency is 0
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.egressLatency is 0
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.delay_mechanism is 0
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.power_profile.version is 0
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.power_profile.grandmasterID is 0
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.power_profile.2011.grandmasterTimeInaccuracy is -1
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.power_profile.2011.networkTimeInaccuracy is -1
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.power_profile.2017.totalTimeInaccuracy is -1
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.allowedLostResponses is 3
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.spp is -1
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.active_key_id is 0
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.hybrid_e2e is 0
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.fault_badpeernet_interval is 16
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.fault_reset_interval is 4
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.delay_filter_length is 1
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.delay_filter is 1
+ptp4l[1182838.329]: config item /var/run/ptp4lro-server.tsproc_mode is 0
+ptp4l[1182838.329]: config item (null).slave_event_monitor is ''
+ptp4l[1182838.329]: config item eth0.phc_index is -1
+ptp4l[1182838.329]: config item eth0.boundary_clock_jbod is 0
+ptp4l[1182838.329]: config item eth0.serverOnly is 1
+ptp4l[1182838.329]: config item eth0.BMCA is 1
+ptp4l[1182838.329]: config item eth0.network_transport is 3
+ptp4l[1182838.329]: config item eth0.delayAsymmetry is 0
+ptp4l[1182838.329]: config item eth0.follow_up_info is 1
+ptp4l[1182838.329]: config item eth0.freq_est_interval is 1
+ptp4l[1182838.329]: config item eth0.msg_interval_request is 0
+ptp4l[1182838.329]: config item eth0.net_sync_monitor is 0
+ptp4l[1182838.329]: config item eth0.path_trace_enabled is 1
+ptp4l[1182838.329]: config item eth0.tc_spanning_tree is 0
+ptp4l[1182838.329]: config item eth0.ingressLatency is 0
+ptp4l[1182838.329]: config item eth0.egressLatency is 0
+ptp4l[1182838.329]: config item eth0.delay_mechanism is 1
+ptp4l[1182838.329]: config item eth0.power_profile.version is 0
+ptp4l[1182838.329]: config item eth0.power_profile.grandmasterID is 0
+ptp4l[1182838.329]: config item eth0.power_profile.2011.grandmasterTimeInaccuracy is -1
+ptp4l[1182838.329]: config item eth0.power_profile.2011.networkTimeInaccuracy is -1
+ptp4l[1182838.329]: config item eth0.power_profile.2017.totalTimeInaccuracy is -1
+ptp4l[1182838.329]: config item eth0.allowedLostResponses is 3
+ptp4l[1182838.329]: config item eth0.spp is -1
+ptp4l[1182838.329]: config item eth0.active_key_id is 0
+ptp4l[1182838.329]: config item eth0.unicast_master_table is 0
+ptp4l[1182838.329]: config item eth0.unicast_listen is 0
+ptp4l[1182838.329]: config item eth0.hybrid_e2e is 0
+ptp4l[1182838.329]: config item eth0.fault_badpeernet_interval is 16
+ptp4l[1182838.330]: config item eth0.fault_reset_interval is 4
+ptp4l[1182838.330]: config item eth0.delay_filter_length is 10
+ptp4l[1182838.330]: config item eth0.delay_filter is 1
+ptp4l[1182838.330]: config item eth0.tsproc_mode is 0
+ptp4l[1182838.330]: config item eth0.logMinDelayReqInterval is 0
+ptp4l[1182838.330]: config item eth0.logAnnounceInterval is 1
+ptp4l[1182838.330]: config item eth0.inhibit_announce is 1
+ptp4l[1182838.330]: config item eth0.ignore_source_id is 0
+ptp4l[1182838.330]: config item eth0.announceReceiptTimeout is 3
+ptp4l[1182838.330]: config item eth0.syncReceiptTimeout is 3
+ptp4l[1182838.330]: config item eth0.transportSpecific is 1
+ptp4l[1182838.330]: config item eth0.ignore_transport_specific is 0
+ptp4l[1182838.330]: config item eth0.G.8275.portDS.localPriority is 128
+ptp4l[1182838.330]: config item eth0.logSyncInterval is 0
+ptp4l[1182838.330]: config item eth0.operLogSyncInterval is 0
+ptp4l[1182838.330]: config item eth0.logMinPdelayReqInterval is 0
+ptp4l[1182838.330]: config item eth0.operLogPdelayReqInterval is 0
+ptp4l[1182838.330]: config item eth0.neighborPropDelayThresh is 800
+ptp4l[1182838.330]: config item eth0.min_neighbor_prop_delay is -20000000
+ptp4l[1182838.330]: config item eth0.delay_response_timeout is 0
+ptp4l[1182838.330]: config item eth0.interface_rate_tlv is 0
+ptp4l[1182838.330]: config item eth0.asCapable is 0
+ptp4l[1182838.330]: config item eth0.inhibit_delay_req is 1
+ptp4l[1182838.330]: config item eth0.ptp_dst_mac is '01:1B:19:00:00:00'
+ptp4l[1182838.330]: config item eth0.p2p_dst_mac is '01:80:C2:00:00:0E'
+ptp4l[1182838.330]: config item global.socket_priority is 0
+ptp4l[1182838.366]: port 1 (eth0): INITIALIZING to MASTER on INIT_COMPLETE
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.logMinDelayReqInterval is 0
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.logAnnounceInterval is 1
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.inhibit_announce is 1
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.ignore_source_id is 0
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.announceReceiptTimeout is 0
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.syncReceiptTimeout is 3
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.transportSpecific is 1
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.ignore_transport_specific is 0
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.G.8275.portDS.localPriority is 128
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.logSyncInterval is 0
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.operLogSyncInterval is 0
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.logMinPdelayReqInterval is 0
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.operLogPdelayReqInterval is 0
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.neighborPropDelayThresh is 800
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.min_neighbor_prop_delay is -20000000
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.delay_response_timeout is 0
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.interface_rate_tlv is 0
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.asCapable is 0
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.inhibit_delay_req is 1
+ptp4l[1182838.366]: config item (null).uds_ro_address is '/var/run/ptp4lro-server'
+ptp4l[1182838.366]: config item /var/run/ptp4l-server.uds_file_mode is 432
+ptp4l[1182838.366]: port 0 (/var/run/ptp4l-server): INITIALIZING to LISTENING on INIT_COMPLETE
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.logMinDelayReqInterval is 0
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.logAnnounceInterval is 1
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.inhibit_announce is 1
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.ignore_source_id is 0
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.announceReceiptTimeout is 0
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.syncReceiptTimeout is 3
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.transportSpecific is 1
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.ignore_transport_specific is 0
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.G.8275.portDS.localPriority is 128
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.logSyncInterval is 0
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.operLogSyncInterval is 0
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.logMinPdelayReqInterval is 0
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.operLogPdelayReqInterval is 0
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.neighborPropDelayThresh is 800
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.min_neighbor_prop_delay is -20000000
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.delay_response_timeout is 0
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.interface_rate_tlv is 0
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.asCapable is 0
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.inhibit_delay_req is 1
+ptp4l[1182838.366]: config item (null).uds_ro_address is '/var/run/ptp4lro-server'
+ptp4l[1182838.366]: config item /var/run/ptp4lro-server.uds_ro_file_mode is 438
+ptp4l[1182838.366]: port 0 (/var/run/ptp4lro-server): INITIALIZING to LISTENING on INIT_COMPLETE
+ptp4l[1182838.367]: port 1 (eth0): received link status notification
+ptp4l[1182838.367]: interface index 2 is up
+ptp4l[1182839.366]: port 1 (eth0): master sync timeout
+ptp4l[1182840.366]: port 1 (eth0): master sync timeout
+ptp4l[1182841.367]: port 1 (eth0): master sync timeout
+ptp4l[1182842.367]: port 1 (eth0): master sync timeout
+ptp4l[1182843.367]: port 1 (eth0): master sync timeout
+ptp4l[1182844.368]: port 1 (eth0): master sync timeout
+ptp4l[1182845.368]: port 1 (eth0): master sync timeout
+ptp4l[1182846.368]: port 1 (eth0): master sync timeout
+ptp4l[1182847.369]: port 1 (eth0): master sync timeout
+ptp4l[1182848.369]: port 1 (eth0): master sync timeout
+ptp4l[1182849.369]: port 1 (eth0): master sync timeout
+ptp4l[1182850.369]: port 1 (eth0): master sync timeout
+ptp4l[1182851.370]: port 1 (eth0): master sync timeout
+ptp4l[1182852.370]: port 1 (eth0): master sync timeout
+ptp4l[1182853.370]: port 1 (eth0): master sync timeout
+ptp4l[1182854.370]: port 1 (eth0): master sync timeout
+ptp4l[1182855.371]: port 1 (eth0): master sync timeout
+ptp4l[1182856.371]: port 1 (eth0): master sync timeout
+ptp4l[1182857.372]: port 1 (eth0): master sync timeout
+ptp4l[1182858.372]: port 1 (eth0): master sync timeout
+ptp4l[1182859.372]: port 1 (eth0): master sync timeout
+ptp4l[1182860.373]: port 1 (eth0): master sync timeout
+ptp4l[1182861.373]: port 1 (eth0): master sync timeout
+ptp4l[1182862.373]: port 1 (eth0): master sync timeout
+ptp4l[1182863.373]: port 1 (eth0): master sync timeout
+ptp4l[1182864.373]: port 1 (eth0): master sync timeout
+ptp4l[1182865.374]: port 1 (eth0): master sync timeout
+ptp4l[1182866.374]: port 1 (eth0): master sync timeout
+ptp4l[1182867.374]: port 1 (eth0): master sync timeout
+ptp4l[1182868.375]: port 1 (eth0): master sync timeout
+ptp4l[1182869.375]: port 1 (eth0): master sync timeout
+ptp4l[1182870.375]: port 1 (eth0): master sync timeout
+ptp4l[1182871.376]: port 1 (eth0): master sync timeout
+ptp4l[1182872.376]: port 1 (eth0): master sync timeout
+ptp4l[1182873.376]: port 1 (eth0): master sync timeout
+ptp4l[1182874.377]: port 1 (eth0): master sync timeout
+ptp4l[1182875.377]: port 1 (eth0): master sync timeout
+ptp4l[1182876.377]: port 1 (eth0): master sync timeout
+ptp4l[1182877.377]: port 1 (eth0): master sync timeout
+ptp4l[1182878.378]: port 1 (eth0): master sync timeout
+ptp4l[1182879.378]: port 1 (eth0): master sync timeout
+ptp4l[1182880.378]: port 1 (eth0): master sync timeout
+ptp4l[1182881.379]: port 1 (eth0): master sync timeout
+ptp4l[1182882.379]: port 1 (eth0): master sync timeout
+ptp4l[1182883.379]: port 1 (eth0): master sync timeout
+ptp4l[1182884.380]: port 1 (eth0): master sync timeout
+ptp4l[1182885.380]: port 1 (eth0): master sync timeout
+ptp4l[1182886.380]: port 1 (eth0): master sync timeout
+ptp4l[1182887.381]: port 1 (eth0): master sync timeout
+ptp4l[1182888.381]: port 1 (eth0): master sync timeout
+ptp4l[1182889.381]: port 1 (eth0): master sync timeout
+ptp4l[1182890.381]: port 1 (eth0): master sync timeout
+ptp4l[1182891.382]: port 1 (eth0): master sync timeout
+ptp4l[1182892.382]: port 1 (eth0): master sync timeout
+ptp4l[1182893.382]: port 1 (eth0): master sync timeout
+ptp4l[1182894.383]: port 1 (eth0): master sync timeout
+ptp4l[1182895.383]: port 1 (eth0): master sync timeout
+ptp4l[1182896.383]: port 1 (eth0): master sync timeout
+ptp4l[1182897.384]: port 1 (eth0): master sync timeout
+ptp4l[1182898.384]: port 1 (eth0): master sync timeout
+ptp4l[1182899.384]: port 1 (eth0): master sync timeout
+ptp4l[1182900.385]: port 1 (eth0): master sync timeout
+ptp4l[1182901.385]: port 1 (eth0): master sync timeout
+ptp4l[1182902.385]: port 1 (eth0): master sync timeout
+ptp4l[1182903.385]: port 1 (eth0): master sync timeout
+ptp4l[1182904.386]: port 1 (eth0): master sync timeout
+ptp4l[1182905.386]: port 1 (eth0): master sync timeout
+ptp4l[1182906.386]: port 1 (eth0): master sync timeout
+ptp4l[1182907.387]: port 1 (eth0): master sync timeout
+ptp4l[1182908.387]: port 1 (eth0): master sync timeout
+ptp4l[1182909.387]: port 1 (eth0): master sync timeout
+ptp4l[1182910.388]: port 1 (eth0): master sync timeout
+ptp4l[1182911.388]: port 1 (eth0): master sync timeout
+ptp4l[1182912.388]: port 1 (eth0): master sync timeout
+ptp4l[1182913.389]: port 1 (eth0): master sync timeout
+ptp4l[1182914.389]: port 1 (eth0): master sync timeout
+ptp4l[1182915.389]: port 1 (eth0): master sync timeout
+ptp4l[1182916.390]: port 1 (eth0): master sync timeout
+ptp4l[1182917.390]: port 1 (eth0): master sync timeout
+ptp4l[1182918.390]: port 1 (eth0): master sync timeout
+ptp4l[1182919.390]: port 1 (eth0): master sync timeout
+ptp4l[1182920.391]: port 1 (eth0): master sync timeout
+ptp4l[1182921.391]: port 1 (eth0): master sync timeout
+ptp4l[1182922.391]: port 1 (eth0): master sync timeout
+ptp4l[1182923.391]: port 1 (eth0): master sync timeout
+ptp4l[1182924.392]: port 1 (eth0): master sync timeout
+ptp4l[1182925.392]: port 1 (eth0): master sync timeout
+ptp4l[1182926.392]: port 1 (eth0): master sync timeout
+ptp4l[1182927.392]: port 1 (eth0): master sync timeout
+ptp4l[1182928.393]: port 1 (eth0): master sync timeout
+ptp4l[1182929.393]: port 1 (eth0): master sync timeout
+ptp4l[1182930.393]: port 1 (eth0): master sync timeout
+ptp4l[1182931.394]: port 1 (eth0): master sync timeout
+ptp4l[1182932.394]: port 1 (eth0): master sync timeout
+ptp4l[1182933.394]: port 1 (eth0): master sync timeout
+ptp4l[1182934.395]: port 1 (eth0): master sync timeout
+ptp4l[1182935.395]: port 1 (eth0): master sync timeout
+ptp4l[1182936.395]: port 1 (eth0): master sync timeout
+ptp4l[1182937.395]: port 1 (eth0): master sync timeout
+ptp4l[1182938.396]: port 1 (eth0): master sync timeout
+ptp4l[1182939.396]: port 1 (eth0): master sync timeout
+ptp4l[1182940.396]: port 1 (eth0): master sync timeout
+ptp4l[1182941.397]: port 1 (eth0): master sync timeout
+ptp4l[1182942.397]: port 1 (eth0): master sync timeout
+ptp4l[1182943.397]: port 1 (eth0): master sync timeout
+ptp4l[1182944.398]: port 1 (eth0): master sync timeout
+ptp4l[1182945.398]: port 1 (eth0): master sync timeout
+ptp4l[1182946.398]: port 1 (eth0): master sync timeout
+ptp4l[1182947.399]: port 1 (eth0): master sync timeout
+ptp4l[1182948.399]: port 1 (eth0): master sync timeout
+ptp4l[1182949.399]: port 1 (eth0): master sync timeout
+ptp4l[1182950.399]: port 1 (eth0): master sync timeout
+ptp4l[1182951.400]: port 1 (eth0): master sync timeout
+ptp4l[1182952.400]: port 1 (eth0): master sync timeout
+ptp4l[1182953.400]: port 1 (eth0): master sync timeout
+ptp4l[1182954.401]: port 1 (eth0): master sync timeout
+ptp4l[1182955.401]: port 1 (eth0): master sync timeout
+ptp4l[1182956.401]: port 1 (eth0): master sync timeout
+ptp4l[1182957.402]: port 1 (eth0): master sync timeout
+ptp4l[1182958.402]: port 1 (eth0): master sync timeout
+ptp4l[1182959.402]: port 1 (eth0): master sync timeout
+ptp4l[1182960.402]: port 1 (eth0): master sync timeout
+ptp4l[1182961.403]: port 1 (eth0): master sync timeout
+ptp4l[1182962.403]: port 1 (eth0): master sync timeout
+ptp4l[1182963.403]: port 1 (eth0): master sync timeout
+ptp4l[1182964.404]: port 1 (eth0): master sync timeout
+ptp4l[1182965.404]: port 1 (eth0): master sync timeout
+ptp4l[1182966.404]: port 1 (eth0): master sync timeout
+ptp4l[1182967.405]: port 1 (eth0): master sync timeout
+ptp4l[1182968.405]: port 1 (eth0): master sync timeout
+ptp4l[1182969.405]: port 1 (eth0): master sync timeout
+ptp4l[1182970.405]: port 1 (eth0): master sync timeout
+ptp4l[1182971.406]: port 1 (eth0): master sync timeout
+ptp4l[1182972.406]: port 1 (eth0): master sync timeout
+ptp4l[1182973.406]: port 1 (eth0): master sync timeout
+ptp4l[1182974.407]: port 1 (eth0): master sync timeout
+ptp4l[1182975.407]: port 1 (eth0): master sync timeout
+ptp4l[1182976.407]: port 1 (eth0): master sync timeout
+ptp4l[1182977.408]: port 1 (eth0): master sync timeout
+ptp4l[1182978.408]: port 1 (eth0): master sync timeout
+ptp4l[1182979.408]: port 1 (eth0): master sync timeout
+ptp4l[1182980.409]: port 1 (eth0): master sync timeout
+ptp4l[1182981.409]: port 1 (eth0): master sync timeout
+ptp4l[1182982.409]: port 1 (eth0): master sync timeout
+ptp4l[1182983.410]: port 1 (eth0): master sync timeout
+ptp4l[1182984.410]: port 1 (eth0): master sync timeout
+ptp4l[1182985.410]: port 1 (eth0): master sync timeout
+ptp4l[1182986.410]: port 1 (eth0): master sync timeout
+ptp4l[1182987.411]: port 1 (eth0): master sync timeout
+ptp4l[1182988.411]: port 1 (eth0): master sync timeout
+ptp4l[1182989.411]: port 1 (eth0): master sync timeout
+ptp4l[1182990.412]: port 1 (eth0): master sync timeout
+ptp4l[1182991.412]: port 1 (eth0): master sync timeout
+ptp4l[1182992.412]: port 1 (eth0): master sync timeout
+ptp4l[1182993.413]: port 1 (eth0): master sync timeout
+ptp4l[1182994.413]: port 1 (eth0): master sync timeout
+ptp4l[1182995.413]: port 1 (eth0): master sync timeout
+ptp4l[1182996.413]: port 1 (eth0): master sync timeout
+ptp4l[1182997.414]: port 1 (eth0): master sync timeout
+ptp4l[1182998.414]: port 1 (eth0): master sync timeout
+ptp4l[1182999.414]: port 1 (eth0): master sync timeout
+ptp4l[1183000.415]: port 1 (eth0): master sync timeout
+ptp4l[1183001.415]: port 1 (eth0): master sync timeout
+ptp4l[1183002.415]: port 1 (eth0): master sync timeout
+ptp4l[1183003.416]: port 1 (eth0): master sync timeout
+ptp4l[1183004.416]: port 1 (eth0): master sync timeout
+ptp4l[1183005.416]: port 1 (eth0): master sync timeout
+ptp4l[1183006.417]: port 1 (eth0): master sync timeout
+ptp4l[1183007.417]: port 1 (eth0): master sync timeout
+ptp4l[1183008.417]: port 1 (eth0): master sync timeout
+ptp4l[1183009.417]: port 1 (eth0): master sync timeout
+ptp4l[1183010.418]: port 1 (eth0): master sync timeout
+ptp4l[1183011.418]: port 1 (eth0): master sync timeout
+ptp4l[1183012.418]: port 1 (eth0): master sync timeout
+ptp4l[1183013.419]: port 1 (eth0): master sync timeout
+ptp4l[1183014.419]: port 1 (eth0): master sync timeout
+ptp4l[1183015.419]: port 1 (eth0): master sync timeout
+ptp4l[1183016.419]: port 1 (eth0): master sync timeout
+ptp4l[1183017.420]: port 1 (eth0): master sync timeout
+ptp4l[1183018.420]: port 1 (eth0): master sync timeout
+ptp4l[1183019.420]: port 1 (eth0): master sync timeout
+ptp4l[1183020.421]: port 1 (eth0): master sync timeout
+ptp4l[1183021.421]: port 1 (eth0): master sync timeout
+ptp4l[1183022.421]: port 1 (eth0): master sync timeout
+ptp4l[1183023.422]: port 1 (eth0): master sync timeout
+ptp4l[1183024.422]: port 1 (eth0): master sync timeout
+ptp4l[1183025.422]: port 1 (eth0): master sync timeout
+ptp4l[1183026.423]: port 1 (eth0): master sync timeout
+ptp4l[1183027.423]: port 1 (eth0): master sync timeout
+ptp4l[1183028.423]: port 1 (eth0): master sync timeout
+ptp4l[1183029.432]: port 1 (eth0): master sync timeout
+ptp4l[1183030.432]: port 1 (eth0): master sync timeout
+ptp4l[1183031.433]: port 1 (eth0): master sync timeout
+ptp4l[1183032.433]: port 1 (eth0): master sync timeout
+ptp4l[1183033.433]: port 1 (eth0): master sync timeout
+ptp4l[1183034.434]: port 1 (eth0): master sync timeout
+ptp4l[1183035.434]: port 1 (eth0): master sync timeout
+ptp4l[1183036.434]: port 1 (eth0): master sync timeout
+ptp4l[1183037.434]: port 1 (eth0): master sync timeout
+ptp4l[1183038.435]: port 1 (eth0): master sync timeout
+ptp4l[1183039.435]: port 1 (eth0): master sync timeout
+ptp4l[1183040.435]: port 1 (eth0): master sync timeout
+ptp4l[1183041.435]: port 1 (eth0): master sync timeout
+ptp4l[1183042.435]: port 1 (eth0): master sync timeout
+ptp4l[1183043.436]: port 1 (eth0): master sync timeout
+ptp4l[1183044.436]: port 1 (eth0): master sync timeout
+ptp4l[1183045.436]: port 1 (eth0): master sync timeout
+ptp4l[1183046.437]: port 1 (eth0): master sync timeout
+ptp4l[1183047.437]: port 1 (eth0): master sync timeout
+ptp4l[1183048.437]: port 1 (eth0): master sync timeout
+ptp4l[1183049.437]: port 1 (eth0): master sync timeout
+ptp4l[1183050.438]: port 1 (eth0): master sync timeout
+ptp4l[1183051.438]: port 1 (eth0): master sync timeout
+ptp4l[1183052.438]: port 1 (eth0): master sync timeout
+ptp4l[1183053.439]: port 1 (eth0): master sync timeout
+ptp4l[1183054.439]: port 1 (eth0): master sync timeout
+ptp4l[1183055.439]: port 1 (eth0): master sync timeout
+ptp4l[1183056.440]: port 1 (eth0): master sync timeout
+ptp4l[1183057.440]: port 1 (eth0): master sync timeout
+ptp4l[1183058.440]: port 1 (eth0): master sync timeout
+ptp4l[1183059.441]: port 1 (eth0): master sync timeout
+ptp4l[1183060.441]: port 1 (eth0): master sync timeout
+ptp4l[1183061.441]: port 1 (eth0): master sync timeout
+ptp4l[1183062.442]: port 1 (eth0): master sync timeout
+ptp4l[1183063.442]: port 1 (eth0): master sync timeout
+ptp4l[1183064.442]: port 1 (eth0): master sync timeout
+ptp4l[1183065.443]: port 1 (eth0): master sync timeout
+ptp4l[1183066.443]: port 1 (eth0): master sync timeout
+ptp4l[1183067.443]: port 1 (eth0): master sync timeout
+ptp4l[1183068.443]: port 1 (eth0): master sync timeout
+ptp4l[1183069.444]: port 1 (eth0): master sync timeout
+ptp4l[1183070.444]: port 1 (eth0): master sync timeout
+ptp4l[1183071.444]: port 1 (eth0): master sync timeout
+ptp4l[1183072.445]: port 1 (eth0): master sync timeout
+ptp4l[1183073.445]: port 1 (eth0): master sync timeout
+ptp4l[1183074.454]: port 1 (eth0): master sync timeout
+ptp4l[1183075.454]: port 1 (eth0): master sync timeout
+ptp4l[1183076.454]: port 1 (eth0): master sync timeout
+ptp4l[1183077.454]: port 1 (eth0): master sync timeout
+ptp4l[1183078.455]: port 1 (eth0): master sync timeout
+ptp4l[1183079.457]: port 1 (eth0): master sync timeout
+ptp4l[1183080.457]: port 1 (eth0): master sync timeout
+ptp4l[1183081.457]: port 1 (eth0): master sync timeout
+ptp4l[1183082.458]: port 1 (eth0): master sync timeout
+ptp4l[1183083.458]: port 1 (eth0): master sync timeout
+ptp4l[1183084.458]: port 1 (eth0): master sync timeout
+ptp4l[1183085.459]: port 1 (eth0): master sync timeout
+ptp4l[1183086.459]: port 1 (eth0): master sync timeout
+ptp4l[1183087.459]: port 1 (eth0): master sync timeout
+ptp4l[1183088.460]: port 1 (eth0): master sync timeout
+ptp4l[1183089.460]: port 1 (eth0): master sync timeout
+ptp4l[1183090.460]: port 1 (eth0): master sync timeout
+ptp4l[1183091.460]: port 1 (eth0): master sync timeout
+ptp4l[1183092.461]: port 1 (eth0): master sync timeout
+ptp4l[1183093.461]: port 1 (eth0): master sync timeout
+ptp4l[1183094.461]: port 1 (eth0): master sync timeout
+ptp4l[1183095.462]: port 1 (eth0): master sync timeout
+ptp4l[1183096.462]: port 1 (eth0): master sync timeout
+ptp4l[1183097.462]: port 1 (eth0): master sync timeout
+ptp4l[1183098.463]: port 1 (eth0): master sync timeout
+ptp4l[1183099.463]: port 1 (eth0): master sync timeout
+ptp4l[1183100.463]: port 1 (eth0): master sync timeout
+ptp4l[1183101.463]: port 1 (eth0): master sync timeout
+ptp4l[1183102.464]: port 1 (eth0): master sync timeout
+ptp4l[1183103.464]: port 1 (eth0): master sync timeout
+ptp4l[1183104.464]: port 1 (eth0): master sync timeout
+ptp4l[1183105.465]: port 1 (eth0): master sync timeout
+ptp4l[1183106.465]: port 1 (eth0): master sync timeout
+ptp4l[1183107.465]: port 1 (eth0): master sync timeout
+ptp4l[1183108.466]: port 1 (eth0): master sync timeout
+ptp4l[1183109.466]: port 1 (eth0): master sync timeout
+ptp4l[1183110.466]: port 1 (eth0): master sync timeout
+ptp4l[1183111.467]: port 1 (eth0): master sync timeout
+ptp4l[1183112.467]: port 1 (eth0): master sync timeout
+ptp4l[1183113.467]: port 1 (eth0): master sync timeout
+ptp4l[1183114.467]: port 1 (eth0): master sync timeout
+ptp4l[1183115.468]: port 1 (eth0): master sync timeout
+ptp4l[1183116.468]: port 1 (eth0): master sync timeout
+ptp4l[1183117.468]: port 1 (eth0): master sync timeout
+ptp4l[1183118.469]: port 1 (eth0): master sync timeout
+ptp4l[1183119.469]: port 1 (eth0): master sync timeout
+ptp4l[1183120.469]: port 1 (eth0): master sync timeout
+ptp4l[1183121.469]: port 1 (eth0): master sync timeout
+ptp4l[1183122.470]: port 1 (eth0): master sync timeout
+ptp4l[1183123.470]: port 1 (eth0): master sync timeout
+ptp4l[1183124.470]: port 1 (eth0): master sync timeout
+ptp4l[1183125.470]: port 1 (eth0): master sync timeout
+ptp4l[1183126.471]: port 1 (eth0): master sync timeout
+ptp4l[1183127.471]: port 1 (eth0): master sync timeout
+ptp4l[1183128.471]: port 1 (eth0): master sync timeout
+ptp4l[1183129.471]: port 1 (eth0): master sync timeout
+ptp4l[1183130.472]: port 1 (eth0): master sync timeout
+ptp4l[1183131.472]: port 1 (eth0): master sync timeout
+ptp4l[1183132.472]: port 1 (eth0): master sync timeout
+ptp4l[1183133.473]: port 1 (eth0): master sync timeout
+ptp4l[1183134.473]: port 1 (eth0): master sync timeout
+ptp4l[1183135.473]: port 1 (eth0): master sync timeout
+ptp4l[1183136.474]: port 1 (eth0): master sync timeout
+ptp4l[1183137.474]: port 1 (eth0): master sync timeout
+ptp4l[1183138.474]: port 1 (eth0): master sync timeout
+ptp4l[1183139.475]: port 1 (eth0): master sync timeout
+ptp4l[1183140.475]: port 1 (eth0): master sync timeout
+ptp4l[1183141.475]: port 1 (eth0): master sync timeout
+ptp4l[1183142.476]: port 1 (eth0): master sync timeout
+ptp4l[1183143.476]: port 1 (eth0): master sync timeout
+ptp4l[1183144.476]: port 1 (eth0): master sync timeout
+ptp4l[1183145.476]: port 1 (eth0): master sync timeout
+ptp4l[1183146.477]: port 1 (eth0): master sync timeout
+ptp4l[1183147.477]: port 1 (eth0): master sync timeout
+ptp4l[1183148.477]: port 1 (eth0): master sync timeout
+ptp4l[1183149.478]: port 1 (eth0): master sync timeout
+ptp4l[1183150.478]: port 1 (eth0): master sync timeout
+ptp4l[1183151.478]: port 1 (eth0): master sync timeout
+ptp4l[1183152.479]: port 1 (eth0): master sync timeout
+ptp4l[1183153.479]: port 1 (eth0): master sync timeout
+ptp4l[1183154.479]: port 1 (eth0): master sync timeout
+ptp4l[1183155.480]: port 1 (eth0): master sync timeout
+ptp4l[1183156.480]: port 1 (eth0): master sync timeout
+ptp4l[1183157.480]: port 1 (eth0): master sync timeout
+ptp4l[1183158.481]: port 1 (eth0): master sync timeout
+ptp4l[1183159.481]: port 1 (eth0): master sync timeout
+ptp4l[1183160.481]: port 1 (eth0): master sync timeout
+ptp4l[1183161.481]: port 1 (eth0): master sync timeout
+ptp4l[1183162.482]: port 1 (eth0): master sync timeout
+ptp4l[1183163.482]: port 1 (eth0): master sync timeout
+ptp4l[1183164.482]: port 1 (eth0): master sync timeout
+ptp4l[1183165.483]: port 1 (eth0): master sync timeout
+ptp4l[1183166.483]: port 1 (eth0): master sync timeout
+ptp4l[1183167.483]: port 1 (eth0): master sync timeout
+ptp4l[1183168.484]: port 1 (eth0): master sync timeout
+ptp4l[1183169.484]: port 1 (eth0): master sync timeout
+ptp4l[1183170.484]: port 1 (eth0): master sync timeout
+ptp4l[1183171.485]: port 1 (eth0): master sync timeout
+ptp4l[1183172.485]: port 1 (eth0): master sync timeout
+ptp4l[1183173.485]: port 1 (eth0): master sync timeout
+ptp4l[1183174.485]: port 1 (eth0): master sync timeout
+ptp4l[1183175.486]: port 1 (eth0): master sync timeout
+ptp4l[1183176.486]: port 1 (eth0): master sync timeout
+ptp4l[1183177.486]: port 1 (eth0): master sync timeout
+ptp4l[1183178.487]: port 1 (eth0): master sync timeout
+ptp4l[1183179.487]: port 1 (eth0): master sync timeout
+ptp4l[1183180.487]: port 1 (eth0): master sync timeout
+ptp4l[1183181.487]: port 1 (eth0): master sync timeout
+ptp4l[1183182.488]: port 1 (eth0): master sync timeout
+ptp4l[1183183.488]: port 1 (eth0): master sync timeout
+ptp4l[1183184.488]: port 1 (eth0): master sync timeout
+ptp4l[1183185.489]: port 1 (eth0): master sync timeout
+ptp4l[1183186.489]: port 1 (eth0): master sync timeout
+ptp4l[1183187.489]: port 1 (eth0): master sync timeout
+ptp4l[1183188.490]: port 1 (eth0): master sync timeout
+ptp4l[1183189.490]: port 1 (eth0): master sync timeout
+ptp4l[1183190.490]: port 1 (eth0): master sync timeout
+ptp4l[1183191.491]: port 1 (eth0): master sync timeout
+ptp4l[1183192.491]: port 1 (eth0): master sync timeout
+ptp4l[1183193.491]: port 1 (eth0): master sync timeout
+ptp4l[1183194.492]: port 1 (eth0): master sync timeout
+ptp4l[1183195.492]: port 1 (eth0): master sync timeout
+ptp4l[1183196.492]: port 1 (eth0): master sync timeout
+ptp4l[1183197.493]: port 1 (eth0): master sync timeout
+ptp4l[1183198.493]: port 1 (eth0): master sync timeout
+ptp4l[1183199.493]: port 1 (eth0): master sync timeout
+ptp4l[1183200.494]: port 1 (eth0): master sync timeout
+ptp4l[1183201.494]: port 1 (eth0): master sync timeout
+ptp4l[1183202.494]: port 1 (eth0): master sync timeout
+ptp4l[1183203.495]: port 1 (eth0): master sync timeout
+ptp4l[1183204.495]: port 1 (eth0): master sync timeout
+ptp4l[1183205.495]: port 1 (eth0): master sync timeout
+ptp4l[1183206.495]: port 1 (eth0): master sync timeout
+ptp4l[1183207.496]: port 1 (eth0): master sync timeout
+ptp4l[1183208.496]: port 1 (eth0): master sync timeout
+ptp4l[1183209.496]: port 1 (eth0): master sync timeout
+ptp4l[1183210.497]: port 1 (eth0): master sync timeout
+ptp4l[1183211.497]: port 1 (eth0): master sync timeout
+ptp4l[1183212.497]: port 1 (eth0): master sync timeout
+ptp4l[1183213.498]: port 1 (eth0): master sync timeout
+ptp4l[1183214.498]: port 1 (eth0): master sync timeout
+ptp4l[1183215.498]: port 1 (eth0): master sync timeout
+ptp4l[1183216.499]: port 1 (eth0): master sync timeout
+ptp4l[1183217.499]: port 1 (eth0): master sync timeout
+ptp4l[1183218.499]: port 1 (eth0): master sync timeout
+ptp4l[1183219.500]: port 1 (eth0): master sync timeout
+ptp4l[1183220.500]: port 1 (eth0): master sync timeout
+ptp4l[1183221.500]: port 1 (eth0): master sync timeout
+ptp4l[1183222.501]: port 1 (eth0): master sync timeout
+ptp4l[1183223.501]: port 1 (eth0): master sync timeout
+ptp4l[1183224.501]: port 1 (eth0): master sync timeout
+ptp4l[1183225.502]: port 1 (eth0): master sync timeout
+ptp4l[1183226.502]: port 1 (eth0): master sync timeout
+ptp4l[1183227.502]: port 1 (eth0): master sync timeout
+ptp4l[1183228.503]: port 1 (eth0): master sync timeout
+ptp4l[1183229.503]: port 1 (eth0): master sync timeout
+ptp4l[1183230.503]: port 1 (eth0): master sync timeout
+ptp4l[1183231.504]: port 1 (eth0): master sync timeout
+ptp4l[1183232.504]: port 1 (eth0): master sync timeout
+ptp4l[1183233.504]: port 1 (eth0): master sync timeout
+ptp4l[1183234.505]: port 1 (eth0): master sync timeout
+ptp4l[1183235.505]: port 1 (eth0): master sync timeout
+ptp4l[1183236.505]: port 1 (eth0): master sync timeout
+ptp4l[1183237.506]: port 1 (eth0): master sync timeout
+ptp4l[1183238.506]: port 1 (eth0): master sync timeout
+ptp4l[1183239.506]: port 1 (eth0): master sync timeout
+ptp4l[1183240.507]: port 1 (eth0): master sync timeout
+ptp4l[1183241.507]: port 1 (eth0): master sync timeout
+ptp4l[1183242.507]: port 1 (eth0): master sync timeout
+ptp4l[1183243.507]: port 1 (eth0): master sync timeout
+ptp4l[1183244.508]: port 1 (eth0): master sync timeout
+ptp4l[1183245.508]: port 1 (eth0): master sync timeout
+ptp4l[1183246.508]: port 1 (eth0): master sync timeout
+ptp4l[1183247.508]: port 1 (eth0): master sync timeout
+ptp4l[1183248.509]: port 1 (eth0): master sync timeout
+ptp4l[1183249.509]: port 1 (eth0): master sync timeout
+ptp4l[1183250.509]: port 1 (eth0): master sync timeout
+ptp4l[1183251.510]: port 1 (eth0): master sync timeout
+ptp4l[1183252.510]: port 1 (eth0): master sync timeout
+ptp4l[1183253.510]: port 1 (eth0): master sync timeout
+ptp4l[1183254.511]: port 1 (eth0): master sync timeout
+ptp4l[1183255.511]: port 1 (eth0): master sync timeout
+ptp4l[1183256.511]: port 1 (eth0): master sync timeout
+ptp4l[1183257.512]: port 1 (eth0): master sync timeout
+ptp4l[1183258.512]: port 1 (eth0): master sync timeout
+ptp4l[1183259.512]: port 1 (eth0): master sync timeout
+ptp4l[1183260.512]: port 1 (eth0): master sync timeout
+ptp4l[1183261.513]: port 1 (eth0): master sync timeout
+ptp4l[1183262.513]: port 1 (eth0): master sync timeout
+ptp4l[1183263.513]: port 1 (eth0): master sync timeout
+ptp4l[1183264.513]: port 1 (eth0): master sync timeout
+ptp4l[1183265.514]: port 1 (eth0): master sync timeout
+ptp4l[1183266.514]: port 1 (eth0): master sync timeout
+ptp4l[1183267.514]: port 1 (eth0): master sync timeout
+ptp4l[1183268.514]: port 1 (eth0): master sync timeout
+ptp4l[1183269.515]: port 1 (eth0): master sync timeout
+ptp4l[1183270.515]: port 1 (eth0): master sync timeout
+ptp4l[1183271.515]: port 1 (eth0): master sync timeout
+ptp4l[1183272.515]: port 1 (eth0): master sync timeout
+ptp4l[1183273.515]: port 1 (eth0): master sync timeout
+ptp4l[1183274.516]: port 1 (eth0): master sync timeout
+ptp4l[1183275.516]: port 1 (eth0): master sync timeout
+ptp4l[1183276.516]: port 1 (eth0): master sync timeout
+ptp4l[1183277.517]: port 1 (eth0): master sync timeout
+ptp4l[1183278.517]: port 1 (eth0): master sync timeout
+ptp4l[1183279.517]: port 1 (eth0): master sync timeout
+ptp4l[1183280.517]: port 1 (eth0): master sync timeout
+ptp4l[1183281.517]: port 1 (eth0): master sync timeout
+ptp4l[1183282.518]: port 1 (eth0): master sync timeout
+ptp4l[1183283.518]: port 1 (eth0): master sync timeout
+ptp4l[1183284.518]: port 1 (eth0): master sync timeout
+ptp4l[1183285.518]: port 1 (eth0): master sync timeout
+ptp4l[1183286.519]: port 1 (eth0): master sync timeout
+ptp4l[1183287.519]: port 1 (eth0): master sync timeout
+ptp4l[1183288.519]: port 1 (eth0): master sync timeout
+ptp4l[1183289.520]: port 1 (eth0): master sync timeout
+ptp4l[1183290.520]: port 1 (eth0): master sync timeout
+ptp4l[1183291.520]: port 1 (eth0): master sync timeout
+ptp4l[1183292.520]: port 1 (eth0): master sync timeout
+ptp4l[1183293.521]: port 1 (eth0): master sync timeout
+ptp4l[1183294.521]: port 1 (eth0): master sync timeout
+ptp4l[1183295.521]: port 1 (eth0): master sync timeout
+ptp4l[1183296.522]: port 1 (eth0): master sync timeout
+ptp4l[1183297.522]: port 1 (eth0): master sync timeout
+ptp4l[1183298.522]: port 1 (eth0): master sync timeout
+ptp4l[1183299.522]: port 1 (eth0): master sync timeout
+ptp4l[1183300.523]: port 1 (eth0): master sync timeout
+ptp4l[1183301.523]: port 1 (eth0): master sync timeout
+ptp4l[1183302.523]: port 1 (eth0): master sync timeout
+ptp4l[1183303.524]: port 1 (eth0): master sync timeout
+ptp4l[1183304.524]: port 1 (eth0): master sync timeout
+ptp4l[1183305.524]: port 1 (eth0): master sync timeout
+ptp4l[1183306.524]: port 1 (eth0): master sync timeout
+ptp4l[1183307.525]: port 1 (eth0): master sync timeout
+ptp4l[1183308.525]: port 1 (eth0): master sync timeout
+ptp4l[1183309.525]: port 1 (eth0): master sync timeout
+ptp4l[1183310.525]: port 1 (eth0): master sync timeout
+ptp4l[1183311.526]: port 1 (eth0): master sync timeout
+ptp4l[1183312.526]: port 1 (eth0): master sync timeout
+ptp4l[1183313.526]: port 1 (eth0): master sync timeout
+ptp4l[1183314.526]: port 1 (eth0): master sync timeout
+ptp4l[1183315.527]: port 1 (eth0): master sync timeout
+ptp4l[1183316.527]: port 1 (eth0): master sync timeout
+ptp4l[1183317.527]: port 1 (eth0): master sync timeout
+ptp4l[1183318.528]: port 1 (eth0): master sync timeout
+ptp4l[1183319.528]: port 1 (eth0): master sync timeout
+ptp4l[1183320.528]: port 1 (eth0): master sync timeout
+ptp4l[1183321.529]: port 1 (eth0): master sync timeout
+ptp4l[1183322.529]: port 1 (eth0): master sync timeout
+ptp4l[1183323.530]: port 1 (eth0): master sync timeout
+ptp4l[1183324.530]: port 1 (eth0): master sync timeout
+ptp4l[1183325.530]: port 1 (eth0): master sync timeout
+ptp4l[1183326.531]: port 1 (eth0): master sync timeout
+ptp4l[1183327.531]: port 1 (eth0): master sync timeout
+ptp4l[1183328.531]: port 1 (eth0): master sync timeout
+ptp4l[1183329.532]: port 1 (eth0): master sync timeout
+ptp4l[1183330.532]: port 1 (eth0): master sync timeout
+ptp4l[1183331.532]: port 1 (eth0): master sync timeout
+ptp4l[1183332.533]: port 1 (eth0): master sync timeout
+ptp4l[1183333.533]: port 1 (eth0): master sync timeout
+ptp4l[1183334.533]: port 1 (eth0): master sync timeout
+ptp4l[1183335.533]: port 1 (eth0): master sync timeout
+ptp4l[1183336.533]: port 1 (eth0): master sync timeout
+ptp4l[1183337.534]: port 1 (eth0): master sync timeout
+ptp4l[1183338.534]: port 1 (eth0): master sync timeout
+ptp4l[1183339.534]: port 1 (eth0): master sync timeout
+ptp4l[1183340.535]: port 1 (eth0): master sync timeout
+ptp4l[1183341.535]: port 1 (eth0): master sync timeout
+ptp4l[1183342.536]: port 1 (eth0): master sync timeout
+ptp4l[1183343.536]: port 1 (eth0): master sync timeout
+ptp4l[1183344.536]: port 1 (eth0): master sync timeout
+ptp4l[1183345.537]: port 1 (eth0): master sync timeout
+ptp4l[1183346.537]: port 1 (eth0): master sync timeout
+ptp4l[1183347.537]: port 1 (eth0): master sync timeout
+ptp4l[1183348.538]: port 1 (eth0): master sync timeout
+ptp4l[1183349.538]: port 1 (eth0): master sync timeout
+ptp4l[1183350.538]: port 1 (eth0): master sync timeout
+ptp4l[1183351.539]: port 1 (eth0): master sync timeout
+ptp4l[1183352.539]: port 1 (eth0): master sync timeout
+ptp4l[1183353.539]: port 1 (eth0): master sync timeout
+ptp4l[1183354.540]: port 1 (eth0): master sync timeout
+ptp4l[1183355.540]: port 1 (eth0): master sync timeout
+ptp4l[1183356.540]: port 1 (eth0): master sync timeout
+ptp4l[1183357.541]: port 1 (eth0): master sync timeout
+ptp4l[1183358.541]: port 1 (eth0): master sync timeout
+ptp4l[1183359.541]: port 1 (eth0): master sync timeout
+ptp4l[1183360.542]: port 1 (eth0): master sync timeout
+ptp4l[1183361.542]: port 1 (eth0): master sync timeout
+ptp4l[1183362.542]: port 1 (eth0): master sync timeout
+ptp4l[1183363.543]: port 1 (eth0): master sync timeout
+ptp4l[1183364.543]: port 1 (eth0): master sync timeout
+ptp4l[1183365.543]: port 1 (eth0): master sync timeout
+ptp4l[1183366.544]: port 1 (eth0): master sync timeout
+ptp4l[1183367.544]: port 1 (eth0): master sync timeout
+ptp4l[1183368.544]: port 1 (eth0): master sync timeout
+ptp4l[1183369.545]: port 1 (eth0): master sync timeout
+ptp4l[1183370.545]: port 1 (eth0): master sync timeout
+ptp4l[1183371.545]: port 1 (eth0): master sync timeout
+ptp4l[1183372.546]: port 1 (eth0): master sync timeout
+ptp4l[1183373.546]: port 1 (eth0): master sync timeout
+ptp4l[1183374.546]: port 1 (eth0): master sync timeout
+ptp4l[1183375.547]: port 1 (eth0): master sync timeout
+ptp4l[1183376.547]: port 1 (eth0): master sync timeout
+ptp4l[1183377.547]: port 1 (eth0): master sync timeout
+ptp4l[1183378.547]: port 1 (eth0): master sync timeout
+ptp4l[1183379.548]: port 1 (eth0): master sync timeout
+ptp4l[1183380.548]: port 1 (eth0): master sync timeout
+ptp4l[1183381.548]: port 1 (eth0): master sync timeout
+ptp4l[1183382.549]: port 1 (eth0): master sync timeout
+ptp4l[1183383.549]: port 1 (eth0): master sync timeout
+ptp4l[1183384.549]: port 1 (eth0): master sync timeout
+ptp4l[1183385.549]: port 1 (eth0): master sync timeout
+ptp4l[1183386.550]: port 1 (eth0): master sync timeout
+ptp4l[1183387.550]: port 1 (eth0): master sync timeout
+ptp4l[1183388.550]: port 1 (eth0): master sync timeout
+ptp4l[1183389.551]: port 1 (eth0): master sync timeout
+ptp4l[1183390.551]: port 1 (eth0): master sync timeout
+ptp4l[1183391.551]: port 1 (eth0): master sync timeout
+ptp4l[1183392.551]: port 1 (eth0): master sync timeout
+ptp4l[1183393.552]: port 1 (eth0): master sync timeout
+ptp4l[1183394.552]: port 1 (eth0): master sync timeout
+ptp4l[1183395.552]: port 1 (eth0): master sync timeout
+ptp4l[1183396.553]: port 1 (eth0): master sync timeout
+ptp4l[1183397.553]: port 1 (eth0): master sync timeout
+ptp4l[1183398.553]: port 1 (eth0): master sync timeout
+ptp4l[1183399.554]: port 1 (eth0): master sync timeout
+ptp4l[1183400.554]: port 1 (eth0): master sync timeout
+ptp4l[1183401.554]: port 1 (eth0): master sync timeout
+ptp4l[1183402.555]: port 1 (eth0): master sync timeout
+ptp4l[1183403.555]: port 1 (eth0): master sync timeout
+ptp4l[1183404.555]: port 1 (eth0): master sync timeout
+ptp4l[1183405.555]: port 1 (eth0): master sync timeout
+ptp4l[1183406.556]: port 1 (eth0): master sync timeout
+ptp4l[1183407.556]: port 1 (eth0): master sync timeout
+ptp4l[1183408.556]: port 1 (eth0): master sync timeout
+ptp4l[1183409.557]: port 1 (eth0): master sync timeout
+ptp4l[1183410.557]: port 1 (eth0): master sync timeout
+ptp4l[1183411.557]: port 1 (eth0): master sync timeout
+ptp4l[1183412.558]: port 1 (eth0): master sync timeout
+ptp4l[1183413.558]: port 1 (eth0): master sync timeout
+ptp4l[1183414.558]: port 1 (eth0): master sync timeout
+ptp4l[1183415.559]: port 1 (eth0): master sync timeout
+ptp4l[1183416.559]: port 1 (eth0): master sync timeout
+ptp4l[1183417.559]: port 1 (eth0): master sync timeout
+ptp4l[1183418.559]: port 1 (eth0): master sync timeout
+ptp4l[1183419.560]: port 1 (eth0): master sync timeout
+ptp4l[1183420.560]: port 1 (eth0): master sync timeout
+ptp4l[1183421.560]: port 1 (eth0): master sync timeout
+ptp4l[1183422.561]: port 1 (eth0): master sync timeout
+ptp4l[1183423.561]: port 1 (eth0): master sync timeout
+ptp4l[1183424.561]: port 1 (eth0): master sync timeout
+ptp4l[1183425.562]: port 1 (eth0): master sync timeout
+ptp4l[1183426.562]: port 1 (eth0): master sync timeout
+ptp4l[1183427.562]: port 1 (eth0): master sync timeout
+ptp4l[1183428.563]: port 1 (eth0): master sync timeout
+ptp4l[1183429.563]: port 1 (eth0): master sync timeout
+ptp4l[1183430.563]: port 1 (eth0): master sync timeout
+ptp4l[1183431.564]: port 1 (eth0): master sync timeout
+ptp4l[1183432.564]: port 1 (eth0): master sync timeout
+ptp4l[1183433.564]: port 1 (eth0): master sync timeout
+ptp4l[1183434.564]: port 1 (eth0): master sync timeout
+ptp4l[1183435.565]: port 1 (eth0): master sync timeout
+ptp4l[1183436.565]: port 1 (eth0): master sync timeout
+ptp4l[1183437.565]: port 1 (eth0): master sync timeout
+ptp4l[1183438.566]: port 1 (eth0): master sync timeout
+ptp4l[1183439.566]: port 1 (eth0): master sync timeout
+ptp4l[1183440.566]: port 1 (eth0): master sync timeout
+ptp4l[1183441.567]: port 1 (eth0): master sync timeout
+ptp4l[1183442.567]: port 1 (eth0): master sync timeout
+ptp4l[1183443.567]: port 1 (eth0): master sync timeout
+ptp4l[1183444.568]: port 1 (eth0): master sync timeout
+ptp4l[1183445.568]: port 1 (eth0): master sync timeout
+ptp4l[1183446.568]: port 1 (eth0): master sync timeout
+ptp4l[1183447.569]: port 1 (eth0): master sync timeout
+ptp4l[1183448.569]: port 1 (eth0): master sync timeout
+ptp4l[1183449.569]: port 1 (eth0): master sync timeout
+ptp4l[1183450.570]: port 1 (eth0): master sync timeout
+ptp4l[1183451.570]: port 1 (eth0): master sync timeout
+ptp4l[1183452.570]: port 1 (eth0): master sync timeout
+ptp4l[1183453.570]: port 1 (eth0): master sync timeout
+ptp4l[1183454.571]: port 1 (eth0): master sync timeout
+ptp4l[1183455.571]: port 1 (eth0): master sync timeout
+ptp4l[1183456.571]: port 1 (eth0): master sync timeout
+ptp4l[1183457.571]: port 1 (eth0): master sync timeout
+ptp4l[1183458.572]: port 1 (eth0): master sync timeout
+ptp4l[1183459.572]: port 1 (eth0): master sync timeout
+ptp4l[1183460.572]: port 1 (eth0): master sync timeout
+ptp4l[1183461.573]: port 1 (eth0): master sync timeout
+ptp4l[1183462.573]: port 1 (eth0): master sync timeout
+ptp4l[1183463.573]: port 1 (eth0): master sync timeout
+ptp4l[1183464.574]: port 1 (eth0): master sync timeout
+ptp4l[1183465.574]: port 1 (eth0): master sync timeout
+ptp4l[1183466.574]: port 1 (eth0): master sync timeout
+ptp4l[1183467.575]: port 1 (eth0): master sync timeout
+ptp4l[1183468.575]: port 1 (eth0): master sync timeout
+ptp4l[1183469.575]: port 1 (eth0): master sync timeout
+ptp4l[1183470.575]: port 1 (eth0): master sync timeout
+ptp4l[1183471.575]: port 1 (eth0): master sync timeout
+ptp4l[1183472.576]: port 1 (eth0): master sync timeout
+ptp4l[1183473.576]: port 1 (eth0): master sync timeout
+ptp4l[1183474.576]: port 1 (eth0): master sync timeout
+ptp4l[1183475.576]: port 1 (eth0): master sync timeout
+ptp4l[1183476.577]: port 1 (eth0): master sync timeout
+ptp4l[1183477.577]: port 1 (eth0): master sync timeout
+ptp4l[1183478.577]: port 1 (eth0): master sync timeout
+ptp4l[1183479.578]: port 1 (eth0): master sync timeout
+ptp4l[1183480.578]: port 1 (eth0): master sync timeout
+ptp4l[1183481.578]: port 1 (eth0): master sync timeout
+ptp4l[1183482.579]: port 1 (eth0): master sync timeout
+ptp4l[1183483.579]: port 1 (eth0): master sync timeout
+ptp4l[1183484.588]: port 1 (eth0): master sync timeout
+ptp4l[1183485.589]: port 1 (eth0): master sync timeout
+ptp4l[1183486.589]: port 1 (eth0): master sync timeout
+ptp4l[1183487.589]: port 1 (eth0): master sync timeout
+ptp4l[1183488.589]: port 1 (eth0): master sync timeout
+ptp4l[1183489.590]: port 1 (eth0): master sync timeout
+ptp4l[1183490.590]: port 1 (eth0): master sync timeout
+ptp4l[1183491.591]: port 1 (eth0): master sync timeout
+ptp4l[1183492.591]: port 1 (eth0): master sync timeout
+ptp4l[1183493.591]: port 1 (eth0): master sync timeout
+ptp4l[1183494.600]: port 1 (eth0): master sync timeout
+ptp4l[1183495.600]: port 1 (eth0): master sync timeout
+ptp4l[1183496.600]: port 1 (eth0): master sync timeout
+ptp4l[1183497.601]: port 1 (eth0): master sync timeout
+ptp4l[1183498.601]: port 1 (eth0): master sync timeout
+ptp4l[1183499.601]: port 1 (eth0): master sync timeout
+ptp4l[1183500.602]: port 1 (eth0): master sync timeout
+ptp4l[1183501.602]: port 1 (eth0): master sync timeout
+ptp4l[1183502.602]: port 1 (eth0): master sync timeout
+ptp4l[1183503.603]: port 1 (eth0): master sync timeout
+ptp4l[1183504.603]: port 1 (eth0): master sync timeout
+ptp4l[1183505.603]: port 1 (eth0): master sync timeout
+ptp4l[1183506.604]: port 1 (eth0): master sync timeout
+ptp4l[1183507.604]: port 1 (eth0): master sync timeout
+ptp4l[1183508.604]: port 1 (eth0): master sync timeout
+ptp4l[1183509.614]: port 1 (eth0): master sync timeout
+ptp4l[1183510.614]: port 1 (eth0): master sync timeout
+ptp4l[1183511.614]: port 1 (eth0): master sync timeout
+ptp4l[1183512.615]: port 1 (eth0): master sync timeout
+ptp4l[1183513.615]: port 1 (eth0): master sync timeout
+ptp4l[1183514.615]: port 1 (eth0): master sync timeout
+ptp4l[1183515.616]: port 1 (eth0): master sync timeout
+ptp4l[1183516.616]: port 1 (eth0): master sync timeout
+ptp4l[1183517.616]: port 1 (eth0): master sync timeout
+ptp4l[1183518.616]: port 1 (eth0): master sync timeout
+ptp4l[1183519.617]: port 1 (eth0): master sync timeout
+ptp4l[1183520.617]: port 1 (eth0): master sync timeout
+ptp4l[1183521.617]: port 1 (eth0): master sync timeout
+ptp4l[1183522.618]: port 1 (eth0): master sync timeout
+ptp4l[1183523.618]: port 1 (eth0): master sync timeout
+ptp4l[1183524.618]: port 1 (eth0): master sync timeout
+ptp4l[1183525.619]: port 1 (eth0): master sync timeout
+ptp4l[1183526.619]: port 1 (eth0): master sync timeout
+ptp4l[1183527.619]: port 1 (eth0): master sync timeout
+ptp4l[1183528.620]: port 1 (eth0): master sync timeout
+ptp4l[1183529.620]: port 1 (eth0): master sync timeout
+ptp4l[1183530.620]: port 1 (eth0): master sync timeout
+ptp4l[1183531.621]: port 1 (eth0): master sync timeout
+ptp4l[1183532.621]: port 1 (eth0): master sync timeout
+ptp4l[1183533.621]: port 1 (eth0): master sync timeout
+ptp4l[1183534.622]: port 1 (eth0): master sync timeout
+ptp4l[1183535.622]: port 1 (eth0): master sync timeout
+ptp4l[1183536.622]: port 1 (eth0): master sync timeout
+ptp4l[1183537.623]: port 1 (eth0): master sync timeout
+ptp4l[1183538.623]: port 1 (eth0): master sync timeout

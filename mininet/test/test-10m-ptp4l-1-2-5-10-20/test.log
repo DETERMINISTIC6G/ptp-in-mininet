@@ -1,0 +1,3441 @@
+
+==============Tue Feb 25 11:27:29 CET 2025=============
+test 1
+/home/montimage/hn/ptp-in-mininet/mininet
+sudo mn -c
+*** Removing excess controllers/ofprotocols/ofdatapaths/pings/noxes
+killall controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+killall -9 controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+pkill -9 -f "sudo mnexec"
+*** Removing junk from /tmp
+rm -f /tmp/vconn* /tmp/vlogs* /tmp/*.out /tmp/*.log
+*** Removing old X11 tunnels
+*** Removing excess kernel datapaths
+ps ax | egrep -o 'dp[0-9]+' | sed 's/dp/nl:/'
+***  Removing OVS datapaths
+ovs-vsctl --timeout=1 list-br
+ovs-vsctl --timeout=1 list-br
+*** Removing all links of the pattern foo-ethX
+ip link show | egrep -o '([-_.[:alnum:]]+-eth[[:digit:]]+)'
+ip link show
+*** Killing stale mininet node processes
+pkill -9 -f mininet:
+*** Shutting down stale tunnels
+pkill -9 -f Tunnel=Ethernet
+pkill -9 -f .ssh/mn
+rm -f ~/.ssh/mn/*
+*** Cleanup complete.
+rm tc.p4.p4info.txt tc.json topos/*.pdf
+sudo rm -rf pcaps logs __pycache__
+p4c-bm2-ss --p4v 16 --p4runtime-files tc.p4.p4info.txt --emit-externs -o tc.json tc.p4
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/1-switch.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 
+*** Adding links:
+(h1, s1) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 1 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 1 links
+.
+*** Stopping 1 switches
+s1 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/1-switch.json.slave.log
+python3 ./topos/plot.py --log-file topos/1-switch.json.slave.log --output-file topos/1-switch.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/2-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 
+*** Adding links:
+(h1, s1) (s1, s2) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 2 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 2 links
+..
+*** Stopping 2 switches
+s1 s2 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/2-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/2-switches.json.slave.log --output-file topos/2-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/5-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 5 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 5 links
+.....
+*** Stopping 5 switches
+s1 s2 s3 s4 s5 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/5-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/5-switches.json.slave.log --output-file topos/5-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/10-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 10 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 10 links
+..........
+*** Stopping 10 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/10-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/10-switches.json.slave.log --output-file topos/10-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/20-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) (s10, s11) (s11, s12) (s12, s13) (s13, s14) (s14, s15) (s15, s16) (s16, s17) (s17, s18) (s18, s19) (s19, s20) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 20 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+s11 **Configuring transparent clock for switch s11.
+**Configuring ports for switch s11.
+Ignore localhost
+s12 **Configuring transparent clock for switch s12.
+**Configuring ports for switch s12.
+Ignore localhost
+s13 **Configuring transparent clock for switch s13.
+**Configuring ports for switch s13.
+Ignore localhost
+s14 **Configuring transparent clock for switch s14.
+**Configuring ports for switch s14.
+Ignore localhost
+s15 **Configuring transparent clock for switch s15.
+**Configuring ports for switch s15.
+Ignore localhost
+s16 **Configuring transparent clock for switch s16.
+**Configuring ports for switch s16.
+Ignore localhost
+s17 **Configuring transparent clock for switch s17.
+**Configuring ports for switch s17.
+Ignore localhost
+s18 **Configuring transparent clock for switch s18.
+**Configuring ports for switch s18.
+Ignore localhost
+s19 **Configuring transparent clock for switch s19.
+**Configuring ports for switch s19.
+Ignore localhost
+s20 **Configuring transparent clock for switch s20.
+**Configuring ports for switch s20.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 20 links
+....................
+*** Stopping 20 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/20-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/20-switches.json.slave.log --output-file topos/20-switches.pdf
+cd topos && python3 plot-all.py
+['1-switch', '2-switches', '5-switches', '10-switches', '20-switches']
+parsing 1-switch
+parsing 2-switches
+parsing 5-switches
+parsing 10-switches
+parsing 20-switches
+Tue Feb 25 12:26:55 CET 2025
+sleep 10 seconds
+/home/montimage/hn/ptp-in-mininet/mininet/test
+
+==============Tue Feb 25 12:27:05 CET 2025=============
+test 2
+/home/montimage/hn/ptp-in-mininet/mininet
+sudo mn -c
+*** Removing excess controllers/ofprotocols/ofdatapaths/pings/noxes
+killall controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+killall -9 controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+pkill -9 -f "sudo mnexec"
+*** Removing junk from /tmp
+rm -f /tmp/vconn* /tmp/vlogs* /tmp/*.out /tmp/*.log
+*** Removing old X11 tunnels
+*** Removing excess kernel datapaths
+ps ax | egrep -o 'dp[0-9]+' | sed 's/dp/nl:/'
+***  Removing OVS datapaths
+ovs-vsctl --timeout=1 list-br
+ovs-vsctl --timeout=1 list-br
+*** Removing all links of the pattern foo-ethX
+ip link show | egrep -o '([-_.[:alnum:]]+-eth[[:digit:]]+)'
+ip link show
+*** Killing stale mininet node processes
+pkill -9 -f mininet:
+*** Shutting down stale tunnels
+pkill -9 -f Tunnel=Ethernet
+pkill -9 -f .ssh/mn
+rm -f ~/.ssh/mn/*
+*** Cleanup complete.
+rm tc.p4.p4info.txt tc.json topos/*.pdf
+sudo rm -rf pcaps logs __pycache__
+p4c-bm2-ss --p4v 16 --p4runtime-files tc.p4.p4info.txt --emit-externs -o tc.json tc.p4
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/1-switch.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 
+*** Adding links:
+(h1, s1) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 1 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 1 links
+.
+*** Stopping 1 switches
+s1 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/1-switch.json.slave.log
+python3 ./topos/plot.py --log-file topos/1-switch.json.slave.log --output-file topos/1-switch.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/2-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 
+*** Adding links:
+(h1, s1) (s1, s2) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 2 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 2 links
+..
+*** Stopping 2 switches
+s1 s2 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/2-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/2-switches.json.slave.log --output-file topos/2-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/5-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 5 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 5 links
+.....
+*** Stopping 5 switches
+s1 s2 s3 s4 s5 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/5-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/5-switches.json.slave.log --output-file topos/5-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/10-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 10 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 10 links
+..........
+*** Stopping 10 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/10-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/10-switches.json.slave.log --output-file topos/10-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/20-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) (s10, s11) (s11, s12) (s12, s13) (s13, s14) (s14, s15) (s15, s16) (s16, s17) (s17, s18) (s18, s19) (s19, s20) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 20 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+s11 **Configuring transparent clock for switch s11.
+**Configuring ports for switch s11.
+Ignore localhost
+s12 **Configuring transparent clock for switch s12.
+**Configuring ports for switch s12.
+Ignore localhost
+s13 **Configuring transparent clock for switch s13.
+**Configuring ports for switch s13.
+Ignore localhost
+s14 **Configuring transparent clock for switch s14.
+**Configuring ports for switch s14.
+Ignore localhost
+s15 **Configuring transparent clock for switch s15.
+**Configuring ports for switch s15.
+Ignore localhost
+s16 **Configuring transparent clock for switch s16.
+**Configuring ports for switch s16.
+Ignore localhost
+s17 **Configuring transparent clock for switch s17.
+**Configuring ports for switch s17.
+Ignore localhost
+s18 **Configuring transparent clock for switch s18.
+**Configuring ports for switch s18.
+Ignore localhost
+s19 **Configuring transparent clock for switch s19.
+**Configuring ports for switch s19.
+Ignore localhost
+s20 **Configuring transparent clock for switch s20.
+**Configuring ports for switch s20.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 20 links
+....................
+*** Stopping 20 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/20-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/20-switches.json.slave.log --output-file topos/20-switches.pdf
+cd topos && python3 plot-all.py
+['1-switch', '2-switches', '5-switches', '10-switches', '20-switches']
+parsing 1-switch
+parsing 2-switches
+parsing 5-switches
+parsing 10-switches
+parsing 20-switches
+Tue Feb 25 13:26:31 CET 2025
+sleep 10 seconds
+/home/montimage/hn/ptp-in-mininet/mininet/test
+
+==============Tue Feb 25 13:26:41 CET 2025=============
+test 3
+/home/montimage/hn/ptp-in-mininet/mininet
+sudo mn -c
+*** Removing excess controllers/ofprotocols/ofdatapaths/pings/noxes
+killall controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+killall -9 controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+pkill -9 -f "sudo mnexec"
+*** Removing junk from /tmp
+rm -f /tmp/vconn* /tmp/vlogs* /tmp/*.out /tmp/*.log
+*** Removing old X11 tunnels
+*** Removing excess kernel datapaths
+ps ax | egrep -o 'dp[0-9]+' | sed 's/dp/nl:/'
+***  Removing OVS datapaths
+ovs-vsctl --timeout=1 list-br
+ovs-vsctl --timeout=1 list-br
+*** Removing all links of the pattern foo-ethX
+ip link show | egrep -o '([-_.[:alnum:]]+-eth[[:digit:]]+)'
+ip link show
+*** Killing stale mininet node processes
+pkill -9 -f mininet:
+*** Shutting down stale tunnels
+pkill -9 -f Tunnel=Ethernet
+pkill -9 -f .ssh/mn
+rm -f ~/.ssh/mn/*
+*** Cleanup complete.
+rm tc.p4.p4info.txt tc.json topos/*.pdf
+sudo rm -rf pcaps logs __pycache__
+p4c-bm2-ss --p4v 16 --p4runtime-files tc.p4.p4info.txt --emit-externs -o tc.json tc.p4
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/1-switch.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 
+*** Adding links:
+(h1, s1) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 1 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 1 links
+.
+*** Stopping 1 switches
+s1 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/1-switch.json.slave.log
+python3 ./topos/plot.py --log-file topos/1-switch.json.slave.log --output-file topos/1-switch.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/2-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 
+*** Adding links:
+(h1, s1) (s1, s2) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 2 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 2 links
+..
+*** Stopping 2 switches
+s1 s2 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/2-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/2-switches.json.slave.log --output-file topos/2-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/5-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 5 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 5 links
+.....
+*** Stopping 5 switches
+s1 s2 s3 s4 s5 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/5-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/5-switches.json.slave.log --output-file topos/5-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/10-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 10 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 10 links
+..........
+*** Stopping 10 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/10-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/10-switches.json.slave.log --output-file topos/10-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/20-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) (s10, s11) (s11, s12) (s12, s13) (s13, s14) (s14, s15) (s15, s16) (s16, s17) (s17, s18) (s18, s19) (s19, s20) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 20 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+s11 **Configuring transparent clock for switch s11.
+**Configuring ports for switch s11.
+Ignore localhost
+s12 **Configuring transparent clock for switch s12.
+**Configuring ports for switch s12.
+Ignore localhost
+s13 **Configuring transparent clock for switch s13.
+**Configuring ports for switch s13.
+Ignore localhost
+s14 **Configuring transparent clock for switch s14.
+**Configuring ports for switch s14.
+Ignore localhost
+s15 **Configuring transparent clock for switch s15.
+**Configuring ports for switch s15.
+Ignore localhost
+s16 **Configuring transparent clock for switch s16.
+**Configuring ports for switch s16.
+Ignore localhost
+s17 **Configuring transparent clock for switch s17.
+**Configuring ports for switch s17.
+Ignore localhost
+s18 **Configuring transparent clock for switch s18.
+**Configuring ports for switch s18.
+Ignore localhost
+s19 **Configuring transparent clock for switch s19.
+**Configuring ports for switch s19.
+Ignore localhost
+s20 **Configuring transparent clock for switch s20.
+**Configuring ports for switch s20.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 20 links
+....................
+*** Stopping 20 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/20-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/20-switches.json.slave.log --output-file topos/20-switches.pdf
+cd topos && python3 plot-all.py
+['1-switch', '2-switches', '5-switches', '10-switches', '20-switches']
+parsing 1-switch
+parsing 2-switches
+parsing 5-switches
+parsing 10-switches
+parsing 20-switches
+Tue Feb 25 14:26:02 CET 2025
+sleep 10 seconds
+/home/montimage/hn/ptp-in-mininet/mininet/test
+
+==============Tue Feb 25 14:26:12 CET 2025=============
+test 4
+/home/montimage/hn/ptp-in-mininet/mininet
+sudo mn -c
+*** Removing excess controllers/ofprotocols/ofdatapaths/pings/noxes
+killall controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+killall -9 controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+pkill -9 -f "sudo mnexec"
+*** Removing junk from /tmp
+rm -f /tmp/vconn* /tmp/vlogs* /tmp/*.out /tmp/*.log
+*** Removing old X11 tunnels
+*** Removing excess kernel datapaths
+ps ax | egrep -o 'dp[0-9]+' | sed 's/dp/nl:/'
+***  Removing OVS datapaths
+ovs-vsctl --timeout=1 list-br
+ovs-vsctl --timeout=1 list-br
+*** Removing all links of the pattern foo-ethX
+ip link show | egrep -o '([-_.[:alnum:]]+-eth[[:digit:]]+)'
+ip link show
+*** Killing stale mininet node processes
+pkill -9 -f mininet:
+*** Shutting down stale tunnels
+pkill -9 -f Tunnel=Ethernet
+pkill -9 -f .ssh/mn
+rm -f ~/.ssh/mn/*
+*** Cleanup complete.
+rm tc.p4.p4info.txt tc.json topos/*.pdf
+sudo rm -rf pcaps logs __pycache__
+p4c-bm2-ss --p4v 16 --p4runtime-files tc.p4.p4info.txt --emit-externs -o tc.json tc.p4
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/1-switch.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 
+*** Adding links:
+(h1, s1) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 1 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 1 links
+.
+*** Stopping 1 switches
+s1 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/1-switch.json.slave.log
+python3 ./topos/plot.py --log-file topos/1-switch.json.slave.log --output-file topos/1-switch.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/2-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 
+*** Adding links:
+(h1, s1) (s1, s2) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 2 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 2 links
+..
+*** Stopping 2 switches
+s1 s2 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/2-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/2-switches.json.slave.log --output-file topos/2-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/5-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 5 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 5 links
+.....
+*** Stopping 5 switches
+s1 s2 s3 s4 s5 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/5-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/5-switches.json.slave.log --output-file topos/5-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/10-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 10 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 10 links
+..........
+*** Stopping 10 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/10-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/10-switches.json.slave.log --output-file topos/10-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/20-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) (s10, s11) (s11, s12) (s12, s13) (s13, s14) (s14, s15) (s15, s16) (s16, s17) (s17, s18) (s18, s19) (s19, s20) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 20 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+s11 **Configuring transparent clock for switch s11.
+**Configuring ports for switch s11.
+Ignore localhost
+s12 **Configuring transparent clock for switch s12.
+**Configuring ports for switch s12.
+Ignore localhost
+s13 **Configuring transparent clock for switch s13.
+**Configuring ports for switch s13.
+Ignore localhost
+s14 **Configuring transparent clock for switch s14.
+**Configuring ports for switch s14.
+Ignore localhost
+s15 **Configuring transparent clock for switch s15.
+**Configuring ports for switch s15.
+Ignore localhost
+s16 **Configuring transparent clock for switch s16.
+**Configuring ports for switch s16.
+Ignore localhost
+s17 **Configuring transparent clock for switch s17.
+**Configuring ports for switch s17.
+Ignore localhost
+s18 **Configuring transparent clock for switch s18.
+**Configuring ports for switch s18.
+Ignore localhost
+s19 **Configuring transparent clock for switch s19.
+**Configuring ports for switch s19.
+Ignore localhost
+s20 **Configuring transparent clock for switch s20.
+**Configuring ports for switch s20.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 20 links
+....................
+*** Stopping 20 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/20-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/20-switches.json.slave.log --output-file topos/20-switches.pdf
+cd topos && python3 plot-all.py
+['1-switch', '2-switches', '5-switches', '10-switches', '20-switches']
+parsing 1-switch
+parsing 2-switches
+parsing 5-switches
+parsing 10-switches
+parsing 20-switches
+Tue Feb 25 15:25:38 CET 2025
+sleep 10 seconds
+/home/montimage/hn/ptp-in-mininet/mininet/test
+
+==============Tue Feb 25 15:25:48 CET 2025=============
+test 5
+/home/montimage/hn/ptp-in-mininet/mininet
+sudo mn -c
+*** Removing excess controllers/ofprotocols/ofdatapaths/pings/noxes
+killall controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+killall -9 controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+pkill -9 -f "sudo mnexec"
+*** Removing junk from /tmp
+rm -f /tmp/vconn* /tmp/vlogs* /tmp/*.out /tmp/*.log
+*** Removing old X11 tunnels
+*** Removing excess kernel datapaths
+ps ax | egrep -o 'dp[0-9]+' | sed 's/dp/nl:/'
+***  Removing OVS datapaths
+ovs-vsctl --timeout=1 list-br
+ovs-vsctl --timeout=1 list-br
+*** Removing all links of the pattern foo-ethX
+ip link show | egrep -o '([-_.[:alnum:]]+-eth[[:digit:]]+)'
+ip link show
+*** Killing stale mininet node processes
+pkill -9 -f mininet:
+*** Shutting down stale tunnels
+pkill -9 -f Tunnel=Ethernet
+pkill -9 -f .ssh/mn
+rm -f ~/.ssh/mn/*
+*** Cleanup complete.
+rm tc.p4.p4info.txt tc.json topos/*.pdf
+sudo rm -rf pcaps logs __pycache__
+p4c-bm2-ss --p4v 16 --p4runtime-files tc.p4.p4info.txt --emit-externs -o tc.json tc.p4
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/1-switch.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 
+*** Adding links:
+(h1, s1) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 1 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 1 links
+.
+*** Stopping 1 switches
+s1 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/1-switch.json.slave.log
+python3 ./topos/plot.py --log-file topos/1-switch.json.slave.log --output-file topos/1-switch.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/2-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 
+*** Adding links:
+(h1, s1) (s1, s2) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 2 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 2 links
+..
+*** Stopping 2 switches
+s1 s2 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/2-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/2-switches.json.slave.log --output-file topos/2-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/5-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 5 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 5 links
+.....
+*** Stopping 5 switches
+s1 s2 s3 s4 s5 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/5-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/5-switches.json.slave.log --output-file topos/5-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/10-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 10 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 10 links
+..........
+*** Stopping 10 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/10-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/10-switches.json.slave.log --output-file topos/10-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/20-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) (s10, s11) (s11, s12) (s12, s13) (s13, s14) (s14, s15) (s15, s16) (s16, s17) (s17, s18) (s18, s19) (s19, s20) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 20 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+s11 **Configuring transparent clock for switch s11.
+**Configuring ports for switch s11.
+Ignore localhost
+s12 **Configuring transparent clock for switch s12.
+**Configuring ports for switch s12.
+Ignore localhost
+s13 **Configuring transparent clock for switch s13.
+**Configuring ports for switch s13.
+Ignore localhost
+s14 **Configuring transparent clock for switch s14.
+**Configuring ports for switch s14.
+Ignore localhost
+s15 **Configuring transparent clock for switch s15.
+**Configuring ports for switch s15.
+Ignore localhost
+s16 **Configuring transparent clock for switch s16.
+**Configuring ports for switch s16.
+Ignore localhost
+s17 **Configuring transparent clock for switch s17.
+**Configuring ports for switch s17.
+Ignore localhost
+s18 **Configuring transparent clock for switch s18.
+**Configuring ports for switch s18.
+Ignore localhost
+s19 **Configuring transparent clock for switch s19.
+**Configuring ports for switch s19.
+Ignore localhost
+s20 **Configuring transparent clock for switch s20.
+**Configuring ports for switch s20.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 20 links
+....................
+*** Stopping 20 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/20-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/20-switches.json.slave.log --output-file topos/20-switches.pdf
+cd topos && python3 plot-all.py
+['1-switch', '2-switches', '5-switches', '10-switches', '20-switches']
+parsing 1-switch
+parsing 2-switches
+parsing 5-switches
+parsing 10-switches
+parsing 20-switches
+Tue Feb 25 16:25:15 CET 2025
+sleep 10 seconds
+/home/montimage/hn/ptp-in-mininet/mininet/test
+
+==============Tue Feb 25 16:25:25 CET 2025=============
+test 6
+/home/montimage/hn/ptp-in-mininet/mininet
+sudo mn -c
+*** Removing excess controllers/ofprotocols/ofdatapaths/pings/noxes
+killall controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+killall -9 controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+pkill -9 -f "sudo mnexec"
+*** Removing junk from /tmp
+rm -f /tmp/vconn* /tmp/vlogs* /tmp/*.out /tmp/*.log
+*** Removing old X11 tunnels
+*** Removing excess kernel datapaths
+ps ax | egrep -o 'dp[0-9]+' | sed 's/dp/nl:/'
+***  Removing OVS datapaths
+ovs-vsctl --timeout=1 list-br
+ovs-vsctl --timeout=1 list-br
+*** Removing all links of the pattern foo-ethX
+ip link show | egrep -o '([-_.[:alnum:]]+-eth[[:digit:]]+)'
+ip link show
+*** Killing stale mininet node processes
+pkill -9 -f mininet:
+*** Shutting down stale tunnels
+pkill -9 -f Tunnel=Ethernet
+pkill -9 -f .ssh/mn
+rm -f ~/.ssh/mn/*
+*** Cleanup complete.
+rm tc.p4.p4info.txt tc.json topos/*.pdf
+sudo rm -rf pcaps logs __pycache__
+p4c-bm2-ss --p4v 16 --p4runtime-files tc.p4.p4info.txt --emit-externs -o tc.json tc.p4
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/1-switch.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 
+*** Adding links:
+(h1, s1) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 1 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 1 links
+.
+*** Stopping 1 switches
+s1 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/1-switch.json.slave.log
+python3 ./topos/plot.py --log-file topos/1-switch.json.slave.log --output-file topos/1-switch.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/2-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 
+*** Adding links:
+(h1, s1) (s1, s2) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 2 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 2 links
+..
+*** Stopping 2 switches
+s1 s2 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/2-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/2-switches.json.slave.log --output-file topos/2-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/5-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 5 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 5 links
+.....
+*** Stopping 5 switches
+s1 s2 s3 s4 s5 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/5-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/5-switches.json.slave.log --output-file topos/5-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/10-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 10 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 10 links
+..........
+*** Stopping 10 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/10-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/10-switches.json.slave.log --output-file topos/10-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/20-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) (s10, s11) (s11, s12) (s12, s13) (s13, s14) (s14, s15) (s15, s16) (s16, s17) (s17, s18) (s18, s19) (s19, s20) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 20 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+s11 **Configuring transparent clock for switch s11.
+**Configuring ports for switch s11.
+Ignore localhost
+s12 **Configuring transparent clock for switch s12.
+**Configuring ports for switch s12.
+Ignore localhost
+s13 **Configuring transparent clock for switch s13.
+**Configuring ports for switch s13.
+Ignore localhost
+s14 **Configuring transparent clock for switch s14.
+**Configuring ports for switch s14.
+Ignore localhost
+s15 **Configuring transparent clock for switch s15.
+**Configuring ports for switch s15.
+Ignore localhost
+s16 **Configuring transparent clock for switch s16.
+**Configuring ports for switch s16.
+Ignore localhost
+s17 **Configuring transparent clock for switch s17.
+**Configuring ports for switch s17.
+Ignore localhost
+s18 **Configuring transparent clock for switch s18.
+**Configuring ports for switch s18.
+Ignore localhost
+s19 **Configuring transparent clock for switch s19.
+**Configuring ports for switch s19.
+Ignore localhost
+s20 **Configuring transparent clock for switch s20.
+**Configuring ports for switch s20.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 20 links
+....................
+*** Stopping 20 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/20-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/20-switches.json.slave.log --output-file topos/20-switches.pdf
+cd topos && python3 plot-all.py
+['1-switch', '2-switches', '5-switches', '10-switches', '20-switches']
+parsing 1-switch
+parsing 2-switches
+parsing 5-switches
+parsing 10-switches
+parsing 20-switches
+Tue Feb 25 17:24:52 CET 2025
+sleep 10 seconds
+/home/montimage/hn/ptp-in-mininet/mininet/test
+
+==============Tue Feb 25 17:25:02 CET 2025=============
+test 7
+/home/montimage/hn/ptp-in-mininet/mininet
+sudo mn -c
+*** Removing excess controllers/ofprotocols/ofdatapaths/pings/noxes
+killall controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+killall -9 controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+pkill -9 -f "sudo mnexec"
+*** Removing junk from /tmp
+rm -f /tmp/vconn* /tmp/vlogs* /tmp/*.out /tmp/*.log
+*** Removing old X11 tunnels
+*** Removing excess kernel datapaths
+ps ax | egrep -o 'dp[0-9]+' | sed 's/dp/nl:/'
+***  Removing OVS datapaths
+ovs-vsctl --timeout=1 list-br
+ovs-vsctl --timeout=1 list-br
+*** Removing all links of the pattern foo-ethX
+ip link show | egrep -o '([-_.[:alnum:]]+-eth[[:digit:]]+)'
+ip link show
+*** Killing stale mininet node processes
+pkill -9 -f mininet:
+*** Shutting down stale tunnels
+pkill -9 -f Tunnel=Ethernet
+pkill -9 -f .ssh/mn
+rm -f ~/.ssh/mn/*
+*** Cleanup complete.
+rm tc.p4.p4info.txt tc.json topos/*.pdf
+sudo rm -rf pcaps logs __pycache__
+p4c-bm2-ss --p4v 16 --p4runtime-files tc.p4.p4info.txt --emit-externs -o tc.json tc.p4
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/1-switch.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 
+*** Adding links:
+(h1, s1) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 1 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 1 links
+.
+*** Stopping 1 switches
+s1 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/1-switch.json.slave.log
+python3 ./topos/plot.py --log-file topos/1-switch.json.slave.log --output-file topos/1-switch.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/2-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 
+*** Adding links:
+(h1, s1) (s1, s2) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 2 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 2 links
+..
+*** Stopping 2 switches
+s1 s2 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/2-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/2-switches.json.slave.log --output-file topos/2-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/5-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 5 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 5 links
+.....
+*** Stopping 5 switches
+s1 s2 s3 s4 s5 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/5-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/5-switches.json.slave.log --output-file topos/5-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/10-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 10 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 10 links
+..........
+*** Stopping 10 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/10-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/10-switches.json.slave.log --output-file topos/10-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/20-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) (s10, s11) (s11, s12) (s12, s13) (s13, s14) (s14, s15) (s15, s16) (s16, s17) (s17, s18) (s18, s19) (s19, s20) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 20 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+s11 **Configuring transparent clock for switch s11.
+**Configuring ports for switch s11.
+Ignore localhost
+s12 **Configuring transparent clock for switch s12.
+**Configuring ports for switch s12.
+Ignore localhost
+s13 **Configuring transparent clock for switch s13.
+**Configuring ports for switch s13.
+Ignore localhost
+s14 **Configuring transparent clock for switch s14.
+**Configuring ports for switch s14.
+Ignore localhost
+s15 **Configuring transparent clock for switch s15.
+**Configuring ports for switch s15.
+Ignore localhost
+s16 **Configuring transparent clock for switch s16.
+**Configuring ports for switch s16.
+Ignore localhost
+s17 **Configuring transparent clock for switch s17.
+**Configuring ports for switch s17.
+Ignore localhost
+s18 **Configuring transparent clock for switch s18.
+**Configuring ports for switch s18.
+Ignore localhost
+s19 **Configuring transparent clock for switch s19.
+**Configuring ports for switch s19.
+Ignore localhost
+s20 **Configuring transparent clock for switch s20.
+**Configuring ports for switch s20.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 20 links
+....................
+*** Stopping 20 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/20-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/20-switches.json.slave.log --output-file topos/20-switches.pdf
+cd topos && python3 plot-all.py
+['1-switch', '2-switches', '5-switches', '10-switches', '20-switches']
+parsing 1-switch
+parsing 2-switches
+parsing 5-switches
+parsing 10-switches
+parsing 20-switches
+Tue Feb 25 18:24:28 CET 2025
+sleep 10 seconds
+/home/montimage/hn/ptp-in-mininet/mininet/test
+
+==============Tue Feb 25 18:24:38 CET 2025=============
+test 8
+/home/montimage/hn/ptp-in-mininet/mininet
+sudo mn -c
+*** Removing excess controllers/ofprotocols/ofdatapaths/pings/noxes
+killall controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+killall -9 controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+pkill -9 -f "sudo mnexec"
+*** Removing junk from /tmp
+rm -f /tmp/vconn* /tmp/vlogs* /tmp/*.out /tmp/*.log
+*** Removing old X11 tunnels
+*** Removing excess kernel datapaths
+ps ax | egrep -o 'dp[0-9]+' | sed 's/dp/nl:/'
+***  Removing OVS datapaths
+ovs-vsctl --timeout=1 list-br
+ovs-vsctl --timeout=1 list-br
+*** Removing all links of the pattern foo-ethX
+ip link show | egrep -o '([-_.[:alnum:]]+-eth[[:digit:]]+)'
+ip link show
+*** Killing stale mininet node processes
+pkill -9 -f mininet:
+*** Shutting down stale tunnels
+pkill -9 -f Tunnel=Ethernet
+pkill -9 -f .ssh/mn
+rm -f ~/.ssh/mn/*
+*** Cleanup complete.
+rm tc.p4.p4info.txt tc.json topos/*.pdf
+sudo rm -rf pcaps logs __pycache__
+p4c-bm2-ss --p4v 16 --p4runtime-files tc.p4.p4info.txt --emit-externs -o tc.json tc.p4
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/1-switch.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 
+*** Adding links:
+(h1, s1) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 1 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 1 links
+.
+*** Stopping 1 switches
+s1 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/1-switch.json.slave.log
+python3 ./topos/plot.py --log-file topos/1-switch.json.slave.log --output-file topos/1-switch.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/2-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 
+*** Adding links:
+(h1, s1) (s1, s2) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 2 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 2 links
+..
+*** Stopping 2 switches
+s1 s2 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/2-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/2-switches.json.slave.log --output-file topos/2-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/5-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 5 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 5 links
+.....
+*** Stopping 5 switches
+s1 s2 s3 s4 s5 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/5-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/5-switches.json.slave.log --output-file topos/5-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/10-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 10 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 10 links
+..........
+*** Stopping 10 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/10-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/10-switches.json.slave.log --output-file topos/10-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/20-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) (s10, s11) (s11, s12) (s12, s13) (s13, s14) (s14, s15) (s15, s16) (s16, s17) (s17, s18) (s18, s19) (s19, s20) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 20 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+s11 **Configuring transparent clock for switch s11.
+**Configuring ports for switch s11.
+Ignore localhost
+s12 **Configuring transparent clock for switch s12.
+**Configuring ports for switch s12.
+Ignore localhost
+s13 **Configuring transparent clock for switch s13.
+**Configuring ports for switch s13.
+Ignore localhost
+s14 **Configuring transparent clock for switch s14.
+**Configuring ports for switch s14.
+Ignore localhost
+s15 **Configuring transparent clock for switch s15.
+**Configuring ports for switch s15.
+Ignore localhost
+s16 **Configuring transparent clock for switch s16.
+**Configuring ports for switch s16.
+Ignore localhost
+s17 **Configuring transparent clock for switch s17.
+**Configuring ports for switch s17.
+Ignore localhost
+s18 **Configuring transparent clock for switch s18.
+**Configuring ports for switch s18.
+Ignore localhost
+s19 **Configuring transparent clock for switch s19.
+**Configuring ports for switch s19.
+Ignore localhost
+s20 **Configuring transparent clock for switch s20.
+**Configuring ports for switch s20.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 20 links
+....................
+*** Stopping 20 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/20-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/20-switches.json.slave.log --output-file topos/20-switches.pdf
+cd topos && python3 plot-all.py
+['1-switch', '2-switches', '5-switches', '10-switches', '20-switches']
+parsing 1-switch
+parsing 2-switches
+parsing 5-switches
+parsing 10-switches
+parsing 20-switches
+Tue Feb 25 19:24:04 CET 2025
+sleep 10 seconds
+/home/montimage/hn/ptp-in-mininet/mininet/test
+
+==============Tue Feb 25 19:24:14 CET 2025=============
+test 9
+/home/montimage/hn/ptp-in-mininet/mininet
+sudo mn -c
+*** Removing excess controllers/ofprotocols/ofdatapaths/pings/noxes
+killall controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+killall -9 controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+pkill -9 -f "sudo mnexec"
+*** Removing junk from /tmp
+rm -f /tmp/vconn* /tmp/vlogs* /tmp/*.out /tmp/*.log
+*** Removing old X11 tunnels
+*** Removing excess kernel datapaths
+ps ax | egrep -o 'dp[0-9]+' | sed 's/dp/nl:/'
+***  Removing OVS datapaths
+ovs-vsctl --timeout=1 list-br
+ovs-vsctl --timeout=1 list-br
+*** Removing all links of the pattern foo-ethX
+ip link show | egrep -o '([-_.[:alnum:]]+-eth[[:digit:]]+)'
+ip link show
+*** Killing stale mininet node processes
+pkill -9 -f mininet:
+*** Shutting down stale tunnels
+pkill -9 -f Tunnel=Ethernet
+pkill -9 -f .ssh/mn
+rm -f ~/.ssh/mn/*
+*** Cleanup complete.
+rm tc.p4.p4info.txt tc.json topos/*.pdf
+sudo rm -rf pcaps logs __pycache__
+p4c-bm2-ss --p4v 16 --p4runtime-files tc.p4.p4info.txt --emit-externs -o tc.json tc.p4
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/1-switch.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 
+*** Adding links:
+(h1, s1) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 1 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 1 links
+.
+*** Stopping 1 switches
+s1 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/1-switch.json.slave.log
+python3 ./topos/plot.py --log-file topos/1-switch.json.slave.log --output-file topos/1-switch.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/2-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 
+*** Adding links:
+(h1, s1) (s1, s2) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 2 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 2 links
+..
+*** Stopping 2 switches
+s1 s2 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/2-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/2-switches.json.slave.log --output-file topos/2-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/5-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 5 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 5 links
+.....
+*** Stopping 5 switches
+s1 s2 s3 s4 s5 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/5-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/5-switches.json.slave.log --output-file topos/5-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/10-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 10 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 10 links
+..........
+*** Stopping 10 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/10-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/10-switches.json.slave.log --output-file topos/10-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/20-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) (s10, s11) (s11, s12) (s12, s13) (s13, s14) (s14, s15) (s15, s16) (s16, s17) (s17, s18) (s18, s19) (s19, s20) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 20 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+s11 **Configuring transparent clock for switch s11.
+**Configuring ports for switch s11.
+Ignore localhost
+s12 **Configuring transparent clock for switch s12.
+**Configuring ports for switch s12.
+Ignore localhost
+s13 **Configuring transparent clock for switch s13.
+**Configuring ports for switch s13.
+Ignore localhost
+s14 **Configuring transparent clock for switch s14.
+**Configuring ports for switch s14.
+Ignore localhost
+s15 **Configuring transparent clock for switch s15.
+**Configuring ports for switch s15.
+Ignore localhost
+s16 **Configuring transparent clock for switch s16.
+**Configuring ports for switch s16.
+Ignore localhost
+s17 **Configuring transparent clock for switch s17.
+**Configuring ports for switch s17.
+Ignore localhost
+s18 **Configuring transparent clock for switch s18.
+**Configuring ports for switch s18.
+Ignore localhost
+s19 **Configuring transparent clock for switch s19.
+**Configuring ports for switch s19.
+Ignore localhost
+s20 **Configuring transparent clock for switch s20.
+**Configuring ports for switch s20.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 20 links
+....................
+*** Stopping 20 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/20-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/20-switches.json.slave.log --output-file topos/20-switches.pdf
+cd topos && python3 plot-all.py
+['1-switch', '2-switches', '5-switches', '10-switches', '20-switches']
+parsing 1-switch
+parsing 2-switches
+parsing 5-switches
+parsing 10-switches
+parsing 20-switches
+Tue Feb 25 20:23:40 CET 2025
+sleep 10 seconds
+/home/montimage/hn/ptp-in-mininet/mininet/test
+
+==============Tue Feb 25 20:23:50 CET 2025=============
+test 10
+/home/montimage/hn/ptp-in-mininet/mininet
+sudo mn -c
+*** Removing excess controllers/ofprotocols/ofdatapaths/pings/noxes
+killall controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+killall -9 controller ofprotocol ofdatapath ping nox_corelt-nox_core ovs-openflowd ovs-controllerovs-testcontroller udpbwtest mnexec ivs ryu-manager 2> /dev/null
+pkill -9 -f "sudo mnexec"
+*** Removing junk from /tmp
+rm -f /tmp/vconn* /tmp/vlogs* /tmp/*.out /tmp/*.log
+*** Removing old X11 tunnels
+*** Removing excess kernel datapaths
+ps ax | egrep -o 'dp[0-9]+' | sed 's/dp/nl:/'
+***  Removing OVS datapaths
+ovs-vsctl --timeout=1 list-br
+ovs-vsctl --timeout=1 list-br
+*** Removing all links of the pattern foo-ethX
+ip link show | egrep -o '([-_.[:alnum:]]+-eth[[:digit:]]+)'
+ip link show
+*** Killing stale mininet node processes
+pkill -9 -f mininet:
+*** Shutting down stale tunnels
+pkill -9 -f Tunnel=Ethernet
+pkill -9 -f .ssh/mn
+rm -f ~/.ssh/mn/*
+*** Cleanup complete.
+rm tc.p4.p4info.txt tc.json topos/*.pdf
+sudo rm -rf pcaps logs __pycache__
+p4c-bm2-ss --p4v 16 --p4runtime-files tc.p4.p4info.txt --emit-externs -o tc.json tc.p4
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/1-switch.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 
+*** Adding links:
+(h1, s1) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 1 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 1 links
+.
+*** Stopping 1 switches
+s1 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/1-switch.json.slave.log
+python3 ./topos/plot.py --log-file topos/1-switch.json.slave.log --output-file topos/1-switch.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/2-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 
+*** Adding links:
+(h1, s1) (s1, s2) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 2 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 2 links
+..
+*** Stopping 2 switches
+s1 s2 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/2-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/2-switches.json.slave.log --output-file topos/2-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/5-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 5 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 5 links
+.....
+*** Stopping 5 switches
+s1 s2 s3 s4 s5 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/5-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/5-switches.json.slave.log --output-file topos/5-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/10-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 10 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 10 links
+..........
+*** Stopping 10 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/10-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/10-switches.json.slave.log --output-file topos/10-switches.pdf
+#rm -rf logs
+mkdir -p logs
+# ensure time sync is disable
+ssh pi@10.42.0.110 "sudo timedatectl set-ntp 0" || true
+ssh pi@10.42.0.110 "sudo killall ptp4l" || true
+#ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 350 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+ssh pi@10.42.0.110 "nohup bash -c 'sudo timeout -- 3650 /usr/local/sbin/ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg' > /tmp/ptp.slave.txt 2>&1 &"
+sudo python3 main.py --topo-file topos/20-switches.json
+*** Creating network
+*** Adding hosts:
+h1 
+*** Adding switches:
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Adding links:
+(h1, s1) (s1, s2) (s2, s3) (s3, s4) (s4, s5) (s5, s6) (s6, s7) (s7, s8) (s8, s9) (s10, s9) (s10, s11) (s11, s12) (s12, s13) (s13, s14) (s14, s15) (s15, s16) (s16, s17) (s17, s18) (s18, s19) (s19, s20) 
+*** Configuring hosts
+h1 
+*** Starting controller
+
+*** Starting 20 switches
+s1 **Configuring transparent clock for switch s1.
+**Configuring ports for switch s1.
+Ignore localhost
+s2 **Configuring transparent clock for switch s2.
+**Configuring ports for switch s2.
+Ignore localhost
+s3 **Configuring transparent clock for switch s3.
+**Configuring ports for switch s3.
+Ignore localhost
+s4 **Configuring transparent clock for switch s4.
+**Configuring ports for switch s4.
+Ignore localhost
+s5 **Configuring transparent clock for switch s5.
+**Configuring ports for switch s5.
+Ignore localhost
+s6 **Configuring transparent clock for switch s6.
+**Configuring ports for switch s6.
+Ignore localhost
+s7 **Configuring transparent clock for switch s7.
+**Configuring ports for switch s7.
+Ignore localhost
+s8 **Configuring transparent clock for switch s8.
+**Configuring ports for switch s8.
+Ignore localhost
+s9 **Configuring transparent clock for switch s9.
+**Configuring ports for switch s9.
+Ignore localhost
+s10 **Configuring transparent clock for switch s10.
+**Configuring ports for switch s10.
+Ignore localhost
+s11 **Configuring transparent clock for switch s11.
+**Configuring ports for switch s11.
+Ignore localhost
+s12 **Configuring transparent clock for switch s12.
+**Configuring ports for switch s12.
+Ignore localhost
+s13 **Configuring transparent clock for switch s13.
+**Configuring ports for switch s13.
+Ignore localhost
+s14 **Configuring transparent clock for switch s14.
+**Configuring ports for switch s14.
+Ignore localhost
+s15 **Configuring transparent clock for switch s15.
+**Configuring ports for switch s15.
+Ignore localhost
+s16 **Configuring transparent clock for switch s16.
+**Configuring ports for switch s16.
+Ignore localhost
+s17 **Configuring transparent clock for switch s17.
+**Configuring ports for switch s17.
+Ignore localhost
+s18 **Configuring transparent clock for switch s18.
+**Configuring ports for switch s18.
+Ignore localhost
+s19 **Configuring transparent clock for switch s19.
+**Configuring ports for switch s19.
+Ignore localhost
+s20 **Configuring transparent clock for switch s20.
+**Configuring ports for switch s20.
+Ignore localhost
+
+  h1 is executing: route add default gw 10.0.1.10 dev eth0
+  h1 is executing: arp -i eth0 -s 10.0.1.10 08:00:00:00:01:00
+  h1 is executing: ptp4l -i eth0 -f ./configs/master.cfg -m 2>&1 > logs/ptp4l.master.log
+sleep 700 sec, then exit
+*** Stopping 0 controllers
+
+*** Stopping 20 links
+....................
+*** Stopping 20 switches
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14 s15 s16 s17 s18 s19 s20 
+*** Stopping 1 hosts
+h1 
+*** Done
+bye
+scp pi@10.42.0.110:/tmp/ptp.slave.txt topos/20-switches.json.slave.log
+python3 ./topos/plot.py --log-file topos/20-switches.json.slave.log --output-file topos/20-switches.pdf
+cd topos && python3 plot-all.py
+['1-switch', '2-switches', '5-switches', '10-switches', '20-switches']
+parsing 1-switch
+parsing 2-switches
+parsing 5-switches
+parsing 10-switches
+parsing 20-switches
+Tue Feb 25 21:23:14 CET 2025
+sleep 10 seconds
+/home/montimage/hn/ptp-in-mininet/mininet/test
+['1-switch', '2-switches', '5-switches', '10-switches', '20-switches']
+parsing ./topos-1/1-switch.json.slave.log
+parsing ./topos-2/1-switch.json.slave.log
+parsing ./topos-3/1-switch.json.slave.log
+parsing ./topos-4/1-switch.json.slave.log
+parsing ./topos-5/1-switch.json.slave.log
+parsing ./topos-6/1-switch.json.slave.log
+parsing ./topos-7/1-switch.json.slave.log
+parsing ./topos-8/1-switch.json.slave.log
+parsing ./topos-9/1-switch.json.slave.log
+parsing ./topos-10/1-switch.json.slave.log
+parsing ./topos-1/2-switches.json.slave.log
+parsing ./topos-2/2-switches.json.slave.log
+parsing ./topos-3/2-switches.json.slave.log
+parsing ./topos-4/2-switches.json.slave.log
+parsing ./topos-5/2-switches.json.slave.log
+parsing ./topos-6/2-switches.json.slave.log
+parsing ./topos-7/2-switches.json.slave.log
+parsing ./topos-8/2-switches.json.slave.log
+parsing ./topos-9/2-switches.json.slave.log
+parsing ./topos-10/2-switches.json.slave.log
+parsing ./topos-1/5-switches.json.slave.log
+parsing ./topos-2/5-switches.json.slave.log
+parsing ./topos-3/5-switches.json.slave.log
+parsing ./topos-4/5-switches.json.slave.log
+parsing ./topos-5/5-switches.json.slave.log
+parsing ./topos-6/5-switches.json.slave.log
+parsing ./topos-7/5-switches.json.slave.log
+parsing ./topos-8/5-switches.json.slave.log
+parsing ./topos-9/5-switches.json.slave.log
+parsing ./topos-10/5-switches.json.slave.log
+parsing ./topos-1/10-switches.json.slave.log
+parsing ./topos-2/10-switches.json.slave.log
+parsing ./topos-3/10-switches.json.slave.log
+parsing ./topos-4/10-switches.json.slave.log
+parsing ./topos-5/10-switches.json.slave.log
+parsing ./topos-6/10-switches.json.slave.log
+parsing ./topos-7/10-switches.json.slave.log
+parsing ./topos-8/10-switches.json.slave.log
+parsing ./topos-9/10-switches.json.slave.log
+parsing ./topos-10/10-switches.json.slave.log
+parsing ./topos-1/20-switches.json.slave.log
+parsing ./topos-2/20-switches.json.slave.log
+parsing ./topos-3/20-switches.json.slave.log
+parsing ./topos-4/20-switches.json.slave.log
+parsing ./topos-5/20-switches.json.slave.log
+parsing ./topos-6/20-switches.json.slave.log
+parsing ./topos-7/20-switches.json.slave.log
+parsing ./topos-8/20-switches.json.slave.log
+parsing ./topos-9/20-switches.json.slave.log
+parsing ./topos-10/20-switches.json.slave.log

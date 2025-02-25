@@ -1,0 +1,1908 @@
+ptp4l[1189990.741]: config item (null).assume_two_step is 0
+ptp4l[1189990.742]: config item (null).check_fup_sync is 0
+ptp4l[1189990.742]: config item (null).tx_timestamp_timeout is 10
+ptp4l[1189990.742]: config item (null).hwts_filter is 0
+ptp4l[1189990.742]: config item (null).ptp_minor_version is 1
+ptp4l[1189990.743]: config item (null).sa_file is '(null)'
+ptp4l[1189990.743]: config item (null).clock_servo is 0
+ptp4l[1189990.743]: config item (null).clock_type is 4096
+ptp4l[1189990.743]: config item (null).delay_mechanism is 1
+ptp4l[1189990.743]: config item (null).clock_servo is 0
+ptp4l[1189990.743]: config item (null).clockClass is 248
+ptp4l[1189990.744]: config item (null).clockAccuracy is 254
+ptp4l[1189990.744]: config item (null).offsetScaledLogVariance is 65535
+ptp4l[1189990.744]: config item (null).productDescription is ';;'
+ptp4l[1189990.744]: config item (null).revisionData is ';;'
+ptp4l[1189990.745]: config item (null).userDescription is ''
+ptp4l[1189990.745]: config item (null).manufacturerIdentity is '00:00:00'
+ptp4l[1189990.745]: config item (null).domainNumber is 0
+ptp4l[1189990.746]: config item (null).clientOnly is 0
+ptp4l[1189990.746]: config item (null).gmCapable is 1
+ptp4l[1189990.746]: config item (null).gmCapable is 1
+ptp4l[1189990.746]: config item (null).G.8275.defaultDS.localPriority is 128
+ptp4l[1189990.747]: config item (null).maxStepsRemoved is 255
+ptp4l[1189990.747]: config item (null).clock_class_threshold is 248
+ptp4l[1189990.747]: config item (null).time_stamping is 0
+ptp4l[1189990.747]: config item (null).twoStepFlag is 1
+ptp4l[1189990.748]: config item (null).twoStepFlag is 1
+ptp4l[1189990.748]: config item (null).time_stamping is 0
+ptp4l[1189990.748]: config item (null).priority1 is 254
+ptp4l[1189990.748]: config item (null).priority2 is 128
+ptp4l[1189990.748]: interface index 8247 is up
+ptp4l[1189990.749]: interface index 8250 is up
+ptp4l[1189990.749]: config item s11-eth1.phc_index is -1
+ptp4l[1189990.749]: config item (null).free_running is 1
+ptp4l[1189990.749]: config item (null).clockIdentity is '000000.0000.000000'
+ptp4l[1189990.749]: config item (null).uds_address is '/var/run/ptp4l'
+ptp4l[1189990.750]: section item /var/run/ptp4l.announceReceiptTimeout now 0
+ptp4l[1189990.750]: section item /var/run/ptp4l.delay_mechanism now 0
+ptp4l[1189990.750]: section item /var/run/ptp4l.network_transport now 0
+ptp4l[1189990.750]: section item /var/run/ptp4l.delay_filter_length now 1
+ptp4l[1189990.750]: config item (null).uds_ro_address is '/var/run/ptp4lro'
+ptp4l[1189990.750]: section item /var/run/ptp4lro.announceReceiptTimeout now 0
+ptp4l[1189990.751]: section item /var/run/ptp4lro.delay_mechanism now 0
+ptp4l[1189990.751]: section item /var/run/ptp4lro.network_transport now 0
+ptp4l[1189990.751]: section item /var/run/ptp4lro.delay_filter_length now 1
+ptp4l[1189990.751]: config item (null).free_running is 1
+ptp4l[1189990.751]: config item (null).freq_est_interval is 3
+ptp4l[1189990.751]: config item (null).write_phase_mode is 0
+ptp4l[1189990.752]: config item (null).gmCapable is 1
+ptp4l[1189990.752]: config item (null).kernel_leap is 1
+ptp4l[1189990.752]: config item (null).utc_offset is 37
+ptp4l[1189990.752]: config item (null).timeSource is 160
+ptp4l[1189990.752]: config item (null).step_window is 0
+ptp4l[1189990.752]: config item (null).pi_proportional_const is 0.000000
+ptp4l[1189990.753]: config item (null).pi_integral_const is 0.000000
+ptp4l[1189990.754]: config item (null).pi_proportional_scale is 0.000000
+ptp4l[1189990.754]: config item (null).pi_proportional_exponent is -0.300000
+ptp4l[1189990.754]: config item (null).pi_proportional_norm_max is 0.700000
+ptp4l[1189990.754]: config item (null).pi_integral_scale is 0.000000
+ptp4l[1189990.755]: config item (null).pi_integral_exponent is 0.400000
+ptp4l[1189990.755]: config item (null).pi_integral_norm_max is 0.300000
+ptp4l[1189990.755]: config item (null).step_threshold is 0.000000
+ptp4l[1189990.755]: config item (null).first_step_threshold is 0.000020
+ptp4l[1189990.756]: config item (null).max_frequency is 900000000
+ptp4l[1189990.756]: config item (null).servo_offset_threshold is 0
+ptp4l[1189990.756]: config item (null).servo_num_offset_values is 10
+ptp4l[1189990.757]: config item (null).dataset_comparison is 0
+ptp4l[1189990.757]: config item (null).delay_filter_length is 10
+ptp4l[1189990.757]: config item (null).delay_filter is 1
+ptp4l[1189990.757]: config item (null).tsproc_mode is 0
+ptp4l[1189990.757]: config item (null).initial_delay is 0
+ptp4l[1189990.758]: config item (null).summary_interval is 1
+ptp4l[1189990.758]: config item (null).sanity_freq_limit is 200000000
+ptp4l[1189990.759]: PI servo: sync interval 1.000 kp 0.100 ki 0.001000
+ptp4l[1189990.759]: config item /var/run/ptp4l.phc_index is -1
+ptp4l[1189990.759]: config item /var/run/ptp4l.boundary_clock_jbod is 0
+ptp4l[1189990.759]: config item /var/run/ptp4l.serverOnly is 0
+ptp4l[1189990.760]: config item /var/run/ptp4l.BMCA is 0
+ptp4l[1189990.760]: config item /var/run/ptp4l.network_transport is 0
+ptp4l[1189990.760]: config item /var/run/ptp4l.delayAsymmetry is 0
+ptp4l[1189990.760]: config item /var/run/ptp4l.follow_up_info is 0
+ptp4l[1189990.760]: config item /var/run/ptp4l.freq_est_interval is 3
+ptp4l[1189990.760]: config item /var/run/ptp4l.msg_interval_request is 0
+ptp4l[1189990.761]: config item /var/run/ptp4l.net_sync_monitor is 0
+ptp4l[1189990.761]: config item /var/run/ptp4l.path_trace_enabled is 0
+ptp4l[1189990.761]: config item /var/run/ptp4l.tc_spanning_tree is 0
+ptp4l[1189990.761]: config item /var/run/ptp4l.ingressLatency is 0
+ptp4l[1189990.762]: config item /var/run/ptp4l.egressLatency is 0
+ptp4l[1189990.762]: config item /var/run/ptp4l.delay_mechanism is 0
+ptp4l[1189990.762]: config item /var/run/ptp4l.power_profile.version is 0
+ptp4l[1189990.762]: config item /var/run/ptp4l.power_profile.grandmasterID is 0
+ptp4l[1189990.762]: config item /var/run/ptp4l.power_profile.2011.grandmasterTimeInaccuracy is -1
+ptp4l[1189990.763]: config item /var/run/ptp4l.power_profile.2011.networkTimeInaccuracy is -1
+ptp4l[1189990.763]: config item /var/run/ptp4l.power_profile.2017.totalTimeInaccuracy is -1
+ptp4l[1189990.763]: config item /var/run/ptp4l.allowedLostResponses is 3
+ptp4l[1189990.764]: config item /var/run/ptp4l.spp is -1
+ptp4l[1189990.764]: config item /var/run/ptp4l.active_key_id is 0
+ptp4l[1189990.765]: config item /var/run/ptp4l.hybrid_e2e is 0
+ptp4l[1189990.765]: config item /var/run/ptp4l.fault_badpeernet_interval is 16
+ptp4l[1189990.765]: config item /var/run/ptp4l.fault_reset_interval is 4
+ptp4l[1189990.765]: config item /var/run/ptp4l.delay_filter_length is 1
+ptp4l[1189990.765]: config item /var/run/ptp4l.delay_filter is 1
+ptp4l[1189990.766]: config item /var/run/ptp4l.tsproc_mode is 0
+ptp4l[1189990.766]: config item /var/run/ptp4lro.phc_index is -1
+ptp4l[1189990.766]: config item /var/run/ptp4lro.boundary_clock_jbod is 0
+ptp4l[1189990.766]: config item /var/run/ptp4lro.serverOnly is 0
+ptp4l[1189990.767]: config item /var/run/ptp4lro.BMCA is 0
+ptp4l[1189990.767]: config item /var/run/ptp4lro.network_transport is 0
+ptp4l[1189990.767]: config item /var/run/ptp4lro.delayAsymmetry is 0
+ptp4l[1189990.768]: config item /var/run/ptp4lro.follow_up_info is 0
+ptp4l[1189990.768]: config item /var/run/ptp4lro.freq_est_interval is 3
+ptp4l[1189990.768]: config item /var/run/ptp4lro.msg_interval_request is 0
+ptp4l[1189990.768]: config item /var/run/ptp4lro.net_sync_monitor is 0
+ptp4l[1189990.768]: config item /var/run/ptp4lro.path_trace_enabled is 0
+ptp4l[1189990.769]: config item /var/run/ptp4lro.tc_spanning_tree is 0
+ptp4l[1189990.769]: config item /var/run/ptp4lro.ingressLatency is 0
+ptp4l[1189990.769]: config item /var/run/ptp4lro.egressLatency is 0
+ptp4l[1189990.769]: config item /var/run/ptp4lro.delay_mechanism is 0
+ptp4l[1189990.770]: config item /var/run/ptp4lro.power_profile.version is 0
+ptp4l[1189990.770]: config item /var/run/ptp4lro.power_profile.grandmasterID is 0
+ptp4l[1189990.770]: config item /var/run/ptp4lro.power_profile.2011.grandmasterTimeInaccuracy is -1
+ptp4l[1189990.771]: config item /var/run/ptp4lro.power_profile.2011.networkTimeInaccuracy is -1
+ptp4l[1189990.771]: config item /var/run/ptp4lro.power_profile.2017.totalTimeInaccuracy is -1
+ptp4l[1189990.771]: config item /var/run/ptp4lro.allowedLostResponses is 3
+ptp4l[1189990.771]: config item /var/run/ptp4lro.spp is -1
+ptp4l[1189990.771]: config item /var/run/ptp4lro.active_key_id is 0
+ptp4l[1189990.772]: config item /var/run/ptp4lro.hybrid_e2e is 0
+ptp4l[1189990.772]: config item /var/run/ptp4lro.fault_badpeernet_interval is 16
+ptp4l[1189990.772]: config item /var/run/ptp4lro.fault_reset_interval is 4
+ptp4l[1189990.772]: config item /var/run/ptp4lro.delay_filter_length is 1
+ptp4l[1189990.772]: config item /var/run/ptp4lro.delay_filter is 1
+ptp4l[1189990.773]: config item /var/run/ptp4lro.tsproc_mode is 0
+ptp4l[1189990.773]: config item (null).slave_event_monitor is ''
+ptp4l[1189990.773]: config item s11-eth1.phc_index is -1
+ptp4l[1189990.774]: config item s11-eth1.boundary_clock_jbod is 0
+ptp4l[1189990.774]: config item s11-eth1.serverOnly is 0
+ptp4l[1189990.774]: config item s11-eth1.BMCA is 0
+ptp4l[1189990.774]: config item s11-eth1.network_transport is 3
+ptp4l[1189990.774]: config item s11-eth1.delayAsymmetry is 0
+ptp4l[1189990.774]: config item s11-eth1.follow_up_info is 0
+ptp4l[1189990.775]: config item s11-eth1.freq_est_interval is 3
+ptp4l[1189990.775]: config item s11-eth1.msg_interval_request is 0
+ptp4l[1189990.776]: config item s11-eth1.net_sync_monitor is 0
+ptp4l[1189990.776]: config item s11-eth1.path_trace_enabled is 0
+ptp4l[1189990.776]: config item s11-eth1.tc_spanning_tree is 0
+ptp4l[1189990.776]: config item s11-eth1.ingressLatency is 0
+ptp4l[1189990.776]: config item s11-eth1.egressLatency is 0
+ptp4l[1189990.776]: config item s11-eth1.delay_mechanism is 1
+ptp4l[1189990.776]: config item s11-eth1.power_profile.version is 0
+ptp4l[1189990.777]: config item s11-eth1.power_profile.grandmasterID is 0
+ptp4l[1189990.777]: config item s11-eth1.power_profile.2011.grandmasterTimeInaccuracy is -1
+ptp4l[1189990.777]: config item s11-eth1.power_profile.2011.networkTimeInaccuracy is -1
+ptp4l[1189990.778]: config item s11-eth1.power_profile.2017.totalTimeInaccuracy is -1
+ptp4l[1189990.778]: config item s11-eth1.allowedLostResponses is 3
+ptp4l[1189990.778]: config item s11-eth1.spp is -1
+ptp4l[1189990.778]: config item s11-eth1.active_key_id is 0
+ptp4l[1189990.778]: config item s11-eth1.unicast_master_table is 0
+ptp4l[1189990.778]: config item s11-eth1.unicast_listen is 1
+ptp4l[1189990.779]: section item s11-eth1.hybrid_e2e now 1
+ptp4l[1189990.779]: config item s11-eth1.inhibit_multicast_service is 0
+ptp4l[1189990.779]: config item s11-eth1.hybrid_e2e is 1
+ptp4l[1189990.779]: config item s11-eth1.fault_badpeernet_interval is 16
+ptp4l[1189990.779]: config item s11-eth1.fault_reset_interval is 4
+ptp4l[1189990.779]: config item s11-eth1.delay_filter_length is 10
+ptp4l[1189990.779]: config item s11-eth1.delay_filter is 1
+ptp4l[1189990.779]: config item s11-eth1.tsproc_mode is 0
+ptp4l[1189990.780]: config item s11-eth2.phc_index is -1
+ptp4l[1189990.780]: config item s11-eth2.boundary_clock_jbod is 0
+ptp4l[1189990.780]: config item s11-eth2.serverOnly is 0
+ptp4l[1189990.780]: config item s11-eth2.BMCA is 0
+ptp4l[1189990.781]: config item s11-eth2.network_transport is 3
+ptp4l[1189990.781]: config item s11-eth2.delayAsymmetry is 0
+ptp4l[1189990.781]: config item s11-eth2.follow_up_info is 0
+ptp4l[1189990.781]: config item s11-eth2.freq_est_interval is 3
+ptp4l[1189990.781]: config item s11-eth2.msg_interval_request is 0
+ptp4l[1189990.782]: config item s11-eth2.net_sync_monitor is 0
+ptp4l[1189990.782]: config item s11-eth2.path_trace_enabled is 0
+ptp4l[1189990.782]: config item s11-eth2.tc_spanning_tree is 0
+ptp4l[1189990.783]: config item s11-eth2.ingressLatency is 0
+ptp4l[1189990.783]: config item s11-eth2.egressLatency is 0
+ptp4l[1189990.783]: config item s11-eth2.delay_mechanism is 1
+ptp4l[1189990.783]: config item s11-eth2.power_profile.version is 0
+ptp4l[1189990.783]: config item s11-eth2.power_profile.grandmasterID is 0
+ptp4l[1189990.783]: config item s11-eth2.power_profile.2011.grandmasterTimeInaccuracy is -1
+ptp4l[1189990.784]: config item s11-eth2.power_profile.2011.networkTimeInaccuracy is -1
+ptp4l[1189990.784]: config item s11-eth2.power_profile.2017.totalTimeInaccuracy is -1
+ptp4l[1189990.784]: config item s11-eth2.allowedLostResponses is 3
+ptp4l[1189990.785]: config item s11-eth2.spp is -1
+ptp4l[1189990.785]: config item s11-eth2.active_key_id is 0
+ptp4l[1189990.786]: config item s11-eth2.unicast_master_table is 0
+ptp4l[1189990.786]: config item s11-eth2.unicast_listen is 1
+ptp4l[1189990.786]: section item s11-eth2.hybrid_e2e now 1
+ptp4l[1189990.786]: config item s11-eth2.inhibit_multicast_service is 0
+ptp4l[1189990.787]: config item s11-eth2.hybrid_e2e is 1
+ptp4l[1189990.787]: config item s11-eth2.fault_badpeernet_interval is 16
+ptp4l[1189990.788]: config item s11-eth2.fault_reset_interval is 4
+ptp4l[1189990.788]: config item s11-eth2.delay_filter_length is 10
+ptp4l[1189990.788]: config item s11-eth2.delay_filter is 1
+ptp4l[1189990.788]: config item s11-eth2.tsproc_mode is 0
+ptp4l[1189990.789]: config item s11-eth1.logMinDelayReqInterval is 0
+ptp4l[1189990.789]: config item s11-eth1.logAnnounceInterval is 1
+ptp4l[1189990.789]: config item s11-eth1.inhibit_announce is 0
+ptp4l[1189990.790]: config item s11-eth1.ignore_source_id is 0
+ptp4l[1189990.790]: config item s11-eth1.announceReceiptTimeout is 3
+ptp4l[1189990.790]: config item s11-eth1.syncReceiptTimeout is 0
+ptp4l[1189990.790]: config item s11-eth1.transportSpecific is 0
+ptp4l[1189990.791]: config item s11-eth1.ignore_transport_specific is 0
+ptp4l[1189990.792]: config item s11-eth1.G.8275.portDS.localPriority is 128
+ptp4l[1189990.792]: config item s11-eth1.logSyncInterval is 0
+ptp4l[1189990.793]: config item s11-eth1.operLogSyncInterval is 0
+ptp4l[1189990.793]: config item s11-eth1.logMinPdelayReqInterval is 0
+ptp4l[1189990.793]: config item s11-eth1.operLogPdelayReqInterval is 0
+ptp4l[1189990.793]: config item s11-eth1.neighborPropDelayThresh is 20000000
+ptp4l[1189990.794]: config item s11-eth1.min_neighbor_prop_delay is -20000000
+ptp4l[1189990.795]: config item s11-eth1.delay_response_timeout is 0
+ptp4l[1189990.795]: config item s11-eth1.interface_rate_tlv is 0
+ptp4l[1189990.795]: config item s11-eth1.asCapable is 1
+ptp4l[1189990.795]: config item s11-eth1.inhibit_delay_req is 0
+ptp4l[1189990.795]: config item s11-eth1.ptp_dst_mac is '01:1B:19:00:00:00'
+ptp4l[1189990.796]: config item s11-eth1.p2p_dst_mac is '01:80:C2:00:00:0E'
+ptp4l[1189990.797]: config item global.socket_priority is 0
+ptp4l[1189990.817]: port 1 (s11-eth1): INITIALIZING to LISTENING on INIT_COMPLETE
+ptp4l[1189990.817]: config item s11-eth2.logMinDelayReqInterval is 0
+ptp4l[1189990.817]: config item s11-eth2.logAnnounceInterval is 1
+ptp4l[1189990.818]: config item s11-eth2.inhibit_announce is 0
+ptp4l[1189990.818]: config item s11-eth2.ignore_source_id is 0
+ptp4l[1189990.819]: config item s11-eth2.announceReceiptTimeout is 3
+ptp4l[1189990.819]: config item s11-eth2.syncReceiptTimeout is 0
+ptp4l[1189990.819]: config item s11-eth2.transportSpecific is 0
+ptp4l[1189990.819]: config item s11-eth2.ignore_transport_specific is 0
+ptp4l[1189990.820]: config item s11-eth2.G.8275.portDS.localPriority is 128
+ptp4l[1189990.821]: config item s11-eth2.logSyncInterval is 0
+ptp4l[1189990.822]: config item s11-eth2.operLogSyncInterval is 0
+ptp4l[1189990.825]: config item s11-eth2.logMinPdelayReqInterval is 0
+ptp4l[1189990.827]: config item s11-eth2.operLogPdelayReqInterval is 0
+ptp4l[1189990.828]: config item s11-eth2.neighborPropDelayThresh is 20000000
+ptp4l[1189990.829]: config item s11-eth2.min_neighbor_prop_delay is -20000000
+ptp4l[1189990.832]: config item s11-eth2.delay_response_timeout is 0
+ptp4l[1189990.833]: config item s11-eth2.interface_rate_tlv is 0
+ptp4l[1189990.835]: config item s11-eth2.asCapable is 1
+ptp4l[1189990.836]: config item s11-eth2.inhibit_delay_req is 0
+ptp4l[1189990.838]: config item s11-eth2.ptp_dst_mac is '01:1B:19:00:00:00'
+ptp4l[1189990.839]: config item s11-eth2.p2p_dst_mac is '01:80:C2:00:00:0E'
+ptp4l[1189990.840]: config item global.socket_priority is 0
+ptp4l[1189990.861]: port 2 (s11-eth2): INITIALIZING to LISTENING on INIT_COMPLETE
+ptp4l[1189990.862]: config item /var/run/ptp4l.logMinDelayReqInterval is 0
+ptp4l[1189990.863]: config item /var/run/ptp4l.logAnnounceInterval is 1
+ptp4l[1189990.865]: config item /var/run/ptp4l.inhibit_announce is 0
+ptp4l[1189990.866]: config item /var/run/ptp4l.ignore_source_id is 0
+ptp4l[1189990.868]: config item /var/run/ptp4l.announceReceiptTimeout is 0
+ptp4l[1189990.869]: config item /var/run/ptp4l.syncReceiptTimeout is 0
+ptp4l[1189990.870]: config item /var/run/ptp4l.transportSpecific is 0
+ptp4l[1189990.872]: config item /var/run/ptp4l.ignore_transport_specific is 0
+ptp4l[1189990.873]: config item /var/run/ptp4l.G.8275.portDS.localPriority is 128
+ptp4l[1189990.875]: config item /var/run/ptp4l.logSyncInterval is 0
+ptp4l[1189990.876]: config item /var/run/ptp4l.operLogSyncInterval is 0
+ptp4l[1189990.878]: config item /var/run/ptp4l.logMinPdelayReqInterval is 0
+ptp4l[1189990.879]: config item /var/run/ptp4l.operLogPdelayReqInterval is 0
+ptp4l[1189990.881]: config item /var/run/ptp4l.neighborPropDelayThresh is 20000000
+ptp4l[1189990.883]: config item /var/run/ptp4l.min_neighbor_prop_delay is -20000000
+ptp4l[1189990.884]: config item /var/run/ptp4l.delay_response_timeout is 0
+ptp4l[1189990.886]: config item /var/run/ptp4l.interface_rate_tlv is 0
+ptp4l[1189990.887]: config item /var/run/ptp4l.asCapable is 1
+ptp4l[1189990.888]: config item /var/run/ptp4l.inhibit_delay_req is 0
+ptp4l[1189990.890]: config item (null).uds_ro_address is '/var/run/ptp4lro'
+ptp4l[1189990.892]: uds: removed existing /var/run/ptp4l
+ptp4l[1189990.893]: config item /var/run/ptp4l.uds_file_mode is 432
+ptp4l[1189990.895]: port 0 (/var/run/ptp4l): INITIALIZING to LISTENING on INIT_COMPLETE
+ptp4l[1189990.896]: config item /var/run/ptp4lro.logMinDelayReqInterval is 0
+ptp4l[1189990.898]: config item /var/run/ptp4lro.logAnnounceInterval is 1
+ptp4l[1189990.900]: config item /var/run/ptp4lro.inhibit_announce is 0
+ptp4l[1189990.902]: config item /var/run/ptp4lro.ignore_source_id is 0
+ptp4l[1189990.903]: config item /var/run/ptp4lro.announceReceiptTimeout is 0
+ptp4l[1189990.904]: config item /var/run/ptp4lro.syncReceiptTimeout is 0
+ptp4l[1189990.905]: config item /var/run/ptp4lro.transportSpecific is 0
+ptp4l[1189990.907]: config item /var/run/ptp4lro.ignore_transport_specific is 0
+ptp4l[1189990.908]: config item /var/run/ptp4lro.G.8275.portDS.localPriority is 128
+ptp4l[1189990.909]: config item /var/run/ptp4lro.logSyncInterval is 0
+ptp4l[1189990.910]: config item /var/run/ptp4lro.operLogSyncInterval is 0
+ptp4l[1189990.911]: config item /var/run/ptp4lro.logMinPdelayReqInterval is 0
+ptp4l[1189990.912]: config item /var/run/ptp4lro.operLogPdelayReqInterval is 0
+ptp4l[1189990.913]: config item /var/run/ptp4lro.neighborPropDelayThresh is 20000000
+ptp4l[1189990.913]: config item /var/run/ptp4lro.min_neighbor_prop_delay is -20000000
+ptp4l[1189990.914]: config item /var/run/ptp4lro.delay_response_timeout is 0
+ptp4l[1189990.915]: config item /var/run/ptp4lro.interface_rate_tlv is 0
+ptp4l[1189990.916]: config item /var/run/ptp4lro.asCapable is 1
+ptp4l[1189990.918]: config item /var/run/ptp4lro.inhibit_delay_req is 0
+ptp4l[1189990.918]: config item (null).uds_ro_address is '/var/run/ptp4lro'
+ptp4l[1189990.919]: uds: removed existing /var/run/ptp4lro
+ptp4l[1189990.920]: config item /var/run/ptp4lro.uds_ro_file_mode is 438
+ptp4l[1189990.921]: port 0 (/var/run/ptp4lro): INITIALIZING to LISTENING on INIT_COMPLETE
+ptp4l[1189990.922]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.923]: interface index 8247 is up
+ptp4l[1189990.924]: port 2 (s11-eth2): received link status notification
+ptp4l[1189990.924]: interface index 8250 is up
+ptp4l[1189990.925]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.927]: port 2 (s11-eth2): received link status notification
+ptp4l[1189990.928]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.928]: port 2 (s11-eth2): received link status notification
+ptp4l[1189990.929]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.930]: port 2 (s11-eth2): received link status notification
+ptp4l[1189990.931]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.932]: port 2 (s11-eth2): received link status notification
+ptp4l[1189990.932]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.933]: port 2 (s11-eth2): received link status notification
+ptp4l[1189990.934]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.935]: port 2 (s11-eth2): received link status notification
+ptp4l[1189990.936]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.936]: port 2 (s11-eth2): received link status notification
+ptp4l[1189990.937]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.938]: port 2 (s11-eth2): received link status notification
+ptp4l[1189990.939]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.939]: port 2 (s11-eth2): received link status notification
+ptp4l[1189990.940]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.941]: port 2 (s11-eth2): received link status notification
+ptp4l[1189990.942]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.943]: port 2 (s11-eth2): received link status notification
+ptp4l[1189990.943]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.944]: port 2 (s11-eth2): received link status notification
+ptp4l[1189990.945]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.946]: port 2 (s11-eth2): received link status notification
+ptp4l[1189990.946]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.947]: port 2 (s11-eth2): received link status notification
+ptp4l[1189990.948]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.948]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.949]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.950]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.951]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.951]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.952]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.953]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.953]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.954]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.955]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.956]: port 1 (s11-eth1): received link status notification
+ptp4l[1189990.956]: port 1 (s11-eth1): received link status notification
+ptp4l[1189991.009]: port 2 (s11-eth2): delay timeout
+ptp4l[1189991.244]: port 2 (s11-eth2): delay timeout
+ptp4l[1189992.364]: port 1 (s11-eth1): delay timeout
+ptp4l[1189992.554]: port 2 (s11-eth2): delay timeout
+ptp4l[1189993.205]: port 2 (s11-eth2): delay timeout
+ptp4l[1189993.469]: port 1 (s11-eth1): delay timeout
+ptp4l[1189993.941]: port 1 (s11-eth1): delay timeout
+ptp4l[1189994.199]: port 2 (s11-eth2): delay timeout
+ptp4l[1189994.550]: port 1 (s11-eth1): delay timeout
+ptp4l[1189995.689]: port 2 (s11-eth2): delay timeout
+ptp4l[1189996.144]: port 1 (s11-eth1): delay timeout
+ptp4l[1189996.926]: port 2 (s11-eth2): delay timeout
+ptp4l[1189997.042]: port 1 (s11-eth1): delay timeout
+ptp4l[1189997.379]: port 1 (s11-eth1): announce timeout
+ptp4l[1189997.379]: port 1 (s11-eth1): LISTENING to MASTER on ANNOUNCE_RECEIPT_TIMEOUT_EXPIRES
+ptp4l[1189997.379]: selected local clock 6658be.fffe.80bd3c as best master
+ptp4l[1189997.379]: port 1 (s11-eth1): assuming the grand master role
+ptp4l[1189997.394]: port 1 (s11-eth1): delay timeout
+ptp4l[1189998.228]: port 2 (s11-eth2): delay timeout
+ptp4l[1189998.548]: port 2 (s11-eth2): announce timeout
+ptp4l[1189998.548]: port 2 (s11-eth2): LISTENING to MASTER on ANNOUNCE_RECEIPT_TIMEOUT_EXPIRES
+ptp4l[1189998.548]: port 1 (s11-eth1): assuming the grand master role
+ptp4l[1189998.548]: port 2 (s11-eth2): assuming the grand master role
+ptp4l[1189998.643]: port 1 (s11-eth1): delay timeout
+ptp4l[1189999.101]: port 1 (s11-eth1): delay timeout
+ptp4l[1189999.231]: port 2 (s11-eth2): delay timeout
+ptp4l[1189999.538]: port 2 (s11-eth2): delay timeout
+ptp4l[1189999.902]: port 2 (s11-eth2): delay timeout
+ptp4l[1190000.435]: port 1 (s11-eth1): delay timeout
+ptp4l[1190001.045]: port 1 (s11-eth1): delay timeout
+ptp4l[1190001.716]: port 2 (s11-eth2): delay timeout
+ptp4l[1190002.091]: port 2 (s11-eth2): delay timeout
+ptp4l[1190002.198]: port 1 (s11-eth1): delay timeout
+ptp4l[1190002.248]: port 2 (s11-eth2): delay timeout
+ptp4l[1190002.309]: port 2 (s11-eth2): delay timeout
+ptp4l[1190002.613]: port 2 (s11-eth2): delay timeout
+ptp4l[1190003.581]: port 1 (s11-eth1): delay timeout
+ptp4l[1190004.072]: port 1 (s11-eth1): delay timeout
+ptp4l[1190004.108]: port 2 (s11-eth2): delay timeout
+ptp4l[1190004.611]: port 1 (s11-eth1): delay timeout
+ptp4l[1190004.911]: port 2 (s11-eth2): delay timeout
+ptp4l[1190006.101]: port 2 (s11-eth2): delay timeout
+ptp4l[1190006.207]: port 1 (s11-eth1): delay timeout
+ptp4l[1190006.274]: port 1 (s11-eth1): delay timeout
+ptp4l[1190007.898]: port 2 (s11-eth2): delay timeout
+ptp4l[1190008.073]: port 1 (s11-eth1): delay timeout
+ptp4l[1190009.184]: port 2 (s11-eth2): delay timeout
+ptp4l[1190009.733]: port 1 (s11-eth1): delay timeout
+ptp4l[1190009.918]: port 1 (s11-eth1): delay timeout
+ptp4l[1190010.220]: port 2 (s11-eth2): delay timeout
+ptp4l[1190010.880]: port 1 (s11-eth1): delay timeout
+ptp4l[1190011.608]: port 2 (s11-eth2): delay timeout
+ptp4l[1190011.819]: port 2 (s11-eth2): delay timeout
+ptp4l[1190011.897]: port 1 (s11-eth1): delay timeout
+ptp4l[1190012.210]: port 2 (s11-eth2): delay timeout
+ptp4l[1190012.878]: port 2 (s11-eth2): delay timeout
+ptp4l[1190013.632]: port 1 (s11-eth1): delay timeout
+ptp4l[1190013.673]: port 1 (s11-eth1): delay timeout
+ptp4l[1190014.602]: port 2 (s11-eth2): delay timeout
+ptp4l[1190014.705]: port 1 (s11-eth1): delay timeout
+ptp4l[1190015.356]: port 1 (s11-eth1): delay timeout
+ptp4l[1190015.541]: port 1 (s11-eth1): delay timeout
+ptp4l[1190016.140]: port 2 (s11-eth2): delay timeout
+ptp4l[1190016.947]: port 2 (s11-eth2): delay timeout
+ptp4l[1190017.454]: port 1 (s11-eth1): delay timeout
+ptp4l[1190018.515]: port 2 (s11-eth2): delay timeout
+ptp4l[1190019.427]: port 1 (s11-eth1): delay timeout
+ptp4l[1190019.626]: port 2 (s11-eth2): delay timeout
+ptp4l[1190020.090]: port 2 (s11-eth2): delay timeout
+ptp4l[1190020.488]: port 1 (s11-eth1): delay timeout
+ptp4l[1190021.739]: port 2 (s11-eth2): delay timeout
+ptp4l[1190021.799]: port 2 (s11-eth2): delay timeout
+ptp4l[1190022.353]: port 1 (s11-eth1): delay timeout
+ptp4l[1190022.638]: port 2 (s11-eth2): delay timeout
+ptp4l[1190022.765]: port 2 (s11-eth2): delay timeout
+ptp4l[1190023.402]: port 2 (s11-eth2): delay timeout
+ptp4l[1190024.013]: port 1 (s11-eth1): delay timeout
+ptp4l[1190024.349]: port 2 (s11-eth2): delay timeout
+ptp4l[1190025.800]: port 1 (s11-eth1): delay timeout
+ptp4l[1190026.021]: port 2 (s11-eth2): delay timeout
+ptp4l[1190026.770]: port 2 (s11-eth2): delay timeout
+ptp4l[1190026.931]: port 1 (s11-eth1): delay timeout
+ptp4l[1190027.079]: port 1 (s11-eth1): delay timeout
+ptp4l[1190027.831]: port 2 (s11-eth2): delay timeout
+ptp4l[1190028.038]: port 1 (s11-eth1): delay timeout
+ptp4l[1190029.282]: port 2 (s11-eth2): delay timeout
+ptp4l[1190029.920]: port 1 (s11-eth1): delay timeout
+ptp4l[1190030.909]: port 2 (s11-eth2): delay timeout
+ptp4l[1190031.094]: port 1 (s11-eth1): delay timeout
+ptp4l[1190031.753]: port 1 (s11-eth1): delay timeout
+ptp4l[1190032.464]: port 1 (s11-eth1): delay timeout
+ptp4l[1190032.832]: port 2 (s11-eth2): delay timeout
+ptp4l[1190033.038]: port 1 (s11-eth1): delay timeout
+ptp4l[1190033.661]: port 1 (s11-eth1): delay timeout
+ptp4l[1190033.675]: port 2 (s11-eth2): delay timeout
+ptp4l[1190034.085]: port 2 (s11-eth2): delay timeout
+ptp4l[1190034.682]: port 2 (s11-eth2): delay timeout
+ptp4l[1190035.042]: port 1 (s11-eth1): delay timeout
+ptp4l[1190035.173]: port 2 (s11-eth2): delay timeout
+ptp4l[1190036.234]: port 2 (s11-eth2): delay timeout
+ptp4l[1190036.375]: port 2 (s11-eth2): delay timeout
+ptp4l[1190036.513]: port 1 (s11-eth1): delay timeout
+ptp4l[1190037.633]: port 1 (s11-eth1): delay timeout
+ptp4l[1190037.710]: port 2 (s11-eth2): delay timeout
+ptp4l[1190038.612]: port 1 (s11-eth1): delay timeout
+ptp4l[1190038.705]: port 2 (s11-eth2): delay timeout
+ptp4l[1190039.858]: port 1 (s11-eth1): delay timeout
+ptp4l[1190040.321]: port 2 (s11-eth2): delay timeout
+ptp4l[1190041.354]: port 2 (s11-eth2): delay timeout
+ptp4l[1190041.800]: port 1 (s11-eth1): delay timeout
+ptp4l[1190042.643]: port 2 (s11-eth2): delay timeout
+ptp4l[1190042.872]: port 1 (s11-eth1): delay timeout
+ptp4l[1190043.221]: port 1 (s11-eth1): delay timeout
+ptp4l[1190044.424]: port 2 (s11-eth2): delay timeout
+ptp4l[1190044.440]: port 1 (s11-eth1): delay timeout
+ptp4l[1190045.164]: port 2 (s11-eth2): delay timeout
+ptp4l[1190046.240]: port 1 (s11-eth1): delay timeout
+ptp4l[1190046.265]: port 2 (s11-eth2): delay timeout
+ptp4l[1190046.606]: port 1 (s11-eth1): delay timeout
+ptp4l[1190047.238]: port 2 (s11-eth2): delay timeout
+ptp4l[1190047.630]: port 1 (s11-eth1): delay timeout
+ptp4l[1190048.263]: port 2 (s11-eth2): delay timeout
+ptp4l[1190049.315]: port 1 (s11-eth1): delay timeout
+ptp4l[1190049.860]: port 2 (s11-eth2): delay timeout
+ptp4l[1190050.169]: port 2 (s11-eth2): delay timeout
+ptp4l[1190051.147]: port 2 (s11-eth2): delay timeout
+ptp4l[1190051.182]: port 1 (s11-eth1): delay timeout
+ptp4l[1190051.424]: port 2 (s11-eth2): delay timeout
+ptp4l[1190052.087]: port 1 (s11-eth1): delay timeout
+ptp4l[1190052.894]: port 2 (s11-eth2): delay timeout
+ptp4l[1190053.835]: port 1 (s11-eth1): delay timeout
+ptp4l[1190054.858]: port 2 (s11-eth2): delay timeout
+ptp4l[1190055.445]: port 1 (s11-eth1): delay timeout
+ptp4l[1190055.940]: port 2 (s11-eth2): delay timeout
+ptp4l[1190056.529]: port 1 (s11-eth1): delay timeout
+ptp4l[1190056.529]: port 2 (s11-eth2): delay timeout
+ptp4l[1190056.605]: port 1 (s11-eth1): delay timeout
+ptp4l[1190056.811]: port 1 (s11-eth1): delay timeout
+ptp4l[1190056.829]: port 1 (s11-eth1): delay timeout
+ptp4l[1190056.859]: port 2 (s11-eth2): delay timeout
+ptp4l[1190058.191]: port 1 (s11-eth1): delay timeout
+ptp4l[1190058.353]: port 2 (s11-eth2): delay timeout
+ptp4l[1190059.281]: port 1 (s11-eth1): delay timeout
+ptp4l[1190059.496]: port 2 (s11-eth2): delay timeout
+ptp4l[1190059.804]: port 2 (s11-eth2): delay timeout
+ptp4l[1190061.123]: port 1 (s11-eth1): delay timeout
+ptp4l[1190061.687]: port 2 (s11-eth2): delay timeout
+ptp4l[1190062.764]: port 1 (s11-eth1): delay timeout
+ptp4l[1190063.013]: port 1 (s11-eth1): delay timeout
+ptp4l[1190063.096]: port 2 (s11-eth2): delay timeout
+ptp4l[1190063.529]: port 2 (s11-eth2): delay timeout
+ptp4l[1190063.628]: port 1 (s11-eth1): delay timeout
+ptp4l[1190063.927]: port 1 (s11-eth1): delay timeout
+ptp4l[1190063.956]: port 1 (s11-eth1): delay timeout
+ptp4l[1190064.802]: port 2 (s11-eth2): delay timeout
+ptp4l[1190065.097]: port 1 (s11-eth1): delay timeout
+ptp4l[1190065.409]: port 2 (s11-eth2): delay timeout
+ptp4l[1190066.104]: port 1 (s11-eth1): delay timeout
+ptp4l[1190066.826]: port 2 (s11-eth2): delay timeout
+ptp4l[1190067.303]: port 2 (s11-eth2): delay timeout
+ptp4l[1190067.615]: port 1 (s11-eth1): delay timeout
+ptp4l[1190068.468]: port 2 (s11-eth2): delay timeout
+ptp4l[1190068.554]: port 2 (s11-eth2): delay timeout
+ptp4l[1190068.801]: port 2 (s11-eth2): delay timeout
+ptp4l[1190069.089]: port 1 (s11-eth1): delay timeout
+ptp4l[1190069.359]: port 2 (s11-eth2): delay timeout
+ptp4l[1190069.682]: port 2 (s11-eth2): delay timeout
+ptp4l[1190069.765]: port 1 (s11-eth1): delay timeout
+ptp4l[1190070.569]: port 2 (s11-eth2): delay timeout
+ptp4l[1190070.645]: port 1 (s11-eth1): delay timeout
+ptp4l[1190070.894]: port 1 (s11-eth1): delay timeout
+ptp4l[1190070.910]: port 2 (s11-eth2): delay timeout
+ptp4l[1190071.267]: port 1 (s11-eth1): delay timeout
+ptp4l[1190072.341]: port 2 (s11-eth2): delay timeout
+ptp4l[1190072.557]: port 2 (s11-eth2): delay timeout
+ptp4l[1190072.659]: port 1 (s11-eth1): delay timeout
+ptp4l[1190073.932]: port 1 (s11-eth1): delay timeout
+ptp4l[1190074.295]: port 2 (s11-eth2): delay timeout
+ptp4l[1190075.443]: port 2 (s11-eth2): delay timeout
+ptp4l[1190075.789]: port 1 (s11-eth1): delay timeout
+ptp4l[1190076.260]: port 1 (s11-eth1): delay timeout
+ptp4l[1190076.965]: port 2 (s11-eth2): delay timeout
+ptp4l[1190077.759]: port 2 (s11-eth2): delay timeout
+ptp4l[1190077.840]: port 1 (s11-eth1): delay timeout
+ptp4l[1190078.529]: port 2 (s11-eth2): delay timeout
+ptp4l[1190079.450]: port 1 (s11-eth1): delay timeout
+ptp4l[1190080.463]: port 2 (s11-eth2): delay timeout
+ptp4l[1190080.826]: port 1 (s11-eth1): delay timeout
+ptp4l[1190081.080]: port 2 (s11-eth2): delay timeout
+ptp4l[1190081.966]: port 2 (s11-eth2): delay timeout
+ptp4l[1190082.178]: port 1 (s11-eth1): delay timeout
+ptp4l[1190082.694]: port 1 (s11-eth1): delay timeout
+ptp4l[1190083.054]: port 1 (s11-eth1): delay timeout
+ptp4l[1190083.059]: port 2 (s11-eth2): delay timeout
+ptp4l[1190083.822]: port 2 (s11-eth2): delay timeout
+ptp4l[1190084.233]: port 1 (s11-eth1): delay timeout
+ptp4l[1190084.739]: port 2 (s11-eth2): delay timeout
+ptp4l[1190085.825]: port 2 (s11-eth2): delay timeout
+ptp4l[1190086.087]: port 1 (s11-eth1): delay timeout
+ptp4l[1190086.821]: port 1 (s11-eth1): delay timeout
+ptp4l[1190087.629]: port 2 (s11-eth2): delay timeout
+ptp4l[1190087.682]: port 2 (s11-eth2): delay timeout
+ptp4l[1190088.248]: port 1 (s11-eth1): delay timeout
+ptp4l[1190088.790]: port 2 (s11-eth2): delay timeout
+ptp4l[1190089.104]: port 1 (s11-eth1): delay timeout
+ptp4l[1190090.233]: port 2 (s11-eth2): delay timeout
+ptp4l[1190090.427]: port 1 (s11-eth1): delay timeout
+ptp4l[1190090.836]: port 2 (s11-eth2): delay timeout
+ptp4l[1190091.144]: port 1 (s11-eth1): delay timeout
+ptp4l[1190092.016]: port 2 (s11-eth2): delay timeout
+ptp4l[1190092.254]: port 2 (s11-eth2): delay timeout
+ptp4l[1190092.886]: port 1 (s11-eth1): delay timeout
+ptp4l[1190093.904]: port 2 (s11-eth2): delay timeout
+ptp4l[1190094.208]: port 1 (s11-eth1): delay timeout
+ptp4l[1190094.628]: port 1 (s11-eth1): delay timeout
+ptp4l[1190094.936]: port 2 (s11-eth2): delay timeout
+ptp4l[1190095.560]: port 1 (s11-eth1): delay timeout
+ptp4l[1190095.902]: port 2 (s11-eth2): delay timeout
+ptp4l[1190097.355]: port 1 (s11-eth1): delay timeout
+ptp4l[1190097.450]: port 2 (s11-eth2): delay timeout
+ptp4l[1190097.672]: port 1 (s11-eth1): delay timeout
+ptp4l[1190098.131]: port 2 (s11-eth2): delay timeout
+ptp4l[1190098.314]: port 1 (s11-eth1): delay timeout
+ptp4l[1190098.964]: port 2 (s11-eth2): delay timeout
+ptp4l[1190099.353]: port 1 (s11-eth1): delay timeout
+ptp4l[1190100.784]: port 2 (s11-eth2): delay timeout
+ptp4l[1190100.949]: port 1 (s11-eth1): delay timeout
+ptp4l[1190102.623]: port 1 (s11-eth1): delay timeout
+ptp4l[1190102.741]: port 2 (s11-eth2): delay timeout
+ptp4l[1190103.303]: port 1 (s11-eth1): delay timeout
+ptp4l[1190103.711]: port 1 (s11-eth1): delay timeout
+ptp4l[1190103.818]: port 1 (s11-eth1): delay timeout
+ptp4l[1190104.502]: port 2 (s11-eth2): delay timeout
+ptp4l[1190105.631]: port 1 (s11-eth1): delay timeout
+ptp4l[1190106.017]: port 2 (s11-eth2): delay timeout
+ptp4l[1190106.593]: port 1 (s11-eth1): delay timeout
+ptp4l[1190107.274]: port 2 (s11-eth2): delay timeout
+ptp4l[1190107.432]: port 1 (s11-eth1): delay timeout
+ptp4l[1190108.831]: port 2 (s11-eth2): delay timeout
+ptp4l[1190108.848]: port 2 (s11-eth2): delay timeout
+ptp4l[1190109.405]: port 1 (s11-eth1): delay timeout
+ptp4l[1190109.615]: port 1 (s11-eth1): delay timeout
+ptp4l[1190110.147]: port 2 (s11-eth2): delay timeout
+ptp4l[1190110.768]: port 2 (s11-eth2): delay timeout
+ptp4l[1190111.283]: port 1 (s11-eth1): delay timeout
+ptp4l[1190111.369]: port 1 (s11-eth1): delay timeout
+ptp4l[1190112.010]: port 2 (s11-eth2): delay timeout
+ptp4l[1190112.217]: port 2 (s11-eth2): delay timeout
+ptp4l[1190112.922]: port 1 (s11-eth1): delay timeout
+ptp4l[1190114.022]: port 1 (s11-eth1): delay timeout
+ptp4l[1190114.099]: port 2 (s11-eth2): delay timeout
+ptp4l[1190114.547]: port 1 (s11-eth1): delay timeout
+ptp4l[1190114.660]: port 2 (s11-eth2): delay timeout
+ptp4l[1190116.017]: port 2 (s11-eth2): delay timeout
+ptp4l[1190116.288]: port 1 (s11-eth1): delay timeout
+ptp4l[1190117.618]: port 2 (s11-eth2): delay timeout
+ptp4l[1190117.848]: port 1 (s11-eth1): delay timeout
+ptp4l[1190118.571]: port 2 (s11-eth2): delay timeout
+ptp4l[1190119.406]: port 1 (s11-eth1): delay timeout
+ptp4l[1190119.805]: port 2 (s11-eth2): delay timeout
+ptp4l[1190121.039]: port 1 (s11-eth1): delay timeout
+ptp4l[1190121.123]: port 2 (s11-eth2): delay timeout
+ptp4l[1190122.681]: port 1 (s11-eth1): delay timeout
+ptp4l[1190122.862]: port 2 (s11-eth2): delay timeout
+ptp4l[1190123.811]: port 1 (s11-eth1): delay timeout
+ptp4l[1190124.019]: port 2 (s11-eth2): delay timeout
+ptp4l[1190124.406]: port 2 (s11-eth2): delay timeout
+ptp4l[1190124.512]: port 1 (s11-eth1): delay timeout
+ptp4l[1190124.770]: port 1 (s11-eth1): delay timeout
+ptp4l[1190125.129]: port 1 (s11-eth1): delay timeout
+ptp4l[1190125.142]: port 1 (s11-eth1): delay timeout
+ptp4l[1190126.401]: port 2 (s11-eth2): delay timeout
+ptp4l[1190126.698]: port 1 (s11-eth1): delay timeout
+ptp4l[1190126.971]: port 2 (s11-eth2): delay timeout
+ptp4l[1190127.146]: port 2 (s11-eth2): delay timeout
+ptp4l[1190128.378]: port 1 (s11-eth1): delay timeout
+ptp4l[1190128.957]: port 2 (s11-eth2): delay timeout
+ptp4l[1190130.145]: port 1 (s11-eth1): delay timeout
+ptp4l[1190130.163]: port 1 (s11-eth1): delay timeout
+ptp4l[1190130.685]: port 2 (s11-eth2): delay timeout
+ptp4l[1190131.512]: port 2 (s11-eth2): delay timeout
+ptp4l[1190131.811]: port 1 (s11-eth1): delay timeout
+ptp4l[1190132.019]: port 1 (s11-eth1): delay timeout
+ptp4l[1190132.055]: port 2 (s11-eth2): delay timeout
+ptp4l[1190132.587]: port 1 (s11-eth1): delay timeout
+ptp4l[1190133.955]: port 2 (s11-eth2): delay timeout
+ptp4l[1190134.083]: port 2 (s11-eth2): delay timeout
+ptp4l[1190134.395]: port 1 (s11-eth1): delay timeout
+ptp4l[1190134.935]: port 2 (s11-eth2): delay timeout
+ptp4l[1190135.761]: port 1 (s11-eth1): delay timeout
+ptp4l[1190136.246]: port 1 (s11-eth1): delay timeout
+ptp4l[1190136.298]: port 2 (s11-eth2): delay timeout
+ptp4l[1190136.928]: port 1 (s11-eth1): delay timeout
+ptp4l[1190137.152]: port 1 (s11-eth1): delay timeout
+ptp4l[1190137.303]: port 2 (s11-eth2): delay timeout
+ptp4l[1190137.465]: port 2 (s11-eth2): delay timeout
+ptp4l[1190138.389]: port 2 (s11-eth2): delay timeout
+ptp4l[1190138.588]: port 2 (s11-eth2): delay timeout
+ptp4l[1190138.745]: port 2 (s11-eth2): delay timeout
+ptp4l[1190138.964]: port 1 (s11-eth1): delay timeout
+ptp4l[1190139.522]: port 1 (s11-eth1): delay timeout
+ptp4l[1190139.691]: port 1 (s11-eth1): delay timeout
+ptp4l[1190139.926]: port 2 (s11-eth2): delay timeout
+ptp4l[1190140.428]: port 1 (s11-eth1): delay timeout
+ptp4l[1190141.052]: port 2 (s11-eth2): delay timeout
+ptp4l[1190141.964]: port 2 (s11-eth2): delay timeout
+ptp4l[1190142.277]: port 1 (s11-eth1): delay timeout
+ptp4l[1190142.901]: port 2 (s11-eth2): delay timeout
+ptp4l[1190143.541]: port 2 (s11-eth2): delay timeout
+ptp4l[1190143.893]: port 1 (s11-eth1): delay timeout
+ptp4l[1190144.496]: port 2 (s11-eth2): delay timeout
+ptp4l[1190145.156]: port 1 (s11-eth1): delay timeout
+ptp4l[1190145.962]: port 2 (s11-eth2): delay timeout
+ptp4l[1190146.653]: port 1 (s11-eth1): delay timeout
+ptp4l[1190146.688]: port 1 (s11-eth1): delay timeout
+ptp4l[1190147.433]: port 2 (s11-eth2): delay timeout
+ptp4l[1190148.084]: port 1 (s11-eth1): delay timeout
+ptp4l[1190148.246]: port 1 (s11-eth1): delay timeout
+ptp4l[1190148.495]: port 1 (s11-eth1): delay timeout
+ptp4l[1190148.713]: port 2 (s11-eth2): delay timeout
+ptp4l[1190149.139]: port 1 (s11-eth1): delay timeout
+ptp4l[1190149.871]: port 1 (s11-eth1): delay timeout
+ptp4l[1190150.237]: port 2 (s11-eth2): delay timeout
+ptp4l[1190150.766]: port 2 (s11-eth2): delay timeout
+ptp4l[1190151.198]: port 1 (s11-eth1): delay timeout
+ptp4l[1190151.722]: port 2 (s11-eth2): delay timeout
+ptp4l[1190152.336]: port 1 (s11-eth1): delay timeout
+ptp4l[1190152.413]: port 2 (s11-eth2): delay timeout
+ptp4l[1190153.750]: port 2 (s11-eth2): delay timeout
+ptp4l[1190154.215]: port 1 (s11-eth1): delay timeout
+ptp4l[1190154.597]: port 2 (s11-eth2): delay timeout
+ptp4l[1190155.276]: port 1 (s11-eth1): delay timeout
+ptp4l[1190156.292]: port 1 (s11-eth1): delay timeout
+ptp4l[1190156.490]: port 2 (s11-eth2): delay timeout
+ptp4l[1190157.510]: port 2 (s11-eth2): delay timeout
+ptp4l[1190158.089]: port 1 (s11-eth1): delay timeout
+ptp4l[1190158.375]: port 2 (s11-eth2): delay timeout
+ptp4l[1190158.798]: port 1 (s11-eth1): delay timeout
+ptp4l[1190159.279]: port 1 (s11-eth1): delay timeout
+ptp4l[1190160.332]: port 2 (s11-eth2): delay timeout
+ptp4l[1190160.626]: port 1 (s11-eth1): delay timeout
+ptp4l[1190161.242]: port 2 (s11-eth2): delay timeout
+ptp4l[1190162.056]: port 2 (s11-eth2): delay timeout
+ptp4l[1190162.370]: port 1 (s11-eth1): delay timeout
+ptp4l[1190162.464]: port 2 (s11-eth2): delay timeout
+ptp4l[1190163.312]: port 2 (s11-eth2): delay timeout
+ptp4l[1190163.585]: port 1 (s11-eth1): delay timeout
+ptp4l[1190164.078]: port 1 (s11-eth1): delay timeout
+ptp4l[1190165.088]: port 1 (s11-eth1): delay timeout
+ptp4l[1190165.115]: port 2 (s11-eth2): delay timeout
+ptp4l[1190165.139]: port 1 (s11-eth1): delay timeout
+ptp4l[1190165.674]: port 1 (s11-eth1): delay timeout
+ptp4l[1190166.252]: port 2 (s11-eth2): delay timeout
+ptp4l[1190166.457]: port 1 (s11-eth1): delay timeout
+ptp4l[1190166.715]: port 2 (s11-eth2): delay timeout
+ptp4l[1190167.520]: port 1 (s11-eth1): delay timeout
+ptp4l[1190168.454]: port 2 (s11-eth2): delay timeout
+ptp4l[1190169.121]: port 1 (s11-eth1): delay timeout
+ptp4l[1190170.208]: port 2 (s11-eth2): delay timeout
+ptp4l[1190170.739]: port 1 (s11-eth1): delay timeout
+ptp4l[1190171.145]: port 2 (s11-eth2): delay timeout
+ptp4l[1190171.339]: port 1 (s11-eth1): delay timeout
+ptp4l[1190171.824]: port 2 (s11-eth2): delay timeout
+ptp4l[1190172.170]: port 1 (s11-eth1): delay timeout
+ptp4l[1190172.645]: port 1 (s11-eth1): delay timeout
+ptp4l[1190173.440]: port 2 (s11-eth2): delay timeout
+ptp4l[1190173.921]: port 2 (s11-eth2): delay timeout
+ptp4l[1190174.496]: port 1 (s11-eth1): delay timeout
+ptp4l[1190175.104]: port 2 (s11-eth2): delay timeout
+ptp4l[1190176.066]: port 2 (s11-eth2): delay timeout
+ptp4l[1190176.302]: port 1 (s11-eth1): delay timeout
+ptp4l[1190176.597]: port 2 (s11-eth2): delay timeout
+ptp4l[1190177.019]: port 1 (s11-eth1): delay timeout
+ptp4l[1190177.302]: port 2 (s11-eth2): delay timeout
+ptp4l[1190178.364]: port 1 (s11-eth1): delay timeout
+ptp4l[1190178.425]: port 2 (s11-eth2): delay timeout
+ptp4l[1190178.617]: port 2 (s11-eth2): delay timeout
+ptp4l[1190179.544]: port 2 (s11-eth2): delay timeout
+ptp4l[1190179.955]: port 2 (s11-eth2): delay timeout
+ptp4l[1190180.282]: port 1 (s11-eth1): delay timeout
+ptp4l[1190181.157]: port 2 (s11-eth2): delay timeout
+ptp4l[1190181.260]: port 1 (s11-eth1): delay timeout
+ptp4l[1190182.706]: port 2 (s11-eth2): delay timeout
+ptp4l[1190182.996]: port 1 (s11-eth1): delay timeout
+ptp4l[1190183.007]: port 1 (s11-eth1): delay timeout
+ptp4l[1190183.806]: port 1 (s11-eth1): delay timeout
+ptp4l[1190184.466]: port 2 (s11-eth2): delay timeout
+ptp4l[1190185.305]: port 1 (s11-eth1): delay timeout
+ptp4l[1190185.857]: port 1 (s11-eth1): delay timeout
+ptp4l[1190186.078]: port 2 (s11-eth2): delay timeout
+ptp4l[1190186.628]: port 2 (s11-eth2): delay timeout
+ptp4l[1190186.974]: port 1 (s11-eth1): delay timeout
+ptp4l[1190187.780]: port 2 (s11-eth2): delay timeout
+ptp4l[1190188.769]: port 1 (s11-eth1): delay timeout
+ptp4l[1190189.160]: port 2 (s11-eth2): delay timeout
+ptp4l[1190189.429]: port 2 (s11-eth2): delay timeout
+ptp4l[1190189.537]: port 1 (s11-eth1): delay timeout
+ptp4l[1190190.659]: port 2 (s11-eth2): delay timeout
+ptp4l[1190190.785]: port 1 (s11-eth1): delay timeout
+ptp4l[1190191.821]: port 1 (s11-eth1): delay timeout
+ptp4l[1190192.030]: port 1 (s11-eth1): delay timeout
+ptp4l[1190192.113]: port 2 (s11-eth2): delay timeout
+ptp4l[1190193.865]: port 2 (s11-eth2): delay timeout
+ptp4l[1190194.014]: port 1 (s11-eth1): delay timeout
+ptp4l[1190194.778]: port 2 (s11-eth2): delay timeout
+ptp4l[1190195.342]: port 1 (s11-eth1): delay timeout
+ptp4l[1190195.654]: port 2 (s11-eth2): delay timeout
+ptp4l[1190196.174]: port 1 (s11-eth1): delay timeout
+ptp4l[1190197.174]: port 2 (s11-eth2): delay timeout
+ptp4l[1190197.975]: port 1 (s11-eth1): delay timeout
+ptp4l[1190198.417]: port 2 (s11-eth2): delay timeout
+ptp4l[1190198.697]: port 1 (s11-eth1): delay timeout
+ptp4l[1190199.195]: port 2 (s11-eth2): delay timeout
+ptp4l[1190199.488]: port 1 (s11-eth1): delay timeout
+ptp4l[1190199.653]: port 2 (s11-eth2): delay timeout
+ptp4l[1190200.027]: port 1 (s11-eth1): delay timeout
+ptp4l[1190200.455]: port 2 (s11-eth2): delay timeout
+ptp4l[1190200.492]: port 2 (s11-eth2): delay timeout
+ptp4l[1190200.906]: port 2 (s11-eth2): delay timeout
+ptp4l[1190201.283]: port 1 (s11-eth1): delay timeout
+ptp4l[1190202.436]: port 1 (s11-eth1): delay timeout
+ptp4l[1190202.714]: port 2 (s11-eth2): delay timeout
+ptp4l[1190203.400]: port 1 (s11-eth1): delay timeout
+ptp4l[1190203.674]: port 2 (s11-eth2): delay timeout
+ptp4l[1190204.017]: port 2 (s11-eth2): delay timeout
+ptp4l[1190204.347]: port 1 (s11-eth1): delay timeout
+ptp4l[1190205.565]: port 1 (s11-eth1): delay timeout
+ptp4l[1190205.744]: port 2 (s11-eth2): delay timeout
+ptp4l[1190206.720]: port 2 (s11-eth2): delay timeout
+ptp4l[1190207.137]: port 1 (s11-eth1): delay timeout
+ptp4l[1190207.389]: port 2 (s11-eth2): delay timeout
+ptp4l[1190207.745]: port 1 (s11-eth1): delay timeout
+ptp4l[1190208.398]: port 1 (s11-eth1): delay timeout
+ptp4l[1190208.573]: port 2 (s11-eth2): delay timeout
+ptp4l[1190208.670]: port 2 (s11-eth2): delay timeout
+ptp4l[1190208.757]: port 1 (s11-eth1): delay timeout
+ptp4l[1190209.992]: port 1 (s11-eth1): delay timeout
+ptp4l[1190210.652]: port 2 (s11-eth2): delay timeout
+ptp4l[1190210.920]: port 1 (s11-eth1): delay timeout
+ptp4l[1190211.956]: port 1 (s11-eth1): delay timeout
+ptp4l[1190212.126]: port 1 (s11-eth1): delay timeout
+ptp4l[1190212.154]: port 2 (s11-eth2): delay timeout
+ptp4l[1190212.350]: port 1 (s11-eth1): delay timeout
+ptp4l[1190213.311]: port 1 (s11-eth1): delay timeout
+ptp4l[1190213.968]: port 2 (s11-eth2): delay timeout
+ptp4l[1190213.992]: port 1 (s11-eth1): delay timeout
+ptp4l[1190214.319]: port 2 (s11-eth2): delay timeout
+ptp4l[1190215.755]: port 1 (s11-eth1): delay timeout
+ptp4l[1190216.144]: port 1 (s11-eth1): delay timeout
+ptp4l[1190216.256]: port 2 (s11-eth2): delay timeout
+ptp4l[1190216.321]: port 1 (s11-eth1): delay timeout
+ptp4l[1190217.862]: port 1 (s11-eth1): delay timeout
+ptp4l[1190218.000]: port 2 (s11-eth2): delay timeout
+ptp4l[1190218.704]: port 2 (s11-eth2): delay timeout
+ptp4l[1190219.002]: port 1 (s11-eth1): delay timeout
+ptp4l[1190219.192]: port 2 (s11-eth2): delay timeout
+ptp4l[1190219.624]: port 2 (s11-eth2): delay timeout
+ptp4l[1190220.485]: port 1 (s11-eth1): delay timeout
+ptp4l[1190221.329]: port 2 (s11-eth2): delay timeout
+ptp4l[1190221.540]: port 1 (s11-eth1): delay timeout
+ptp4l[1190221.914]: port 1 (s11-eth1): delay timeout
+ptp4l[1190222.735]: port 2 (s11-eth2): delay timeout
+ptp4l[1190223.324]: port 2 (s11-eth2): delay timeout
+ptp4l[1190223.576]: port 1 (s11-eth1): delay timeout
+ptp4l[1190223.598]: port 1 (s11-eth1): delay timeout
+ptp4l[1190224.284]: port 1 (s11-eth1): delay timeout
+ptp4l[1190224.352]: port 2 (s11-eth2): delay timeout
+ptp4l[1190225.293]: port 1 (s11-eth1): delay timeout
+ptp4l[1190225.607]: port 2 (s11-eth2): delay timeout
+ptp4l[1190226.118]: port 2 (s11-eth2): delay timeout
+ptp4l[1190226.408]: port 2 (s11-eth2): delay timeout
+ptp4l[1190226.907]: port 1 (s11-eth1): delay timeout
+ptp4l[1190227.640]: port 1 (s11-eth1): delay timeout
+ptp4l[1190227.744]: port 1 (s11-eth1): delay timeout
+ptp4l[1190228.192]: port 2 (s11-eth2): delay timeout
+ptp4l[1190228.490]: port 1 (s11-eth1): delay timeout
+ptp4l[1190228.945]: port 1 (s11-eth1): delay timeout
+ptp4l[1190229.453]: port 1 (s11-eth1): delay timeout
+ptp4l[1190229.606]: port 2 (s11-eth2): delay timeout
+ptp4l[1190230.448]: port 2 (s11-eth2): delay timeout
+ptp4l[1190230.803]: port 1 (s11-eth1): delay timeout
+ptp4l[1190231.134]: port 2 (s11-eth2): delay timeout
+ptp4l[1190231.517]: port 2 (s11-eth2): delay timeout
+ptp4l[1190231.897]: port 1 (s11-eth1): delay timeout
+ptp4l[1190233.343]: port 2 (s11-eth2): delay timeout
+ptp4l[1190233.695]: port 1 (s11-eth1): delay timeout
+ptp4l[1190234.214]: port 2 (s11-eth2): delay timeout
+ptp4l[1190234.442]: port 2 (s11-eth2): delay timeout
+ptp4l[1190235.003]: port 1 (s11-eth1): delay timeout
+ptp4l[1190235.018]: port 2 (s11-eth2): delay timeout
+ptp4l[1190235.365]: port 1 (s11-eth1): delay timeout
+ptp4l[1190236.315]: port 1 (s11-eth1): delay timeout
+ptp4l[1190236.339]: port 1 (s11-eth1): delay timeout
+ptp4l[1190236.562]: port 1 (s11-eth1): delay timeout
+ptp4l[1190236.652]: port 2 (s11-eth2): delay timeout
+ptp4l[1190236.697]: port 2 (s11-eth2): delay timeout
+ptp4l[1190237.606]: port 2 (s11-eth2): delay timeout
+ptp4l[1190238.540]: port 1 (s11-eth1): delay timeout
+ptp4l[1190238.592]: port 2 (s11-eth2): delay timeout
+ptp4l[1190239.114]: port 2 (s11-eth2): delay timeout
+ptp4l[1190239.840]: port 1 (s11-eth1): delay timeout
+ptp4l[1190240.610]: port 2 (s11-eth2): delay timeout
+ptp4l[1190240.917]: port 2 (s11-eth2): delay timeout
+ptp4l[1190241.146]: port 2 (s11-eth2): delay timeout
+ptp4l[1190241.431]: port 1 (s11-eth1): delay timeout
+ptp4l[1190242.482]: port 1 (s11-eth1): delay timeout
+ptp4l[1190242.840]: port 2 (s11-eth2): delay timeout
+ptp4l[1190242.989]: port 2 (s11-eth2): delay timeout
+ptp4l[1190244.125]: port 1 (s11-eth1): delay timeout
+ptp4l[1190244.549]: port 2 (s11-eth2): delay timeout
+ptp4l[1190245.116]: port 1 (s11-eth1): delay timeout
+ptp4l[1190245.362]: port 1 (s11-eth1): delay timeout
+ptp4l[1190245.447]: port 1 (s11-eth1): delay timeout
+ptp4l[1190245.540]: port 2 (s11-eth2): delay timeout
+ptp4l[1190245.610]: port 2 (s11-eth2): delay timeout
+ptp4l[1190246.821]: port 1 (s11-eth1): delay timeout
+ptp4l[1190247.065]: port 1 (s11-eth1): delay timeout
+ptp4l[1190247.493]: port 2 (s11-eth2): delay timeout
+ptp4l[1190247.603]: port 2 (s11-eth2): delay timeout
+ptp4l[1190248.423]: port 2 (s11-eth2): delay timeout
+ptp4l[1190248.444]: port 1 (s11-eth1): delay timeout
+ptp4l[1190250.164]: port 2 (s11-eth2): delay timeout
+ptp4l[1190250.188]: port 1 (s11-eth1): delay timeout
+ptp4l[1190251.933]: port 2 (s11-eth2): delay timeout
+ptp4l[1190251.952]: port 1 (s11-eth1): delay timeout
+ptp4l[1190253.699]: port 1 (s11-eth1): delay timeout
+ptp4l[1190253.899]: port 2 (s11-eth2): delay timeout
+ptp4l[1190254.775]: port 2 (s11-eth2): delay timeout
+ptp4l[1190255.506]: port 2 (s11-eth2): delay timeout
+ptp4l[1190255.508]: port 1 (s11-eth1): delay timeout
+ptp4l[1190256.616]: port 2 (s11-eth2): delay timeout
+ptp4l[1190256.843]: port 2 (s11-eth2): delay timeout
+ptp4l[1190256.906]: port 1 (s11-eth1): delay timeout
+ptp4l[1190257.544]: port 2 (s11-eth2): delay timeout
+ptp4l[1190258.000]: port 2 (s11-eth2): delay timeout
+ptp4l[1190258.394]: port 2 (s11-eth2): delay timeout
+ptp4l[1190258.609]: port 1 (s11-eth1): delay timeout
+ptp4l[1190258.707]: port 1 (s11-eth1): delay timeout
+ptp4l[1190259.148]: port 2 (s11-eth2): delay timeout
+ptp4l[1190259.249]: port 1 (s11-eth1): delay timeout
+ptp4l[1190259.462]: port 2 (s11-eth2): delay timeout
+ptp4l[1190260.338]: port 1 (s11-eth1): delay timeout
+ptp4l[1190260.897]: port 1 (s11-eth1): delay timeout
+ptp4l[1190260.995]: port 2 (s11-eth2): delay timeout
+ptp4l[1190261.902]: port 2 (s11-eth2): delay timeout
+ptp4l[1190262.071]: port 1 (s11-eth1): delay timeout
+ptp4l[1190262.530]: port 2 (s11-eth2): delay timeout
+ptp4l[1190263.127]: port 1 (s11-eth1): delay timeout
+ptp4l[1190263.134]: port 1 (s11-eth1): delay timeout
+ptp4l[1190263.681]: port 2 (s11-eth2): delay timeout
+ptp4l[1190264.300]: port 1 (s11-eth1): delay timeout
+ptp4l[1190265.652]: port 2 (s11-eth2): delay timeout
+ptp4l[1190266.047]: port 1 (s11-eth1): delay timeout
+ptp4l[1190266.561]: port 2 (s11-eth2): delay timeout
+ptp4l[1190267.786]: port 1 (s11-eth1): delay timeout
+ptp4l[1190268.073]: port 2 (s11-eth2): delay timeout
+ptp4l[1190268.662]: port 1 (s11-eth1): delay timeout
+ptp4l[1190269.558]: port 2 (s11-eth2): delay timeout
+ptp4l[1190269.983]: port 1 (s11-eth1): delay timeout
+ptp4l[1190270.199]: port 1 (s11-eth1): delay timeout
+ptp4l[1190270.630]: port 1 (s11-eth1): delay timeout
+ptp4l[1190271.308]: port 2 (s11-eth2): delay timeout
+ptp4l[1190271.751]: port 2 (s11-eth2): delay timeout
+ptp4l[1190271.777]: port 1 (s11-eth1): delay timeout
+ptp4l[1190272.627]: port 1 (s11-eth1): delay timeout
+ptp4l[1190272.882]: port 2 (s11-eth2): delay timeout
+ptp4l[1190273.526]: port 1 (s11-eth1): delay timeout
+ptp4l[1190274.406]: port 2 (s11-eth2): delay timeout
+ptp4l[1190275.130]: port 1 (s11-eth1): delay timeout
+ptp4l[1190275.197]: port 1 (s11-eth1): delay timeout
+ptp4l[1190275.403]: port 2 (s11-eth2): delay timeout
+ptp4l[1190275.488]: port 2 (s11-eth2): delay timeout
+ptp4l[1190277.087]: port 2 (s11-eth2): delay timeout
+ptp4l[1190277.114]: port 1 (s11-eth1): delay timeout
+ptp4l[1190277.563]: port 2 (s11-eth2): delay timeout
+ptp4l[1190278.068]: port 2 (s11-eth2): delay timeout
+ptp4l[1190278.373]: port 1 (s11-eth1): delay timeout
+ptp4l[1190278.687]: port 1 (s11-eth1): delay timeout
+ptp4l[1190279.172]: port 2 (s11-eth2): delay timeout
+ptp4l[1190280.282]: port 2 (s11-eth2): delay timeout
+ptp4l[1190280.344]: port 1 (s11-eth1): delay timeout
+ptp4l[1190281.762]: port 2 (s11-eth2): delay timeout
+ptp4l[1190281.970]: port 1 (s11-eth1): delay timeout
+ptp4l[1190282.360]: port 1 (s11-eth1): delay timeout
+ptp4l[1190282.619]: port 2 (s11-eth2): delay timeout
+ptp4l[1190282.987]: port 2 (s11-eth2): delay timeout
+ptp4l[1190283.725]: port 1 (s11-eth1): delay timeout
+ptp4l[1190284.253]: port 2 (s11-eth2): delay timeout
+ptp4l[1190284.574]: port 1 (s11-eth1): delay timeout
+ptp4l[1190285.589]: port 1 (s11-eth1): delay timeout
+ptp4l[1190285.942]: port 2 (s11-eth2): delay timeout
+ptp4l[1190286.062]: port 2 (s11-eth2): delay timeout
+ptp4l[1190286.224]: port 2 (s11-eth2): delay timeout
+ptp4l[1190286.654]: port 1 (s11-eth1): delay timeout
+ptp4l[1190287.732]: port 2 (s11-eth2): delay timeout
+ptp4l[1190287.904]: port 1 (s11-eth1): delay timeout
+ptp4l[1190288.310]: port 1 (s11-eth1): delay timeout
+ptp4l[1190288.744]: port 2 (s11-eth2): delay timeout
+ptp4l[1190289.084]: port 1 (s11-eth1): delay timeout
+ptp4l[1190289.360]: port 2 (s11-eth2): delay timeout
+ptp4l[1190290.200]: port 2 (s11-eth2): delay timeout
+ptp4l[1190290.486]: port 1 (s11-eth1): delay timeout
+ptp4l[1190290.732]: port 2 (s11-eth2): delay timeout
+ptp4l[1190291.171]: port 2 (s11-eth2): delay timeout
+ptp4l[1190291.974]: port 1 (s11-eth1): delay timeout
+ptp4l[1190292.179]: port 2 (s11-eth2): delay timeout
+ptp4l[1190292.719]: port 1 (s11-eth1): delay timeout
+ptp4l[1190292.830]: port 1 (s11-eth1): delay timeout
+ptp4l[1190293.123]: port 2 (s11-eth2): delay timeout
+ptp4l[1190293.724]: port 2 (s11-eth2): delay timeout
+ptp4l[1190293.890]: port 1 (s11-eth1): delay timeout
+ptp4l[1190294.430]: port 1 (s11-eth1): delay timeout
+ptp4l[1190294.657]: port 1 (s11-eth1): delay timeout
+ptp4l[1190294.733]: port 1 (s11-eth1): delay timeout
+ptp4l[1190294.944]: port 2 (s11-eth2): delay timeout
+ptp4l[1190295.663]: port 1 (s11-eth1): delay timeout
+ptp4l[1190296.108]: port 1 (s11-eth1): delay timeout
+ptp4l[1190296.302]: port 1 (s11-eth1): delay timeout
+ptp4l[1190296.535]: port 2 (s11-eth2): delay timeout
+ptp4l[1190296.668]: port 2 (s11-eth2): delay timeout
+ptp4l[1190296.742]: port 1 (s11-eth1): delay timeout
+ptp4l[1190297.878]: port 2 (s11-eth2): delay timeout
+ptp4l[1190298.131]: port 2 (s11-eth2): delay timeout
+ptp4l[1190298.246]: port 1 (s11-eth1): delay timeout
+ptp4l[1190299.258]: port 1 (s11-eth1): delay timeout
+ptp4l[1190299.502]: port 2 (s11-eth2): delay timeout
+ptp4l[1190299.885]: port 2 (s11-eth2): delay timeout
+ptp4l[1190300.761]: port 1 (s11-eth1): delay timeout
+ptp4l[1190301.037]: port 1 (s11-eth1): delay timeout
+ptp4l[1190301.303]: port 2 (s11-eth2): delay timeout
+ptp4l[1190302.036]: port 1 (s11-eth1): delay timeout
+ptp4l[1190302.122]: port 2 (s11-eth2): delay timeout
+ptp4l[1190303.152]: port 1 (s11-eth1): delay timeout
+ptp4l[1190303.458]: port 1 (s11-eth1): delay timeout
+ptp4l[1190303.653]: port 2 (s11-eth2): delay timeout
+ptp4l[1190304.191]: port 2 (s11-eth2): delay timeout
+ptp4l[1190305.013]: port 1 (s11-eth1): delay timeout
+ptp4l[1190305.243]: port 2 (s11-eth2): delay timeout
+ptp4l[1190305.512]: port 1 (s11-eth1): delay timeout
+ptp4l[1190305.624]: port 1 (s11-eth1): delay timeout
+ptp4l[1190305.891]: port 2 (s11-eth2): delay timeout
+ptp4l[1190306.723]: port 1 (s11-eth1): delay timeout
+ptp4l[1190307.375]: port 1 (s11-eth1): delay timeout
+ptp4l[1190307.759]: port 2 (s11-eth2): delay timeout
+ptp4l[1190308.700]: port 1 (s11-eth1): delay timeout
+ptp4l[1190309.703]: port 2 (s11-eth2): delay timeout
+ptp4l[1190310.281]: port 1 (s11-eth1): delay timeout
+ptp4l[1190310.619]: port 2 (s11-eth2): delay timeout
+ptp4l[1190310.669]: port 1 (s11-eth1): delay timeout
+ptp4l[1190312.025]: port 1 (s11-eth1): delay timeout
+ptp4l[1190312.394]: port 2 (s11-eth2): delay timeout
+ptp4l[1190312.547]: port 1 (s11-eth1): delay timeout
+ptp4l[1190313.377]: port 2 (s11-eth2): delay timeout
+ptp4l[1190313.407]: port 1 (s11-eth1): delay timeout
+ptp4l[1190313.761]: port 1 (s11-eth1): delay timeout
+ptp4l[1190314.152]: port 2 (s11-eth2): delay timeout
+ptp4l[1190314.428]: port 2 (s11-eth2): delay timeout
+ptp4l[1190315.166]: port 2 (s11-eth2): delay timeout
+ptp4l[1190315.632]: port 1 (s11-eth1): delay timeout
+ptp4l[1190316.185]: port 1 (s11-eth1): delay timeout
+ptp4l[1190316.454]: port 2 (s11-eth2): delay timeout
+ptp4l[1190316.561]: port 2 (s11-eth2): delay timeout
+ptp4l[1190317.921]: port 1 (s11-eth1): delay timeout
+ptp4l[1190318.230]: port 2 (s11-eth2): delay timeout
+ptp4l[1190318.643]: port 2 (s11-eth2): delay timeout
+ptp4l[1190319.188]: port 1 (s11-eth1): delay timeout
+ptp4l[1190319.866]: port 2 (s11-eth2): delay timeout
+ptp4l[1190320.992]: port 1 (s11-eth1): delay timeout
+ptp4l[1190321.331]: port 2 (s11-eth2): delay timeout
+ptp4l[1190321.783]: port 2 (s11-eth2): delay timeout
+ptp4l[1190322.714]: port 1 (s11-eth1): delay timeout
+ptp4l[1190323.359]: port 2 (s11-eth2): delay timeout
+ptp4l[1190323.535]: port 1 (s11-eth1): delay timeout
+ptp4l[1190323.678]: port 2 (s11-eth2): delay timeout
+ptp4l[1190323.763]: port 1 (s11-eth1): delay timeout
+ptp4l[1190323.824]: port 2 (s11-eth2): delay timeout
+ptp4l[1190324.026]: port 1 (s11-eth1): delay timeout
+ptp4l[1190325.088]: port 1 (s11-eth1): delay timeout
+ptp4l[1190325.632]: port 2 (s11-eth2): delay timeout
+ptp4l[1190325.739]: port 1 (s11-eth1): delay timeout
+ptp4l[1190326.156]: port 1 (s11-eth1): delay timeout
+ptp4l[1190327.213]: port 2 (s11-eth2): delay timeout
+ptp4l[1190327.329]: port 1 (s11-eth1): delay timeout
+ptp4l[1190327.778]: port 2 (s11-eth2): delay timeout
+ptp4l[1190328.606]: port 1 (s11-eth1): delay timeout
+ptp4l[1190329.525]: port 1 (s11-eth1): delay timeout
+ptp4l[1190329.725]: port 2 (s11-eth2): delay timeout
+ptp4l[1190329.948]: port 2 (s11-eth2): delay timeout
+ptp4l[1190330.673]: port 1 (s11-eth1): delay timeout
+ptp4l[1190331.109]: port 1 (s11-eth1): delay timeout
+ptp4l[1190331.604]: port 2 (s11-eth2): delay timeout
+ptp4l[1190331.884]: port 1 (s11-eth1): delay timeout
+ptp4l[1190332.427]: port 1 (s11-eth1): delay timeout
+ptp4l[1190332.870]: port 1 (s11-eth1): delay timeout
+ptp4l[1190332.996]: port 2 (s11-eth2): delay timeout
+ptp4l[1190333.528]: port 1 (s11-eth1): delay timeout
+ptp4l[1190333.952]: port 2 (s11-eth2): delay timeout
+ptp4l[1190334.414]: port 2 (s11-eth2): delay timeout
+ptp4l[1190334.834]: port 2 (s11-eth2): delay timeout
+ptp4l[1190335.194]: port 1 (s11-eth1): delay timeout
+ptp4l[1190336.108]: port 1 (s11-eth1): delay timeout
+ptp4l[1190336.222]: port 2 (s11-eth2): delay timeout
+ptp4l[1190336.430]: port 2 (s11-eth2): delay timeout
+ptp4l[1190337.663]: port 2 (s11-eth2): delay timeout
+ptp4l[1190337.886]: port 2 (s11-eth2): delay timeout
+ptp4l[1190338.104]: port 1 (s11-eth1): delay timeout
+ptp4l[1190338.240]: port 2 (s11-eth2): delay timeout
+ptp4l[1190338.270]: port 2 (s11-eth2): delay timeout
+ptp4l[1190339.600]: port 1 (s11-eth1): delay timeout
+ptp4l[1190339.686]: port 2 (s11-eth2): delay timeout
+ptp4l[1190339.747]: port 1 (s11-eth1): delay timeout
+ptp4l[1190341.298]: port 2 (s11-eth2): delay timeout
+ptp4l[1190341.580]: port 1 (s11-eth1): delay timeout
+ptp4l[1190341.756]: port 1 (s11-eth1): delay timeout
+ptp4l[1190342.617]: port 2 (s11-eth2): delay timeout
+ptp4l[1190342.865]: port 1 (s11-eth1): delay timeout
+ptp4l[1190343.883]: port 2 (s11-eth2): delay timeout
+ptp4l[1190343.960]: port 1 (s11-eth1): delay timeout
+ptp4l[1190344.140]: port 2 (s11-eth2): delay timeout
+ptp4l[1190344.890]: port 2 (s11-eth2): delay timeout
+ptp4l[1190345.448]: port 1 (s11-eth1): delay timeout
+ptp4l[1190345.583]: port 2 (s11-eth2): delay timeout
+ptp4l[1190345.711]: port 1 (s11-eth1): delay timeout
+ptp4l[1190345.725]: port 2 (s11-eth2): delay timeout
+ptp4l[1190346.430]: port 2 (s11-eth2): delay timeout
+ptp4l[1190346.946]: port 1 (s11-eth1): delay timeout
+ptp4l[1190347.137]: port 1 (s11-eth1): delay timeout
+ptp4l[1190347.231]: port 2 (s11-eth2): delay timeout
+ptp4l[1190347.507]: port 1 (s11-eth1): delay timeout
+ptp4l[1190348.118]: port 1 (s11-eth1): delay timeout
+ptp4l[1190348.493]: port 2 (s11-eth2): delay timeout
+ptp4l[1190348.670]: port 2 (s11-eth2): delay timeout
+ptp4l[1190349.276]: port 2 (s11-eth2): delay timeout
+ptp4l[1190349.876]: port 1 (s11-eth1): delay timeout
+ptp4l[1190351.242]: port 2 (s11-eth2): delay timeout
+ptp4l[1190351.285]: port 1 (s11-eth1): delay timeout
+ptp4l[1190351.605]: port 1 (s11-eth1): delay timeout
+ptp4l[1190352.070]: port 2 (s11-eth2): delay timeout
+ptp4l[1190352.509]: port 1 (s11-eth1): delay timeout
+ptp4l[1190352.928]: port 2 (s11-eth2): delay timeout
+ptp4l[1190353.979]: port 2 (s11-eth2): delay timeout
+ptp4l[1190354.245]: port 1 (s11-eth1): delay timeout
+ptp4l[1190354.448]: port 2 (s11-eth2): delay timeout
+ptp4l[1190354.818]: port 2 (s11-eth2): delay timeout
+ptp4l[1190355.463]: port 2 (s11-eth2): delay timeout
+ptp4l[1190355.813]: port 1 (s11-eth1): delay timeout
+ptp4l[1190356.140]: port 2 (s11-eth2): delay timeout
+ptp4l[1190357.449]: port 1 (s11-eth1): delay timeout
+ptp4l[1190357.879]: port 2 (s11-eth2): delay timeout
+ptp4l[1190358.383]: port 1 (s11-eth1): delay timeout
+ptp4l[1190358.872]: port 1 (s11-eth1): delay timeout
+ptp4l[1190359.002]: port 2 (s11-eth2): delay timeout
+ptp4l[1190360.388]: port 2 (s11-eth2): delay timeout
+ptp4l[1190360.498]: port 1 (s11-eth1): delay timeout
+ptp4l[1190361.019]: port 2 (s11-eth2): delay timeout
+ptp4l[1190361.110]: port 2 (s11-eth2): delay timeout
+ptp4l[1190361.359]: port 1 (s11-eth1): delay timeout
+ptp4l[1190362.411]: port 1 (s11-eth1): delay timeout
+ptp4l[1190362.541]: port 2 (s11-eth2): delay timeout
+ptp4l[1190362.872]: port 1 (s11-eth1): delay timeout
+ptp4l[1190363.234]: port 2 (s11-eth2): delay timeout
+ptp4l[1190363.453]: port 2 (s11-eth2): delay timeout
+ptp4l[1190364.321]: port 2 (s11-eth2): delay timeout
+ptp4l[1190364.533]: port 1 (s11-eth1): delay timeout
+ptp4l[1190364.589]: port 2 (s11-eth2): delay timeout
+ptp4l[1190364.718]: port 1 (s11-eth1): delay timeout
+ptp4l[1190364.866]: port 2 (s11-eth2): delay timeout
+ptp4l[1190365.370]: port 2 (s11-eth2): delay timeout
+ptp4l[1190365.813]: port 1 (s11-eth1): delay timeout
+ptp4l[1190366.552]: port 2 (s11-eth2): delay timeout
+ptp4l[1190366.791]: port 2 (s11-eth2): delay timeout
+ptp4l[1190367.024]: port 2 (s11-eth2): delay timeout
+ptp4l[1190367.445]: port 2 (s11-eth2): delay timeout
+ptp4l[1190367.766]: port 1 (s11-eth1): delay timeout
+ptp4l[1190368.369]: port 1 (s11-eth1): delay timeout
+ptp4l[1190369.253]: port 2 (s11-eth2): delay timeout
+ptp4l[1190369.434]: port 1 (s11-eth1): delay timeout
+ptp4l[1190369.672]: port 1 (s11-eth1): delay timeout
+ptp4l[1190369.737]: port 2 (s11-eth2): delay timeout
+ptp4l[1190370.475]: port 1 (s11-eth1): delay timeout
+ptp4l[1190371.155]: port 2 (s11-eth2): delay timeout
+ptp4l[1190371.837]: port 1 (s11-eth1): delay timeout
+ptp4l[1190372.446]: port 2 (s11-eth2): delay timeout
+ptp4l[1190372.880]: port 1 (s11-eth1): delay timeout
+ptp4l[1190373.193]: port 2 (s11-eth2): delay timeout
+ptp4l[1190374.803]: port 1 (s11-eth1): delay timeout
+ptp4l[1190375.097]: port 2 (s11-eth2): delay timeout
+ptp4l[1190375.640]: port 1 (s11-eth1): delay timeout
+ptp4l[1190376.450]: port 2 (s11-eth2): delay timeout
+ptp4l[1190376.595]: port 1 (s11-eth1): delay timeout
+ptp4l[1190376.641]: port 1 (s11-eth1): delay timeout
+ptp4l[1190377.258]: port 1 (s11-eth1): delay timeout
+ptp4l[1190377.748]: port 2 (s11-eth2): delay timeout
+ptp4l[1190378.662]: port 2 (s11-eth2): delay timeout
+ptp4l[1190378.774]: port 1 (s11-eth1): delay timeout
+ptp4l[1190379.545]: port 2 (s11-eth2): delay timeout
+ptp4l[1190380.475]: port 1 (s11-eth1): delay timeout
+ptp4l[1190380.737]: port 2 (s11-eth2): delay timeout
+ptp4l[1190380.941]: port 2 (s11-eth2): delay timeout
+ptp4l[1190381.313]: port 2 (s11-eth2): delay timeout
+ptp4l[1190382.453]: port 1 (s11-eth1): delay timeout
+ptp4l[1190382.896]: port 1 (s11-eth1): delay timeout
+ptp4l[1190383.244]: port 2 (s11-eth2): delay timeout
+ptp4l[1190383.501]: port 1 (s11-eth1): delay timeout
+ptp4l[1190383.595]: port 2 (s11-eth2): delay timeout
+ptp4l[1190383.751]: port 1 (s11-eth1): delay timeout
+ptp4l[1190384.803]: port 2 (s11-eth2): delay timeout
+ptp4l[1190385.167]: port 1 (s11-eth1): delay timeout
+ptp4l[1190385.537]: port 2 (s11-eth2): delay timeout
+ptp4l[1190385.755]: port 2 (s11-eth2): delay timeout
+ptp4l[1190385.907]: port 2 (s11-eth2): delay timeout
+ptp4l[1190386.613]: port 1 (s11-eth1): delay timeout
+ptp4l[1190386.713]: port 2 (s11-eth2): delay timeout
+ptp4l[1190387.908]: port 2 (s11-eth2): delay timeout
+ptp4l[1190388.123]: port 1 (s11-eth1): delay timeout
+ptp4l[1190389.461]: port 2 (s11-eth2): delay timeout
+ptp4l[1190389.555]: port 1 (s11-eth1): delay timeout
+ptp4l[1190389.945]: port 1 (s11-eth1): delay timeout
+ptp4l[1190390.560]: port 2 (s11-eth2): delay timeout
+ptp4l[1190390.614]: port 2 (s11-eth2): delay timeout
+ptp4l[1190390.729]: port 1 (s11-eth1): delay timeout
+ptp4l[1190391.558]: port 1 (s11-eth1): delay timeout
+ptp4l[1190392.229]: port 1 (s11-eth1): delay timeout
+ptp4l[1190392.301]: port 2 (s11-eth2): delay timeout
+ptp4l[1190393.432]: port 1 (s11-eth1): delay timeout
+ptp4l[1190394.044]: port 2 (s11-eth2): delay timeout
+ptp4l[1190394.948]: port 2 (s11-eth2): delay timeout
+ptp4l[1190394.986]: port 1 (s11-eth1): delay timeout
+ptp4l[1190395.882]: port 2 (s11-eth2): delay timeout
+ptp4l[1190396.517]: port 1 (s11-eth1): delay timeout
+ptp4l[1190396.989]: port 2 (s11-eth2): delay timeout
+ptp4l[1190397.822]: port 1 (s11-eth1): delay timeout
+ptp4l[1190398.451]: port 2 (s11-eth2): delay timeout
+ptp4l[1190399.373]: port 1 (s11-eth1): delay timeout
+ptp4l[1190400.362]: port 2 (s11-eth2): delay timeout
+ptp4l[1190401.185]: port 1 (s11-eth1): delay timeout
+ptp4l[1190402.161]: port 2 (s11-eth2): delay timeout
+ptp4l[1190402.303]: port 1 (s11-eth1): delay timeout
+ptp4l[1190402.836]: port 1 (s11-eth1): delay timeout
+ptp4l[1190403.389]: port 2 (s11-eth2): delay timeout
+ptp4l[1190403.400]: port 1 (s11-eth1): delay timeout
+ptp4l[1190404.083]: port 1 (s11-eth1): delay timeout
+ptp4l[1190404.835]: port 2 (s11-eth2): delay timeout
+ptp4l[1190405.454]: port 1 (s11-eth1): delay timeout
+ptp4l[1190405.791]: port 2 (s11-eth2): delay timeout
+ptp4l[1190406.714]: port 2 (s11-eth2): delay timeout
+ptp4l[1190407.101]: port 2 (s11-eth2): delay timeout
+ptp4l[1190407.331]: port 1 (s11-eth1): delay timeout
+ptp4l[1190408.077]: port 2 (s11-eth2): delay timeout
+ptp4l[1190408.644]: port 1 (s11-eth1): delay timeout
+ptp4l[1190409.248]: port 2 (s11-eth2): delay timeout
+ptp4l[1190409.674]: port 1 (s11-eth1): delay timeout
+ptp4l[1190410.248]: port 2 (s11-eth2): delay timeout
+ptp4l[1190411.674]: port 1 (s11-eth1): delay timeout
+ptp4l[1190411.877]: port 1 (s11-eth1): delay timeout
+ptp4l[1190411.947]: port 2 (s11-eth2): delay timeout
+ptp4l[1190413.200]: port 2 (s11-eth2): delay timeout
+ptp4l[1190413.619]: port 1 (s11-eth1): delay timeout
+ptp4l[1190414.296]: port 1 (s11-eth1): delay timeout
+ptp4l[1190414.306]: port 2 (s11-eth2): delay timeout
+ptp4l[1190414.519]: port 2 (s11-eth2): delay timeout
+ptp4l[1190415.079]: port 1 (s11-eth1): delay timeout
+ptp4l[1190415.323]: port 1 (s11-eth1): delay timeout
+ptp4l[1190416.501]: port 2 (s11-eth2): delay timeout
+ptp4l[1190417.086]: port 1 (s11-eth1): delay timeout
+ptp4l[1190417.143]: port 1 (s11-eth1): delay timeout
+ptp4l[1190418.393]: port 2 (s11-eth2): delay timeout
+ptp4l[1190418.705]: port 1 (s11-eth1): delay timeout
+ptp4l[1190419.403]: port 2 (s11-eth2): delay timeout
+ptp4l[1190419.498]: port 2 (s11-eth2): delay timeout
+ptp4l[1190419.989]: port 1 (s11-eth1): delay timeout
+ptp4l[1190420.718]: port 1 (s11-eth1): delay timeout
+ptp4l[1190421.072]: port 2 (s11-eth2): delay timeout
+ptp4l[1190421.497]: port 1 (s11-eth1): delay timeout
+ptp4l[1190422.015]: port 2 (s11-eth2): delay timeout
+ptp4l[1190422.671]: port 2 (s11-eth2): delay timeout
+ptp4l[1190423.181]: port 1 (s11-eth1): delay timeout
+ptp4l[1190423.252]: port 1 (s11-eth1): delay timeout
+ptp4l[1190424.538]: port 2 (s11-eth2): delay timeout
+ptp4l[1190424.884]: port 1 (s11-eth1): delay timeout
+ptp4l[1190425.716]: port 2 (s11-eth2): delay timeout
+ptp4l[1190426.126]: port 1 (s11-eth1): delay timeout
+ptp4l[1190426.304]: port 1 (s11-eth1): delay timeout
+ptp4l[1190426.378]: port 2 (s11-eth2): delay timeout
+ptp4l[1190426.738]: port 2 (s11-eth2): delay timeout
+ptp4l[1190427.119]: port 2 (s11-eth2): delay timeout
+ptp4l[1190427.546]: port 1 (s11-eth1): delay timeout
+ptp4l[1190428.103]: port 2 (s11-eth2): delay timeout
+ptp4l[1190429.159]: port 1 (s11-eth1): delay timeout
+ptp4l[1190429.589]: port 2 (s11-eth2): delay timeout
+ptp4l[1190429.985]: port 2 (s11-eth2): delay timeout
+ptp4l[1190430.819]: port 1 (s11-eth1): delay timeout
+ptp4l[1190431.684]: port 2 (s11-eth2): delay timeout
+ptp4l[1190432.324]: port 2 (s11-eth2): delay timeout
+ptp4l[1190432.460]: port 1 (s11-eth1): delay timeout
+ptp4l[1190433.786]: port 2 (s11-eth2): delay timeout
+ptp4l[1190433.993]: port 1 (s11-eth1): delay timeout
+ptp4l[1190434.482]: port 2 (s11-eth2): delay timeout
+ptp4l[1190435.018]: port 1 (s11-eth1): delay timeout
+ptp4l[1190435.024]: port 2 (s11-eth2): delay timeout
+ptp4l[1190436.144]: port 2 (s11-eth2): delay timeout
+ptp4l[1190436.260]: port 2 (s11-eth2): delay timeout
+ptp4l[1190436.967]: port 2 (s11-eth2): delay timeout
+ptp4l[1190436.997]: port 1 (s11-eth1): delay timeout
+ptp4l[1190438.056]: port 1 (s11-eth1): delay timeout
+ptp4l[1190438.447]: port 1 (s11-eth1): delay timeout
+ptp4l[1190438.865]: port 2 (s11-eth2): delay timeout
+ptp4l[1190439.001]: port 1 (s11-eth1): delay timeout
+ptp4l[1190439.463]: port 1 (s11-eth1): delay timeout
+ptp4l[1190439.649]: port 1 (s11-eth1): delay timeout
+ptp4l[1190439.752]: port 1 (s11-eth1): delay timeout
+ptp4l[1190439.790]: port 2 (s11-eth2): delay timeout
+ptp4l[1190440.637]: port 2 (s11-eth2): delay timeout
+ptp4l[1190440.918]: port 2 (s11-eth2): delay timeout
+ptp4l[1190441.456]: port 1 (s11-eth1): delay timeout
+ptp4l[1190441.863]: port 2 (s11-eth2): delay timeout
+ptp4l[1190442.524]: port 2 (s11-eth2): delay timeout
+ptp4l[1190442.663]: port 1 (s11-eth1): delay timeout
+ptp4l[1190443.483]: port 1 (s11-eth1): delay timeout
+ptp4l[1190443.630]: port 1 (s11-eth1): delay timeout
+ptp4l[1190444.453]: port 2 (s11-eth2): delay timeout
+ptp4l[1190445.218]: port 1 (s11-eth1): delay timeout
+ptp4l[1190445.668]: port 2 (s11-eth2): delay timeout
+ptp4l[1190446.898]: port 2 (s11-eth2): delay timeout
+ptp4l[1190447.063]: port 1 (s11-eth1): delay timeout
+ptp4l[1190448.371]: port 1 (s11-eth1): delay timeout
+ptp4l[1190448.753]: port 2 (s11-eth2): delay timeout
+ptp4l[1190449.133]: port 1 (s11-eth1): delay timeout
+ptp4l[1190449.303]: port 2 (s11-eth2): delay timeout
+ptp4l[1190449.465]: port 1 (s11-eth1): delay timeout
+ptp4l[1190449.993]: port 1 (s11-eth1): delay timeout
+ptp4l[1190450.608]: port 2 (s11-eth2): delay timeout
+ptp4l[1190451.444]: port 1 (s11-eth1): delay timeout
+ptp4l[1190452.029]: port 2 (s11-eth2): delay timeout
+ptp4l[1190452.679]: port 1 (s11-eth1): delay timeout
+ptp4l[1190453.159]: port 1 (s11-eth1): delay timeout
+ptp4l[1190453.377]: port 2 (s11-eth2): delay timeout
+ptp4l[1190454.786]: port 1 (s11-eth1): delay timeout
+ptp4l[1190455.278]: port 2 (s11-eth2): delay timeout
+ptp4l[1190455.367]: port 2 (s11-eth2): delay timeout
+ptp4l[1190455.454]: port 2 (s11-eth2): delay timeout
+ptp4l[1190456.190]: port 1 (s11-eth1): delay timeout
+ptp4l[1190456.961]: port 2 (s11-eth2): delay timeout
+ptp4l[1190457.894]: port 2 (s11-eth2): delay timeout
+ptp4l[1190457.983]: port 1 (s11-eth1): delay timeout
+ptp4l[1190458.721]: port 1 (s11-eth1): delay timeout
+ptp4l[1190458.860]: port 1 (s11-eth1): delay timeout
+ptp4l[1190459.308]: port 1 (s11-eth1): delay timeout
+ptp4l[1190459.681]: port 2 (s11-eth2): delay timeout
+ptp4l[1190459.975]: port 1 (s11-eth1): delay timeout
+ptp4l[1190460.569]: port 1 (s11-eth1): delay timeout
+ptp4l[1190460.641]: port 2 (s11-eth2): delay timeout
+ptp4l[1190460.815]: port 2 (s11-eth2): delay timeout
+ptp4l[1190460.824]: port 1 (s11-eth1): delay timeout
+ptp4l[1190461.254]: port 2 (s11-eth2): delay timeout
+ptp4l[1190461.282]: port 2 (s11-eth2): delay timeout
+ptp4l[1190462.308]: port 1 (s11-eth1): delay timeout
+ptp4l[1190462.554]: port 1 (s11-eth1): delay timeout
+ptp4l[1190463.028]: port 2 (s11-eth2): delay timeout
+ptp4l[1190463.105]: port 2 (s11-eth2): delay timeout
+ptp4l[1190463.133]: port 1 (s11-eth1): delay timeout
+ptp4l[1190464.239]: port 1 (s11-eth1): delay timeout
+ptp4l[1190464.656]: port 2 (s11-eth2): delay timeout
+ptp4l[1190465.628]: port 2 (s11-eth2): delay timeout
+ptp4l[1190465.766]: port 1 (s11-eth1): delay timeout
+ptp4l[1190465.970]: port 2 (s11-eth2): delay timeout
+ptp4l[1190466.641]: port 1 (s11-eth1): delay timeout
+ptp4l[1190467.421]: port 2 (s11-eth2): delay timeout
+ptp4l[1190468.196]: port 2 (s11-eth2): delay timeout
+ptp4l[1190468.609]: port 1 (s11-eth1): delay timeout
+ptp4l[1190468.667]: port 1 (s11-eth1): delay timeout
+ptp4l[1190469.051]: port 2 (s11-eth2): delay timeout
+ptp4l[1190469.413]: port 2 (s11-eth2): delay timeout
+ptp4l[1190469.529]: port 1 (s11-eth1): delay timeout
+ptp4l[1190471.263]: port 2 (s11-eth2): delay timeout
+ptp4l[1190471.323]: port 1 (s11-eth1): delay timeout
+ptp4l[1190471.411]: port 2 (s11-eth2): delay timeout
+ptp4l[1190471.910]: port 1 (s11-eth1): delay timeout
+ptp4l[1190472.506]: port 1 (s11-eth1): delay timeout
+ptp4l[1190473.345]: port 2 (s11-eth2): delay timeout
+ptp4l[1190473.759]: port 1 (s11-eth1): delay timeout
+ptp4l[1190474.238]: port 2 (s11-eth2): delay timeout
+ptp4l[1190474.949]: port 1 (s11-eth1): delay timeout
+ptp4l[1190475.745]: port 2 (s11-eth2): delay timeout
+ptp4l[1190476.016]: port 1 (s11-eth1): delay timeout
+ptp4l[1190477.007]: port 1 (s11-eth1): delay timeout
+ptp4l[1190477.374]: port 2 (s11-eth2): delay timeout
+ptp4l[1190478.102]: port 1 (s11-eth1): delay timeout
+ptp4l[1190478.747]: port 2 (s11-eth2): delay timeout
+ptp4l[1190479.339]: port 1 (s11-eth1): delay timeout
+ptp4l[1190480.421]: port 2 (s11-eth2): delay timeout
+ptp4l[1190480.790]: port 1 (s11-eth1): delay timeout
+ptp4l[1190481.209]: port 2 (s11-eth2): delay timeout
+ptp4l[1190481.569]: port 1 (s11-eth1): delay timeout
+ptp4l[1190482.186]: port 2 (s11-eth2): delay timeout
+ptp4l[1190483.307]: port 2 (s11-eth2): delay timeout
+ptp4l[1190483.329]: port 1 (s11-eth1): delay timeout
+ptp4l[1190484.539]: port 1 (s11-eth1): delay timeout
+ptp4l[1190485.158]: port 2 (s11-eth2): delay timeout
+ptp4l[1190485.628]: port 1 (s11-eth1): delay timeout
+ptp4l[1190485.693]: port 1 (s11-eth1): delay timeout
+ptp4l[1190485.784]: port 2 (s11-eth2): delay timeout
+ptp4l[1190486.839]: port 1 (s11-eth1): delay timeout
+ptp4l[1190487.265]: port 1 (s11-eth1): delay timeout
+ptp4l[1190487.272]: port 2 (s11-eth2): delay timeout
+ptp4l[1190488.261]: port 1 (s11-eth1): delay timeout
+ptp4l[1190488.554]: port 2 (s11-eth2): delay timeout
+ptp4l[1190488.835]: port 1 (s11-eth1): delay timeout
+ptp4l[1190490.050]: port 1 (s11-eth1): delay timeout
+ptp4l[1190490.137]: port 2 (s11-eth2): delay timeout
+ptp4l[1190490.972]: port 2 (s11-eth2): delay timeout
+ptp4l[1190491.080]: port 2 (s11-eth2): delay timeout
+ptp4l[1190491.219]: port 1 (s11-eth1): delay timeout
+ptp4l[1190491.439]: port 2 (s11-eth2): delay timeout
+ptp4l[1190491.562]: port 1 (s11-eth1): delay timeout
+ptp4l[1190492.613]: port 2 (s11-eth2): delay timeout
+ptp4l[1190493.548]: port 1 (s11-eth1): delay timeout
+ptp4l[1190493.817]: port 1 (s11-eth1): delay timeout
+ptp4l[1190493.947]: port 2 (s11-eth2): delay timeout
+ptp4l[1190494.518]: port 2 (s11-eth2): delay timeout
+ptp4l[1190495.177]: port 1 (s11-eth1): delay timeout
+ptp4l[1190495.987]: port 1 (s11-eth1): delay timeout
+ptp4l[1190496.459]: port 2 (s11-eth2): delay timeout
+ptp4l[1190497.180]: port 2 (s11-eth2): delay timeout
+ptp4l[1190497.346]: port 1 (s11-eth1): delay timeout
+ptp4l[1190498.464]: port 1 (s11-eth1): delay timeout
+ptp4l[1190498.966]: port 2 (s11-eth2): delay timeout
+ptp4l[1190500.305]: port 1 (s11-eth1): delay timeout
+ptp4l[1190500.603]: port 2 (s11-eth2): delay timeout
+ptp4l[1190500.633]: port 1 (s11-eth1): delay timeout
+ptp4l[1190500.896]: port 1 (s11-eth1): delay timeout
+ptp4l[1190501.288]: port 1 (s11-eth1): delay timeout
+ptp4l[1190501.365]: port 1 (s11-eth1): delay timeout
+ptp4l[1190501.534]: port 2 (s11-eth2): delay timeout
+ptp4l[1190502.350]: port 2 (s11-eth2): delay timeout
+ptp4l[1190503.115]: port 1 (s11-eth1): delay timeout
+ptp4l[1190503.423]: port 2 (s11-eth2): delay timeout
+ptp4l[1190504.146]: port 1 (s11-eth1): delay timeout
+ptp4l[1190504.802]: port 1 (s11-eth1): delay timeout
+ptp4l[1190504.813]: port 2 (s11-eth2): delay timeout
+ptp4l[1190505.049]: port 1 (s11-eth1): delay timeout
+ptp4l[1190505.371]: port 2 (s11-eth2): delay timeout
+ptp4l[1190505.726]: port 2 (s11-eth2): delay timeout
+ptp4l[1190506.540]: port 1 (s11-eth1): delay timeout
+ptp4l[1190506.643]: port 2 (s11-eth2): delay timeout
+ptp4l[1190508.171]: port 2 (s11-eth2): delay timeout
+ptp4l[1190508.373]: port 1 (s11-eth1): delay timeout
+ptp4l[1190509.074]: port 2 (s11-eth2): delay timeout
+ptp4l[1190509.540]: port 1 (s11-eth1): delay timeout
+ptp4l[1190509.803]: port 1 (s11-eth1): delay timeout
+ptp4l[1190510.870]: port 2 (s11-eth2): delay timeout
+ptp4l[1190511.540]: port 1 (s11-eth1): delay timeout
+ptp4l[1190512.608]: port 2 (s11-eth2): delay timeout
+ptp4l[1190512.612]: port 1 (s11-eth1): delay timeout
+ptp4l[1190513.070]: port 1 (s11-eth1): delay timeout
+ptp4l[1190513.704]: port 2 (s11-eth2): delay timeout
+ptp4l[1190513.917]: port 2 (s11-eth2): delay timeout
+ptp4l[1190513.928]: port 1 (s11-eth1): delay timeout
+ptp4l[1190514.216]: port 2 (s11-eth2): delay timeout
+ptp4l[1190514.423]: port 1 (s11-eth1): delay timeout
+ptp4l[1190514.757]: port 2 (s11-eth2): delay timeout
+ptp4l[1190515.514]: port 2 (s11-eth2): delay timeout
+ptp4l[1190515.652]: port 1 (s11-eth1): delay timeout
+ptp4l[1190516.446]: port 2 (s11-eth2): delay timeout
+ptp4l[1190516.953]: port 2 (s11-eth2): delay timeout
+ptp4l[1190516.958]: port 1 (s11-eth1): delay timeout
+ptp4l[1190517.337]: port 1 (s11-eth1): delay timeout
+ptp4l[1190518.701]: port 2 (s11-eth2): delay timeout
+ptp4l[1190518.875]: port 1 (s11-eth1): delay timeout
+ptp4l[1190519.838]: port 2 (s11-eth2): delay timeout
+ptp4l[1190519.909]: port 1 (s11-eth1): delay timeout
+ptp4l[1190521.605]: port 1 (s11-eth1): delay timeout
+ptp4l[1190521.623]: port 2 (s11-eth2): delay timeout
+ptp4l[1190521.761]: port 2 (s11-eth2): delay timeout
+ptp4l[1190522.129]: port 1 (s11-eth1): delay timeout
+ptp4l[1190522.374]: port 2 (s11-eth2): delay timeout
+ptp4l[1190522.487]: port 1 (s11-eth1): delay timeout
+ptp4l[1190524.002]: port 1 (s11-eth1): delay timeout
+ptp4l[1190524.040]: port 2 (s11-eth2): delay timeout
+ptp4l[1190525.502]: port 2 (s11-eth2): delay timeout
+ptp4l[1190525.525]: port 1 (s11-eth1): delay timeout
+ptp4l[1190526.786]: port 1 (s11-eth1): delay timeout
+ptp4l[1190527.280]: port 2 (s11-eth2): delay timeout
+ptp4l[1190527.986]: port 1 (s11-eth1): delay timeout
+ptp4l[1190528.129]: port 2 (s11-eth2): delay timeout
+ptp4l[1190528.342]: port 1 (s11-eth1): delay timeout
+ptp4l[1190529.786]: port 2 (s11-eth2): delay timeout
+ptp4l[1190530.049]: port 1 (s11-eth1): delay timeout
+ptp4l[1190530.355]: port 2 (s11-eth2): delay timeout
+ptp4l[1190530.557]: port 2 (s11-eth2): delay timeout
+ptp4l[1190531.666]: port 2 (s11-eth2): delay timeout
+ptp4l[1190532.005]: port 1 (s11-eth1): delay timeout
+ptp4l[1190532.851]: port 2 (s11-eth2): delay timeout
+ptp4l[1190532.892]: port 2 (s11-eth2): delay timeout
+ptp4l[1190532.963]: port 1 (s11-eth1): delay timeout
+ptp4l[1190533.383]: port 2 (s11-eth2): delay timeout
+ptp4l[1190534.427]: port 1 (s11-eth1): delay timeout
+ptp4l[1190535.172]: port 2 (s11-eth2): delay timeout
+ptp4l[1190535.297]: port 1 (s11-eth1): delay timeout
+ptp4l[1190536.174]: port 2 (s11-eth2): delay timeout
+ptp4l[1190536.222]: port 1 (s11-eth1): delay timeout
+ptp4l[1190537.009]: port 1 (s11-eth1): delay timeout
+ptp4l[1190537.630]: port 1 (s11-eth1): delay timeout
+ptp4l[1190538.057]: port 1 (s11-eth1): delay timeout
+ptp4l[1190538.078]: port 2 (s11-eth2): delay timeout
+ptp4l[1190538.983]: port 1 (s11-eth1): delay timeout
+ptp4l[1190539.311]: port 2 (s11-eth2): delay timeout
+ptp4l[1190539.767]: port 1 (s11-eth1): delay timeout
+ptp4l[1190539.902]: port 2 (s11-eth2): delay timeout
+ptp4l[1190540.210]: port 2 (s11-eth2): delay timeout
+ptp4l[1190540.263]: port 2 (s11-eth2): delay timeout
+ptp4l[1190540.514]: port 1 (s11-eth1): delay timeout
+ptp4l[1190540.787]: port 2 (s11-eth2): delay timeout
+ptp4l[1190542.040]: port 2 (s11-eth2): delay timeout
+ptp4l[1190542.083]: port 1 (s11-eth1): delay timeout
+ptp4l[1190543.413]: port 2 (s11-eth2): delay timeout
+ptp4l[1190544.007]: port 1 (s11-eth1): delay timeout
+ptp4l[1190544.323]: port 2 (s11-eth2): delay timeout
+ptp4l[1190544.816]: port 2 (s11-eth2): delay timeout
+ptp4l[1190545.086]: port 1 (s11-eth1): delay timeout
+ptp4l[1190545.682]: port 2 (s11-eth2): delay timeout
+ptp4l[1190546.367]: port 1 (s11-eth1): delay timeout
+ptp4l[1190546.418]: port 1 (s11-eth1): delay timeout
+ptp4l[1190546.656]: port 1 (s11-eth1): delay timeout
+ptp4l[1190547.284]: port 2 (s11-eth2): delay timeout
+ptp4l[1190547.825]: port 2 (s11-eth2): delay timeout
+ptp4l[1190548.298]: port 1 (s11-eth1): delay timeout
+ptp4l[1190549.528]: port 2 (s11-eth2): delay timeout
+ptp4l[1190549.729]: port 1 (s11-eth1): delay timeout
+ptp4l[1190550.433]: port 1 (s11-eth1): delay timeout
+ptp4l[1190550.789]: port 1 (s11-eth1): delay timeout
+ptp4l[1190550.939]: port 2 (s11-eth2): delay timeout
+ptp4l[1190552.103]: port 1 (s11-eth1): delay timeout
+ptp4l[1190552.430]: port 2 (s11-eth2): delay timeout
+ptp4l[1190553.079]: port 1 (s11-eth1): delay timeout
+ptp4l[1190553.495]: port 1 (s11-eth1): delay timeout
+ptp4l[1190553.704]: port 1 (s11-eth1): delay timeout
+ptp4l[1190554.170]: port 2 (s11-eth2): delay timeout
+ptp4l[1190554.228]: port 1 (s11-eth1): delay timeout
+ptp4l[1190555.177]: port 2 (s11-eth2): delay timeout
+ptp4l[1190555.184]: port 1 (s11-eth1): delay timeout
+ptp4l[1190556.009]: port 2 (s11-eth2): delay timeout
+ptp4l[1190556.243]: port 1 (s11-eth1): delay timeout
+ptp4l[1190556.643]: port 1 (s11-eth1): delay timeout
+ptp4l[1190556.955]: port 1 (s11-eth1): delay timeout
+ptp4l[1190557.488]: port 2 (s11-eth2): delay timeout
+ptp4l[1190557.807]: port 1 (s11-eth1): delay timeout
+ptp4l[1190557.812]: port 2 (s11-eth2): delay timeout
+ptp4l[1190559.029]: port 1 (s11-eth1): delay timeout
+ptp4l[1190559.744]: port 2 (s11-eth2): delay timeout
+ptp4l[1190559.831]: port 2 (s11-eth2): delay timeout
+ptp4l[1190559.845]: port 1 (s11-eth1): delay timeout
+ptp4l[1190560.262]: port 1 (s11-eth1): delay timeout
+ptp4l[1190560.400]: port 1 (s11-eth1): delay timeout
+ptp4l[1190561.042]: port 2 (s11-eth2): delay timeout
+ptp4l[1190561.102]: port 2 (s11-eth2): delay timeout
+ptp4l[1190561.781]: port 2 (s11-eth2): delay timeout
+ptp4l[1190561.849]: port 1 (s11-eth1): delay timeout
+ptp4l[1190562.932]: port 2 (s11-eth2): delay timeout
+ptp4l[1190563.022]: port 2 (s11-eth2): delay timeout
+ptp4l[1190563.339]: port 1 (s11-eth1): delay timeout
+ptp4l[1190564.877]: port 2 (s11-eth2): delay timeout
+ptp4l[1190565.184]: port 1 (s11-eth1): delay timeout
+ptp4l[1190566.280]: port 2 (s11-eth2): delay timeout
+ptp4l[1190566.530]: port 1 (s11-eth1): delay timeout
+ptp4l[1190567.101]: port 2 (s11-eth2): delay timeout
+ptp4l[1190567.673]: port 1 (s11-eth1): delay timeout
+ptp4l[1190568.702]: port 1 (s11-eth1): delay timeout
+ptp4l[1190568.862]: port 2 (s11-eth2): delay timeout
+ptp4l[1190569.630]: port 2 (s11-eth2): delay timeout
+ptp4l[1190570.370]: port 1 (s11-eth1): delay timeout
+ptp4l[1190570.869]: port 1 (s11-eth1): delay timeout
+ptp4l[1190571.614]: port 2 (s11-eth2): delay timeout
+ptp4l[1190572.695]: port 1 (s11-eth1): delay timeout
+ptp4l[1190573.078]: port 2 (s11-eth2): delay timeout
+ptp4l[1190573.216]: port 2 (s11-eth2): delay timeout
+ptp4l[1190573.531]: port 2 (s11-eth2): delay timeout
+ptp4l[1190573.594]: port 1 (s11-eth1): delay timeout
+ptp4l[1190574.753]: port 2 (s11-eth2): delay timeout
+ptp4l[1190574.953]: port 1 (s11-eth1): delay timeout
+ptp4l[1190574.990]: port 1 (s11-eth1): delay timeout
+ptp4l[1190575.000]: port 2 (s11-eth2): delay timeout
+ptp4l[1190576.436]: port 1 (s11-eth1): delay timeout
+ptp4l[1190576.458]: port 2 (s11-eth2): delay timeout
+ptp4l[1190576.890]: port 1 (s11-eth1): delay timeout
+ptp4l[1190577.798]: port 1 (s11-eth1): delay timeout
+ptp4l[1190578.041]: port 2 (s11-eth2): delay timeout
+ptp4l[1190578.302]: port 2 (s11-eth2): delay timeout
+ptp4l[1190578.312]: port 1 (s11-eth1): delay timeout
+ptp4l[1190578.315]: port 1 (s11-eth1): delay timeout
+ptp4l[1190578.361]: port 2 (s11-eth2): delay timeout
+ptp4l[1190578.665]: port 1 (s11-eth1): delay timeout
+ptp4l[1190580.274]: port 2 (s11-eth2): delay timeout
+ptp4l[1190580.512]: port 1 (s11-eth1): delay timeout
+ptp4l[1190581.772]: port 1 (s11-eth1): delay timeout
+ptp4l[1190582.027]: port 2 (s11-eth2): delay timeout
+ptp4l[1190582.440]: port 1 (s11-eth1): delay timeout
+ptp4l[1190582.923]: port 2 (s11-eth2): delay timeout
+ptp4l[1190583.460]: port 1 (s11-eth1): delay timeout
+ptp4l[1190584.023]: port 1 (s11-eth1): delay timeout
+ptp4l[1190584.620]: port 2 (s11-eth2): delay timeout
+ptp4l[1190585.811]: port 1 (s11-eth1): delay timeout
+ptp4l[1190586.301]: port 2 (s11-eth2): delay timeout
+ptp4l[1190586.872]: port 1 (s11-eth1): delay timeout
+ptp4l[1190587.914]: port 2 (s11-eth2): delay timeout
+ptp4l[1190588.017]: port 1 (s11-eth1): delay timeout
+ptp4l[1190589.767]: port 1 (s11-eth1): delay timeout
+ptp4l[1190589.874]: port 2 (s11-eth2): delay timeout
+ptp4l[1190591.056]: port 2 (s11-eth2): delay timeout
+ptp4l[1190591.227]: port 1 (s11-eth1): delay timeout
+ptp4l[1190592.165]: port 2 (s11-eth2): delay timeout
+ptp4l[1190592.934]: port 1 (s11-eth1): delay timeout
+ptp4l[1190593.384]: port 2 (s11-eth2): delay timeout
+ptp4l[1190593.488]: port 1 (s11-eth1): delay timeout
+ptp4l[1190594.548]: port 2 (s11-eth2): delay timeout
+ptp4l[1190594.684]: port 2 (s11-eth2): delay timeout
+ptp4l[1190594.756]: port 2 (s11-eth2): delay timeout
+ptp4l[1190594.943]: port 2 (s11-eth2): delay timeout
+ptp4l[1190595.161]: port 1 (s11-eth1): delay timeout
+ptp4l[1190595.291]: port 1 (s11-eth1): delay timeout
+ptp4l[1190595.340]: port 2 (s11-eth2): delay timeout
+ptp4l[1190595.480]: port 1 (s11-eth1): delay timeout
+ptp4l[1190595.523]: port 1 (s11-eth1): delay timeout
+ptp4l[1190595.560]: port 1 (s11-eth1): delay timeout
+ptp4l[1190596.059]: port 1 (s11-eth1): delay timeout
+ptp4l[1190596.087]: port 2 (s11-eth2): delay timeout
+ptp4l[1190596.791]: port 2 (s11-eth2): delay timeout
+ptp4l[1190597.361]: port 1 (s11-eth1): delay timeout
+ptp4l[1190597.683]: port 1 (s11-eth1): delay timeout
+ptp4l[1190598.084]: port 1 (s11-eth1): delay timeout
+ptp4l[1190598.185]: port 2 (s11-eth2): delay timeout
+ptp4l[1190598.295]: port 2 (s11-eth2): delay timeout
+ptp4l[1190598.376]: port 2 (s11-eth2): delay timeout
+ptp4l[1190599.394]: port 2 (s11-eth2): delay timeout
+ptp4l[1190600.041]: port 1 (s11-eth1): delay timeout
+ptp4l[1190601.117]: port 2 (s11-eth2): delay timeout
+ptp4l[1190601.267]: port 1 (s11-eth1): delay timeout
+ptp4l[1190602.094]: port 2 (s11-eth2): delay timeout
+ptp4l[1190602.739]: port 1 (s11-eth1): delay timeout
+ptp4l[1190602.779]: port 2 (s11-eth2): delay timeout
+ptp4l[1190602.898]: port 1 (s11-eth1): delay timeout
+ptp4l[1190603.289]: port 1 (s11-eth1): delay timeout
+ptp4l[1190603.360]: port 2 (s11-eth2): delay timeout
+ptp4l[1190604.496]: port 2 (s11-eth2): delay timeout
+ptp4l[1190604.666]: port 1 (s11-eth1): delay timeout
+ptp4l[1190605.716]: port 1 (s11-eth1): delay timeout
+ptp4l[1190606.051]: port 2 (s11-eth2): delay timeout
+ptp4l[1190606.987]: port 1 (s11-eth1): delay timeout
+ptp4l[1190607.678]: port 2 (s11-eth2): delay timeout
+ptp4l[1190608.224]: port 1 (s11-eth1): delay timeout
+ptp4l[1190609.345]: port 2 (s11-eth2): delay timeout
+ptp4l[1190609.980]: port 1 (s11-eth1): delay timeout
+ptp4l[1190610.394]: port 1 (s11-eth1): delay timeout
+ptp4l[1190610.771]: port 2 (s11-eth2): delay timeout
+ptp4l[1190612.192]: port 1 (s11-eth1): delay timeout
+ptp4l[1190612.232]: port 2 (s11-eth2): delay timeout
+ptp4l[1190613.106]: port 1 (s11-eth1): delay timeout
+ptp4l[1190613.271]: port 1 (s11-eth1): delay timeout
+ptp4l[1190613.333]: port 2 (s11-eth2): delay timeout
+ptp4l[1190613.578]: port 1 (s11-eth1): delay timeout
+ptp4l[1190614.144]: port 1 (s11-eth1): delay timeout
+ptp4l[1190614.408]: port 1 (s11-eth1): delay timeout
+ptp4l[1190614.755]: port 2 (s11-eth2): delay timeout
+ptp4l[1190615.402]: port 2 (s11-eth2): delay timeout
+ptp4l[1190615.940]: port 1 (s11-eth1): delay timeout
+ptp4l[1190616.683]: port 2 (s11-eth2): delay timeout
+ptp4l[1190617.194]: port 1 (s11-eth1): delay timeout
+ptp4l[1190617.452]: port 1 (s11-eth1): delay timeout
+ptp4l[1190618.178]: port 1 (s11-eth1): delay timeout
+ptp4l[1190618.555]: port 2 (s11-eth2): delay timeout
+ptp4l[1190618.735]: port 1 (s11-eth1): delay timeout
+ptp4l[1190618.971]: port 2 (s11-eth2): delay timeout
+ptp4l[1190619.919]: port 2 (s11-eth2): delay timeout
+ptp4l[1190620.043]: port 1 (s11-eth1): delay timeout
+ptp4l[1190620.485]: port 1 (s11-eth1): delay timeout
+ptp4l[1190620.988]: port 1 (s11-eth1): delay timeout
+ptp4l[1190621.712]: port 2 (s11-eth2): delay timeout
+ptp4l[1190621.831]: port 1 (s11-eth1): delay timeout
+ptp4l[1190621.960]: port 1 (s11-eth1): delay timeout
+ptp4l[1190622.038]: port 1 (s11-eth1): delay timeout
+ptp4l[1190623.419]: port 1 (s11-eth1): delay timeout
+ptp4l[1190623.425]: port 2 (s11-eth2): delay timeout
+ptp4l[1190624.929]: port 2 (s11-eth2): delay timeout
+ptp4l[1190625.303]: port 1 (s11-eth1): delay timeout
+ptp4l[1190626.723]: port 2 (s11-eth2): delay timeout
+ptp4l[1190626.986]: port 1 (s11-eth1): delay timeout
+ptp4l[1190627.688]: port 2 (s11-eth2): delay timeout
+ptp4l[1190627.693]: port 1 (s11-eth1): delay timeout
+ptp4l[1190628.471]: port 2 (s11-eth2): delay timeout
+ptp4l[1190628.824]: port 1 (s11-eth1): delay timeout
+ptp4l[1190629.029]: port 1 (s11-eth1): delay timeout
+ptp4l[1190629.485]: port 2 (s11-eth2): delay timeout
+ptp4l[1190630.724]: port 1 (s11-eth1): delay timeout
+ptp4l[1190630.762]: port 2 (s11-eth2): delay timeout
+ptp4l[1190631.104]: port 2 (s11-eth2): delay timeout
+ptp4l[1190631.662]: port 2 (s11-eth2): delay timeout
+ptp4l[1190632.461]: port 1 (s11-eth1): delay timeout
+ptp4l[1190632.652]: port 2 (s11-eth2): delay timeout
+ptp4l[1190632.674]: port 1 (s11-eth1): delay timeout
+ptp4l[1190633.467]: port 2 (s11-eth2): delay timeout
+ptp4l[1190634.238]: port 2 (s11-eth2): delay timeout
+ptp4l[1190634.390]: port 1 (s11-eth1): delay timeout
+ptp4l[1190635.414]: port 1 (s11-eth1): delay timeout
+ptp4l[1190635.469]: port 2 (s11-eth2): delay timeout
+ptp4l[1190636.493]: port 2 (s11-eth2): delay timeout
+ptp4l[1190637.131]: port 1 (s11-eth1): delay timeout
+ptp4l[1190637.352]: port 1 (s11-eth1): delay timeout
+ptp4l[1190637.958]: port 2 (s11-eth2): delay timeout
+ptp4l[1190639.137]: port 2 (s11-eth2): delay timeout
+ptp4l[1190639.218]: port 1 (s11-eth1): delay timeout
+ptp4l[1190639.486]: port 2 (s11-eth2): delay timeout
+ptp4l[1190640.044]: port 2 (s11-eth2): delay timeout
+ptp4l[1190640.277]: port 2 (s11-eth2): delay timeout
+ptp4l[1190641.162]: port 1 (s11-eth1): delay timeout
+ptp4l[1190641.514]: port 1 (s11-eth1): delay timeout
+ptp4l[1190641.725]: port 2 (s11-eth2): delay timeout
+ptp4l[1190642.137]: port 2 (s11-eth2): delay timeout
+ptp4l[1190643.196]: port 2 (s11-eth2): delay timeout
+ptp4l[1190643.430]: port 1 (s11-eth1): delay timeout
+ptp4l[1190643.894]: port 2 (s11-eth2): delay timeout
+ptp4l[1190643.966]: port 2 (s11-eth2): delay timeout
+ptp4l[1190644.869]: port 2 (s11-eth2): delay timeout
+ptp4l[1190644.972]: port 1 (s11-eth1): delay timeout
+ptp4l[1190646.107]: port 2 (s11-eth2): delay timeout
+ptp4l[1190646.320]: port 1 (s11-eth1): delay timeout
+ptp4l[1190646.746]: port 2 (s11-eth2): delay timeout
+ptp4l[1190647.900]: port 1 (s11-eth1): delay timeout
+ptp4l[1190648.652]: port 2 (s11-eth2): delay timeout
+ptp4l[1190649.529]: port 1 (s11-eth1): delay timeout
+ptp4l[1190650.250]: port 1 (s11-eth1): delay timeout
+ptp4l[1190650.445]: port 2 (s11-eth2): delay timeout
+ptp4l[1190651.008]: port 2 (s11-eth2): delay timeout
+ptp4l[1190651.594]: port 1 (s11-eth1): delay timeout
+ptp4l[1190651.962]: port 1 (s11-eth1): delay timeout
+ptp4l[1190652.242]: port 1 (s11-eth1): delay timeout
+ptp4l[1190652.960]: port 2 (s11-eth2): delay timeout
+ptp4l[1190653.218]: port 1 (s11-eth1): delay timeout
+ptp4l[1190653.718]: port 1 (s11-eth1): delay timeout
+ptp4l[1190654.559]: port 1 (s11-eth1): delay timeout
+ptp4l[1190654.793]: port 2 (s11-eth2): delay timeout
+ptp4l[1190655.570]: port 1 (s11-eth1): delay timeout
+ptp4l[1190655.642]: port 2 (s11-eth2): delay timeout
+ptp4l[1190656.355]: port 1 (s11-eth1): delay timeout
+ptp4l[1190657.210]: port 2 (s11-eth2): delay timeout
+ptp4l[1190657.437]: port 1 (s11-eth1): delay timeout
+ptp4l[1190657.443]: port 2 (s11-eth2): delay timeout
+ptp4l[1190658.440]: port 2 (s11-eth2): delay timeout
+ptp4l[1190659.084]: port 2 (s11-eth2): delay timeout
+ptp4l[1190659.357]: port 1 (s11-eth1): delay timeout
+ptp4l[1190660.063]: port 2 (s11-eth2): delay timeout
+ptp4l[1190660.249]: port 2 (s11-eth2): delay timeout
+ptp4l[1190661.053]: port 1 (s11-eth1): delay timeout
+ptp4l[1190661.299]: port 2 (s11-eth2): delay timeout
+ptp4l[1190661.652]: port 1 (s11-eth1): delay timeout
+ptp4l[1190662.050]: port 1 (s11-eth1): delay timeout
+ptp4l[1190662.722]: port 2 (s11-eth2): delay timeout
+ptp4l[1190663.288]: port 1 (s11-eth1): delay timeout
+ptp4l[1190663.593]: port 1 (s11-eth1): delay timeout
+ptp4l[1190663.724]: port 2 (s11-eth2): delay timeout
+ptp4l[1190664.459]: port 1 (s11-eth1): delay timeout
+ptp4l[1190664.519]: port 2 (s11-eth2): delay timeout
+ptp4l[1190664.729]: port 2 (s11-eth2): delay timeout
+ptp4l[1190665.484]: port 1 (s11-eth1): delay timeout
+ptp4l[1190666.086]: port 2 (s11-eth2): delay timeout
+ptp4l[1190666.462]: port 1 (s11-eth1): delay timeout
+ptp4l[1190666.663]: port 2 (s11-eth2): delay timeout
+ptp4l[1190668.099]: port 1 (s11-eth1): delay timeout
+ptp4l[1190668.508]: port 1 (s11-eth1): delay timeout
+ptp4l[1190668.616]: port 2 (s11-eth2): delay timeout
+ptp4l[1190668.645]: port 1 (s11-eth1): delay timeout
+ptp4l[1190669.410]: port 2 (s11-eth2): delay timeout
+ptp4l[1190670.065]: port 1 (s11-eth1): delay timeout
+ptp4l[1190670.395]: port 2 (s11-eth2): delay timeout
+ptp4l[1190671.383]: port 2 (s11-eth2): delay timeout
+ptp4l[1190671.450]: port 2 (s11-eth2): delay timeout
+ptp4l[1190671.643]: port 1 (s11-eth1): delay timeout
+ptp4l[1190672.551]: port 1 (s11-eth1): delay timeout
+ptp4l[1190673.261]: port 2 (s11-eth2): delay timeout
+ptp4l[1190673.616]: port 1 (s11-eth1): delay timeout
+ptp4l[1190673.715]: port 2 (s11-eth2): delay timeout
+ptp4l[1190674.475]: port 2 (s11-eth2): delay timeout
+ptp4l[1190675.115]: port 2 (s11-eth2): delay timeout
+ptp4l[1190675.501]: port 1 (s11-eth1): delay timeout
+ptp4l[1190676.050]: port 2 (s11-eth2): delay timeout
+ptp4l[1190676.112]: port 2 (s11-eth2): delay timeout
+ptp4l[1190676.860]: port 1 (s11-eth1): delay timeout
+ptp4l[1190677.446]: port 2 (s11-eth2): delay timeout
+ptp4l[1190677.456]: port 1 (s11-eth1): delay timeout
+ptp4l[1190678.510]: port 2 (s11-eth2): delay timeout
+ptp4l[1190679.093]: port 1 (s11-eth1): delay timeout
+ptp4l[1190679.972]: port 2 (s11-eth2): delay timeout
+ptp4l[1190680.634]: port 2 (s11-eth2): delay timeout
+ptp4l[1190680.952]: port 1 (s11-eth1): delay timeout
+ptp4l[1190682.167]: port 1 (s11-eth1): delay timeout
+ptp4l[1190682.306]: port 2 (s11-eth2): delay timeout
+ptp4l[1190682.554]: port 2 (s11-eth2): delay timeout
+ptp4l[1190683.406]: port 2 (s11-eth2): delay timeout
+ptp4l[1190683.807]: port 1 (s11-eth1): delay timeout
+ptp4l[1190684.464]: port 1 (s11-eth1): delay timeout
+ptp4l[1190684.998]: port 2 (s11-eth2): delay timeout
+ptp4l[1190685.385]: port 2 (s11-eth2): delay timeout
+ptp4l[1190685.453]: port 1 (s11-eth1): delay timeout
+ptp4l[1190685.461]: port 2 (s11-eth2): delay timeout
+ptp4l[1190687.426]: port 2 (s11-eth2): delay timeout
+ptp4l[1190687.426]: port 1 (s11-eth1): delay timeout
+ptp4l[1190687.467]: port 1 (s11-eth1): delay timeout
+ptp4l[1190688.489]: port 2 (s11-eth2): delay timeout
+ptp4l[1190689.242]: port 1 (s11-eth1): delay timeout
+ptp4l[1190690.347]: port 1 (s11-eth1): delay timeout
+ptp4l[1190690.460]: port 2 (s11-eth2): delay timeout
+ptp4l[1190690.575]: port 1 (s11-eth1): delay timeout
+ptp4l[1190692.316]: port 2 (s11-eth2): delay timeout
+ptp4l[1190692.440]: port 1 (s11-eth1): delay timeout
+ptp4l[1190693.008]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.008]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.010]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.010]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.040]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.040]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.041]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.041]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.043]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.043]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.043]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.043]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.071]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.071]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.072]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.072]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.074]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.074]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.074]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.074]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.101]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.101]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.102]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.102]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.104]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.104]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.105]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.105]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.132]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.132]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.133]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.133]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.135]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.135]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.135]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.135]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.161]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.161]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.162]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.162]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.164]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.164]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.165]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.165]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.184]: port 2 (s11-eth2): delay timeout
+ptp4l[1190693.192]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.192]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.193]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.193]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.195]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.195]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.196]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.196]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.226]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.226]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.227]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.227]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.228]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.228]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.229]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.229]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.231]: port 1 (s11-eth1): delay timeout
+ptp4l[1190693.254]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.254]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.256]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.256]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.257]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.257]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.257]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.257]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.278]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.278]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.279]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.279]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.281]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.281]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.282]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.282]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.310]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.311]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.313]: port 1 (s11-eth1): error on fda[0]: Network is down
+ptp4l[1190693.313]: port 1 (s11-eth1): MASTER to FAULTY on FAULT_DETECTED (FT_UNSPECIFIED)
+ptp4l[1190693.330]: waiting 2^{4} seconds to clear fault on port 1 (s11-eth1)
+ptp4l[1190693.330]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.330]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.333]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.333]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.336]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.337]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.344]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.350]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.356]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.362]: port 2 (s11-eth2): error on fda[0]: Network is down
+ptp4l[1190693.362]: port 2 (s11-eth2): MASTER to FAULTY on FAULT_DETECTED (FT_UNSPECIFIED)
+ptp4l[1190693.384]: waiting 2^{4} seconds to clear fault on port 2 (s11-eth2)
+ptp4l[1190693.384]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.387]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.391]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.394]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.398]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.401]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.406]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.412]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.417]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.423]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.429]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.436]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.442]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.449]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.456]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.463]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.468]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.472]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.475]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.482]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.485]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.489]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.492]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.498]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.505]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.510]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.515]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.523]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.527]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.530]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.533]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.537]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.540]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.545]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.551]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.557]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.564]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.575]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.579]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.590]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.596]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.602]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.608]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.617]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.623]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.630]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.638]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.645]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.655]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.665]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.672]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.679]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.694]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.700]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.707]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.712]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.719]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.725]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.729]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.732]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.738]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.743]: port 2 (s11-eth2): received link status notification
+ptp4l[1190693.749]: port 1 (s11-eth1): received link status notification
+ptp4l[1190693.755]: port 2 (s11-eth2): received link status notification
