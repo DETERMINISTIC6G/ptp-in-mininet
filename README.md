@@ -221,6 +221,16 @@ cp mininet/collector/wireshark-ptp-tlv-dissector.lua ~/.local/lib/wireshark/plug
 
 <img src="mininet/collector/int-delay-req.png" width="500px" />
 
+## Use the PTP client on a raspberry Pi
+
+You might need to separate the PTP client on another machine, such as a raspberry Pi, so that it can update the system time (not in free-running mode).
+To do so, you need to:
+
+- install LinuxPTP on that machine
+- copy [mininet/configs/slave.cfg](mininet/configs/slave.cfg) to that machine
+- run the client: `sudo timeout ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg`, in which `enxb827ebcf092b` is a NIC that is used to connect to the machine running the emulator. See [this example](mininet/Makefile#L34C37-L34C128)
+- start the emulator within a topology conf which differes than the virtual one, such that, [mininet/topos/10-switches.json](mininet/topos/10-switches.json): `make test-10-switches`. See [this example](mininet/Makefile#L53C1-L61)
+
 ## Dataset
 
 Several datasets representing test results are available at [./mininet/test](./mininet/test)
