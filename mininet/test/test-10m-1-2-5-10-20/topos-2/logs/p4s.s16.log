@@ -1,0 +1,18 @@
+Warning: you requested the nanomsg event logger, but bmv2 was compiled without -DBMELOG, and the event logger cannot be activated
+Calling target program-options parser
+Adding interface s16-eth1 as port 1
+Adding interface s16-eth2 as port 2
+[23:44:02.898] [bmv2] [I] [thread 446144] Starting Thrift server on port 9106
+[23:44:02.899] [bmv2] [I] [thread 446144] Thrift server was started
+[23:44:03.540] [bmv2] [E] [thread 446184] Error when trying to add entry to table 'MyIngress.ipv4_lpm': DUPLICATE_ENTRY
+[23:44:03.541] [bmv2] [E] [thread 446184] Error when trying to add entry to table 'MyIngress.unicast': DUPLICATE_ENTRY
+[23:44:03.542] [bmv2] [E] [thread 446184] Error when trying to add entry to table 'MyIngress.mac_unicast': DUPLICATE_ENTRY
+[23:44:05.876] [bmv2] [I] [thread 446150] Initialized PTP counter table size 10
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory

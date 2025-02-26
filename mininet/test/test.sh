@@ -39,5 +39,8 @@ function move_result(){
 	mv *.pdf *.log topos-* "$DIR"
 }
 
+#do_serial_test test 2>&1 | tee test.log
+#move_result test-10m-ptp4l-1-2-5-10-20
+
 do_serial_test test 2>&1 | tee test.log
-move_result test-10m-ptp4l-1-2-5-10-20
+move_result test-10m-1-2-5-10-20

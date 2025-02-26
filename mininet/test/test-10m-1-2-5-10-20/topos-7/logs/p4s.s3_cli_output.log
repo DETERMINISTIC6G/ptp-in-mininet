@@ -1,0 +1,66 @@
+Obtaining JSON from switch...
+Done
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Setting default action of config_switch
+action:              set_switch_id
+runtime data:        00:03
+RuntimeCmd: 
+1:01/24
+action:              ipv4_forward
+runtime data:        08:00:00:00:01:11	00:01
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to lpm match table ipv4_lpm
+match key:           LPM-0a:00:02:02/24
+action:              ipv4_forward
+runtime data:        08:00:00:00:02:22	00:02
+Entry has been added with handle 1
+RuntimeCmd: Adding entry to lpm match table ipv4_lpm
+match key:           LPM-0a:00:03:03/24
+action:              ipv4_forward
+runtime data:        08:00:00:00:03:33	00:02
+Entry has been added with handle 2
+RuntimeCmd: Adding entry to lpm match table ipv4_lpm
+match key:           LPM-0a:00:03:03/24
+action:              ipv4_forward
+runtime data:        08:00:00:00:03:33	00:02
+Invalid table operation (DUPLICATE_ENTRY)
+RuntimeCmd: Adding entry to lpm match table unicast
+match key:           LPM-0a:00:01:01/24
+action:              ipv4_forward
+runtime data:        01:00:5e:00:01:81	00:02
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to lpm match table unicast
+match key:           LPM-0a:00:02:02/24
+action:              ipv4_forward
+runtime data:        01:00:5e:00:01:81	00:01
+Entry has been added with handle 1
+RuntimeCmd: Adding entry to lpm match table unicast
+match key:           LPM-0a:00:02:02/24
+action:              ipv4_forward
+runtime data:        01:00:5e:00:01:81	00:01
+Invalid table operation (DUPLICATE_ENTRY)
+RuntimeCmd: Adding entry to exact match table mac_unicast
+match key:           EXACT-00:01
+action:              mac_forward
+runtime data:        01:00:5e:00:01:81	00:02
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table mac_unicast
+match key:           EXACT-00:02
+action:              mac_forward
+runtime data:        01:00:5e:00:01:81	00:01
+Entry has been added with handle 1
+RuntimeCmd: Adding entry to exact match table mac_unicast
+match key:           EXACT-00:02
+action:              mac_forward
+runtime data:        01:00:5e:00:01:81	00:01
+Invalid table operation (DUPLICATE_ENTRY)
+RuntimeCmd: *** Unknown syntax: #mc_mgrp_create 10
+RuntimeCmd: *** Unknown syntax: #mc_node_create 5 1 2
+RuntimeCmd: *** Unknown syntax: #mc_node_associate 10 0
+RuntimeCmd: *** Unknown syntax: #
+RuntimeCmd: *** Unknown syntax: #table_add ipv4_lpm multicast 224.0.1.129/24 => 10
+RuntimeCmd: *** Unknown syntax: #table_add ipv4_lpm multicast 224.0.1.129/24 => 10
+RuntimeCmd: *** Unknown syntax: // INT
+RuntimeCmd: *** Unknown syntax: // set data to append to INT: switch_id = 2
+RuntimeCmd: *** Unknown syntax: #table_set_default tb_int_config set_transit 2
+RuntimeCmd: 
