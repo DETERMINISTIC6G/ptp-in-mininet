@@ -7,6 +7,8 @@ import os
 
 # avoid showing plot window
 import matplotlib as mpl
+from matplotlib.gridspec import GridSpec
+
 mpl.use('Agg')
 
 
@@ -41,7 +43,7 @@ def parse_ptp_log(log_file):
     
     min_ts   =  0
     #interval = 300
-    interval = 3600
+    interval = 600
     
     first_time = 0
     with open(log_file, "r") as file:
@@ -74,22 +76,6 @@ def parse_ptp_log(log_file):
     
     return data
 
-def get_sub_data(data, start, end):
-    """
-    get a new deep copy of data
-       each element of the new data is a sub element
-    """
-    old_data = data
-    data = {}
-    for name in old_data:
-        data[name] = {}
-        obj = old_data[name]
-        for metric in obj:
-            data[name][metric] = []
-            for arr in obj[metric]:
-                data[name][metric].append( arr[start:end] )
-    return data
-    
 
 def annotate_boxplot(ax, data):
     """
@@ -133,7 +119,7 @@ def moving_average(y_2d):
 CONFIG = {
         "master_offset"   : {
             "ylabel": "Clock offset (microsecond)", 
-            "yticks": [-150, -100, -50, 0, 50, 100, 150, 200]
+            "yticks": [-150, -100, -50, -25, 0, 25, 50, 100, 150, 200,300]
         },
         "frequency_offset": {
             "ylabel": "Frequency offset", 
@@ -151,132 +137,76 @@ def line_plot_metrics(data):
     #plt.figure(figsize=(15, 12))
     #fig, ax = plt.subplots()
     
-    # draw only first 6000 samples
-    data = get_sub_data(data, 0, 600)
     for name in data:
-
         obj = data[name]
         
         for metric in obj:
             plt.clf()
 
             # Remove margins
-            plt.margins(x=0, y=0) 
+            #plt.margins(x=0, y=0) 
             # Set global font size
             plt.rcParams.update({'font.size': 16})  # Adjust the font size
 
-        
+            # Create a figure
+            fig = plt.figure(figsize=(7, 5), layout="constrained")
+            # Define the grid layout: 1 row, 2 cols with with ratios 4:1
+            gs = GridSpec(1, 2, figure=fig, width_ratios=[1,4] )
+
+            # 1. draw lines
+            line_plot = fig.add_subplot(gs[1])
+            line_plot.margins(x=0, y=0) 
+
+            flatten_arr = []
             #plt.yscale('log')  # Set Y-axis to logarithmic scale (base 10)
             for arr in obj[metric]:
-                plt.plot(range(0, len(arr)), arr, marker='o', color="green", markeredgewidth=0, alpha=0.5, markersize=5, linestyle='None')
+                flatten_arr += arr
+                line_plot.plot(range(0, len(arr)), arr, marker='o', color="green", markeredgewidth=0, alpha=1, markersize=3, linestyle='None')
             
             # a line to represent average
             y_mean, y_smooth = moving_average(obj[metric])
 
-            plt.plot(range(0,len(y_mean)), y_mean, color="blue", alpha=0.9)
-            plt.plot(range(0,len(y_smooth)), y_smooth, color="red", linewidth=3)
+            line_plot.plot(range(0,len(y_mean)), y_mean, color="blue", alpha=0.9)
+            line_plot.plot(range(0,len(y_smooth)), y_smooth, color="red", linewidth=3)
             
 
-            plt.xlabel("Timestamp (second)")
-            #plt.ylabel( CONFIG[metric]["ylabel"] )
-
+            line_plot.set_xlabel("Timestamp (second)")
 
             # Manually specify y-axis ticks
             if "yticks" in CONFIG[metric]:
                 yticks = CONFIG[metric]["yticks"].copy() #we will modify the array
                 
-                max_val = 0
-                min_val = 100*1000*1000*1000
-                for arr in obj[metric]:
-                    v = min(arr)
-                    if v < min_val:
-                        min_val = v
-                    v = max(arr)
-                    if v > max_val:
-                        max_val = v
                 
-                # ensure 2 first ticks and 2 last ticks are not overriden
-                yticks[0]  = int(min_val + 1)
-                yticks[-1] = int(max_val - 1)
-                if yticks[0] > yticks[1]:
-                    yticks[1] = yticks[0]
-                if yticks[-1] < yticks[-2]:
-                    yticks[-2] = yticks[-1]
-
-                
-                ax = plt.gca()  # Get current axis
-                ax.set_yticks( yticks )
+                #ax = plt.gca()  # Get current axis
+                line_plot.set_yticks( yticks )
+    
+            line_plot.grid(True)#, color='black')
             
-    
-            plt.tight_layout()
-            plt.grid()
-            plt.savefig( f"plot-{name}-{metric}.pdf", dpi=30, format='pdf', bbox_inches='tight')
-
-def flatten( arr ):
-    ret = []
-    for val in arr:
-        ret += val
-    return ret
-
-
-log_file_labels = {
-    "1-switch"   : "1 TC", 
-    "2-switches" : "2 TCs", 
-    "5-switches" : "5 TCs", 
-    "10-switches": "10 TCs", 
-    "20-switches": "20 TCs"
-    }
-    
-def box_plot_metrics(data):
-    """
-    Plots the master offset, frequency offset, and path delay metrics along with boxplots.
-    :param data: Dictionary containing timestamps and metric values.
-    """
-    
-    # exclude the "calibration period"
-    # remove the first 120 seconds
-    data = get_sub_data(data, 120,-1)
-    #plt.figure(figsize=(15, 12))
-    #fig, ax = plt.subplots()
-    for metric in CONFIG:
-        plt.clf()
-        # Set global font size
-        plt.rcParams.update({'font.size': 16})  # Adjust the font size
-
-        #plt.yscale('log')  # Set Y-axis to logarithmic scale (base 10)
-
-        labels = []
-        arr    = []
-        # each log
-        for name in data:
-            labels.append( log_file_labels[name] )
-            val = data[name][metric]
+            # 2. draw box
+            box_plot = fig.add_subplot(gs[0])
+            box_plot.margins(x=0, y=0) 
+            box_plot.boxplot(flatten_arr, vert=True, patch_artist=True, 
+                widths=0.6,
+                #labels=[""],
+                boxprops=dict(color='black', facecolor='grey', alpha=0.9), 
+                medianprops=dict(color='black'),
+                #Change outlier size & color
+                flierprops=dict(marker='o', markersize=5, color='black', alpha=0.5))
             
-            val = flatten( val )
-            arr.append( val )
-        # Boxplot for Master Offset (Vertical)
-        box = plt.boxplot(arr, vert=True, patch_artist=True, labels=labels, boxprops=dict(color='black', facecolor='grey', alpha=0.9), medianprops=dict(color='black'),
-            #Change outlier size & color
-            flierprops=dict(marker='o', markersize=5, color='black', alpha=0.5))
-        #plt.title("Master Offset Distribution")
-
-        #plt.ylabel( CONFIG[metric]["ylabel"] )
-
-        # Manually specify y-axis ticks
-        if "yticks" in CONFIG[metric]:
-            ax = plt.gca()  # Get current axis
-            ax.set_yticks( CONFIG[metric]["yticks"] )
-
-        plt.tight_layout()
-        plt.grid()
-        plt.savefig( f"plot-{metric}.pdf", dpi=30, format='pdf', bbox_inches='tight')
+            box_plot.grid()
+            box_plot.set_ylabel( CONFIG[metric]["ylabel"] )
+            box_plot.set_yticks( yticks )
+            box_plot.set_yticklabels([]) #hide ytick labels
+            box_plot.set_xticklabels([]) #hide ytick labels
+             
+            plt.savefig( f"plot-{name}-{metric}-detail.pdf", dpi=30, format='pdf', bbox_inches='tight')
 
 
 if __name__ == "__main__":
     extension = ".json.slave.log"
     # Set up command-line argument parsing
-    log_files = ["1-switch", "2-switches", "5-switches", "10-switches", "20-switches"]
-    #log_files = ["1-switch"]
+    #log_files = ["1-switch", "2-switches", "5-switches", "10-switches", "20-switches"]
+    log_files = ["10-switches"]
     print(log_files)
     data = dict()
     
@@ -305,6 +235,6 @@ if __name__ == "__main__":
     # Plot the metrics
     if len(data):
         line_plot_metrics(data)
-        box_plot_metrics(data)
+        #box_plot_metrics(data)
     else:
         print("No valid data found in the log file.")
