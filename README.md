@@ -220,3 +220,7 @@ cp mininet/collector/wireshark-ptp-tlv-dissector.lua ~/.local/lib/wireshark/plug
 ```
 
 <img src="mininet/collector/int-delay-req.png" width="500px" />
+
+## Dataset
+
+Several datasets representing test results are available at [./mininet/test](./mininet/test)
