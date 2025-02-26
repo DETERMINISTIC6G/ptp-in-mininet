@@ -227,7 +227,7 @@ You might need to separate the PTP client on another machine, such as a raspberr
 To do so, you need to:
 
 - install LinuxPTP on that machine
-- copy [mininet/configs/slave.cfg](mininet/configs/slave.cfg) to that machine
+- copy [mininet/configs/slave.cfg](mininet/configs/slave.cfg) to that machine, and remove this line `free_running 1` in the file
 - run the client: `sudo timeout ptp4l -i enxb827ebcf092b -f /home/pi/configs/slave.cfg`, in which `enxb827ebcf092b` is a NIC that is used to connect to the machine running the emulator. See [this example](mininet/Makefile#L34C37-L34C128)
 - start the emulator within a topology conf which differes than the virtual one, such that, [mininet/topos/10-switches.json](mininet/topos/10-switches.json): `make test-10-switches`. See [this example](mininet/Makefile#L53C1-L61)
 
