@@ -95,6 +95,14 @@ python3 -m pip install -r ./mininet/requirements`
 
 We use Grafana to graphically display results. For furter information of Grafana, go [here](https://grafana.com/docs/grafana/latest/setup-grafana/installation/debian/)
 
+You can install Grafana or use it from Docker:
+
+#### Use Grafana docker image:
+
+```bash
+docker run -d -p 3000:3000 --name=grafana grafana/grafana-enterprise
+```
+
 #### Install Grafana
 
 ```bash
