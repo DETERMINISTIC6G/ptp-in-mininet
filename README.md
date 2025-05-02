@@ -68,10 +68,11 @@ cd behaviral-model
 # the latest patch is available here: https://github.com/p4lang/behavioral-model/compare/main...montimage-projects:behavioral-model:main
 git checkout 199af48 #moment I tested BMv2
 git apply ../bmv2.patch
-
+# install libraries
+sudo bash ci/install-thrift.sh
+sudo bash ci/install-nanomsg.sh
 # compile and install
-./autogen.sh
-./configure
+./autogen.sh && ./configure
 make -j && sudo make install
 ```
 
