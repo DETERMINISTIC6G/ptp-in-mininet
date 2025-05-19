@@ -1,0 +1,12 @@
+Calling target program-options parser
+Adding interface s2-eth1 as port 1
+Adding interface s2-eth2 as port 2
+[17:22:52.414] [bmv2] [I] [thread 134378] Starting Thrift server on port 9092
+[17:22:52.414] [bmv2] [I] [thread 134378] Thrift server was started
+[17:22:52.451] [bmv2] [I] [thread 134386] Init ptp counter table size 10
+[17:22:52.945] [bmv2] [E] [thread 134407] Error when trying to add entry to table 'MyIngress.ipv4_lpm': DUPLICATE_ENTRY
+[17:22:52.956] [bmv2] [E] [thread 134407] Error when trying to add entry to table 'MyIngress.unicast': DUPLICATE_ENTRY
+[17:22:52.965] [bmv2] [E] [thread 134407] Error when trying to add entry to table 'MyIngress.mac_unicast': DUPLICATE_ENTRY
+open: No such file or directory
+open: No such file or directory
+open: No such file or directory

@@ -9,7 +9,7 @@ import os
 import matplotlib as mpl
 mpl.use('Agg')
 
-
+INTERVAL=3600
 
 def parse_ptp_log(log_file):
     """
@@ -40,8 +40,6 @@ def parse_ptp_log(log_file):
     )
     
     min_ts   =  0
-    #interval = 300
-    interval = 3600
     
     first_time = 0
     with open(log_file, "r") as file:
@@ -64,7 +62,7 @@ def parse_ptp_log(log_file):
                 if kernel_time < min_ts:
                     continue
                 #kernel_time -= min_ts
-                if kernel_time > interval + min_ts:
+                if kernel_time > INTERVAL + min_ts:
                     break
          
                 #data["timestamp"].append(int(kernel_time))
@@ -152,7 +150,7 @@ def line_plot_metrics(data):
     #fig, ax = plt.subplots()
     
     # draw only first 6000 samples
-    data = get_sub_data(data, 0, 600)
+    data = get_sub_data(data, 0, INTERVAL)
     for name in data:
 
         obj = data[name]
@@ -210,7 +208,7 @@ def line_plot_metrics(data):
     
             plt.tight_layout()
             plt.grid()
-            plt.savefig( f"plot-{name}-{metric}.pdf", dpi=30, format='pdf', bbox_inches='tight')
+            plt.savefig( f"plot-{name}-{metric}-{INTERVAL}.pdf", dpi=30, format='pdf', bbox_inches='tight')
 
 def flatten( arr ):
     ret = []
@@ -269,7 +267,7 @@ def box_plot_metrics(data):
 
         plt.tight_layout()
         plt.grid()
-        plt.savefig( f"plot-{metric}.pdf", dpi=30, format='pdf', bbox_inches='tight')
+        plt.savefig( f"plot-{metric}-3600.pdf", dpi=30, format='pdf', bbox_inches='tight')
 
 
 if __name__ == "__main__":
