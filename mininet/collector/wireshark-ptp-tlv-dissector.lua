@@ -96,3 +96,14 @@ end
 local eth_type = DissectorTable.get("ethertype")
 original_ptp_dissector = eth_type:get_dissector(0x88f7)
 eth_type:add(0x88f7, ptp_tlv_dissector)
+
+-- attach to UDP
+-- Get the UDP port dissector table
+local udp_port_table = DissectorTable.get("udp.port")
+
+-- Save original dissector (optional, for fallback)
+original_ptp_udp_dissector = udp_port_table:get_dissector(319)
+
+-- Register your custom dissector
+udp_port_table:add(319, ptp_tlv_dissector)
+udp_port_table:add(320, ptp_tlv_dissector)
